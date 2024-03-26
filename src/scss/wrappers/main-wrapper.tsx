@@ -1,9 +1,15 @@
-const MyComponent = () => {
-    return (
-        <div>
-
-        </div>
-    );
+type Props = {
+  children?: React.ReactNode;
 };
 
-export default MyComponent;
+export const MainWrapper = ({ children }: Props): React.ReactNode => {
+  return (
+    <div className="card">
+      <Header />
+      {children}
+      <Footer />
+    </div>
+  );
+};
+
+export default MainWrapper;
