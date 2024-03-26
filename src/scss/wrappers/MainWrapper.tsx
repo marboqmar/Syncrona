@@ -1,12 +1,18 @@
-import '../components/Header.tsx'
-import '../components/Footer.tsx'
+import Header from '../components/Header.tsx'
+import Footer from '../components/Footer.tsx'
 
-const MainWrapper = () => {
+type Props = {
+    children?: React.ReactNode
+};
+
+export const MainWrapper = ({children}: Props): React.ReactNode => {
     return (
         <div>
-            <h1>Main wrapper</h1>
+            <Header />
+            {children}
+            <Footer />
         </div>
     );
 };
 
-export default MainWrapper;
+export default MainWrapper
