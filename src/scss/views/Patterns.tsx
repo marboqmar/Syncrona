@@ -4,7 +4,7 @@ const Patterns = () => {
     return (
         <MainWrapper>
             <div>
-                
+
             </div>
         </MainWrapper>
     );
