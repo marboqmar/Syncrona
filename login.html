@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="index.html" class="logo">Logo</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="login-form">
+        <h2>Login</h2>
+        <form action="/login" method="post"><label for="username">username:</label>
+          <input type="text" name="username" id="username" required>
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password" required>
+          <button type="submit">Log in</button>
+        <p class="forgot-password">
+          <a href="forgot-password.html">
+            Forgot your password? Recover your password
+          </a>
+        </p>
+        <p class="no-account">
+          Don't have an account? <a href="register.html">Register now</a>
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
