@@ -1,28 +1,35 @@
-// BoardList.tsx
+
 
 import React from "react";
-import { Paper, CssBaseline } from "@material-ui/core";
+import { Paper, CssBaseline, makeStyles } from "@material-ui/core";
 import ListTitle from "./ListTitle";
 import BoardCard from "./BoardCard";
 import AddCardOrList from "./AddCardOrList";
 import styles from "../style.scss"; 
 import colors from "../colors.scss"; 
-import Colors from "../colors.scss"; 
+
+
+
 
 const BoardList = () => {
-    const backgroundStyle = {
-        backgroundColor: (colors as any)["Syncrona-white-dark"] 
-    };
-
+   
     return (
-        <Paper  style={backgroundStyle}>
+        <Paper className="livvic-thin Card">
             <CssBaseline/>
             <ListTitle/>
             <BoardCard/>
-            <AddCardOrList/>
+            <AddCardOrList/> 
         </Paper>
     );
 };
+
+
+const useStyle = makeStyles (theme => ({
+    card: {
+        width: "300px",
+        background: "#EAD4DE"
+    }
+}))
 
 export default BoardList;
 
