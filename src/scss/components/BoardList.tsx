@@ -12,11 +12,11 @@ import colors from "../colors.scss";
 
 
 const BoardList = () => {
-   
+   const classes= useStyle()
     return (
         <Paper className="livvic-thin Card">
             <CssBaseline/>
-            <ListTitle/>
+            <ListTitle className={}/>
             <BoardCard/>
             <AddCardOrList/> 
         </Paper>
@@ -25,9 +25,10 @@ const BoardList = () => {
 
 
 const useStyle = makeStyles (theme => ({
-    card: {
-        width: "300px",
-        background: "#EAD4DE"
+    
+    title: {
+        display= "flex",
+        
     }
 }))
 
