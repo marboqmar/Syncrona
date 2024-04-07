@@ -1,6 +1,6 @@
-export const colors = { 
+$colors : (
     Syncrona-info:#90BEDE,
-    Syncrona-info-light:#B5D1E5,
+    Syncrona-info-light: #B5D1E5,
     Syncrona-info-lighter:#D8E7F1,
     Syncrona-info-dark:#5D9AC5,
     Syncrona-info-darker:#2D6F9D,
@@ -33,8 +33,8 @@ export const colors = {
     Syncrona-yellow-light:#F9C06C,
     Syncrona-yellow-lighter:#FBD59D,
     Syncrona-yellow-dark:#D89027,
-    Syncrona-yellow-darker#A56B27:,
-    Syncrona-white:#FEF5F9,
+    Syncrona-yellow-darker:#A56B27,
+    Syncrona-white: #FEF5F9,
     Syncrona-white-light:#FFFFFF,
     Syncrona-white-lighter:#FFFFFF,
     Syncrona-white-dark:#EAD4DE,
@@ -43,20 +43,24 @@ export const colors = {
     Syncrona-gray1-light: #B5B0B2,
     Syncrona-gray1-lighter:#CECACC,
     Syncrona-gray1-dark:#837C80,
-    Syncrona-gray1-dark:#696366,
+    Syncrona-gray1-darker:#696366,
     Syncrona-gray2: #7A6C73,
     Syncrona-gray2-light: #93858C,
     Syncrona-gray2-lighter:#ABA0A6,
     Syncrona-gray2-dark:#5F5459,
-    Syncrona-gray2-dark:#443C40,
+    Syncrona-gray2-darker:#443C40,
     Syncrona-gray3: #6A5C62,
     Syncrona-gray3-light: #86747C,
     Syncrona-gray3-lighter:#9E8F95,
     Syncrona-gray3-dark:#52474C,
-    Syncrona-gray3-dark:#372F32,
+    Syncrona-gray3-darker:#372F32,
     Syncrona-black:#5A4B51,
     Syncrona-black-light:#756169,
     Syncrona-black-lighter:#907982,
     Syncrona-black-dark:#3D3337,
     Syncrona-black-darker:#211C1E,
-};
+
+)
+    
+
+
