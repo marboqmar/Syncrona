@@ -1,13 +1,11 @@
 import './scss/style.scss'
 import { Link } from 'react-router-dom'
+import BoardList from './scss/components/BoardList'
 
 function App() {
     return (
         <>
-            <h1>Home</h1>
-            <Link to='/login'>Login</Link>
-            <h1>Patterns</h1>
-            <Link to='/Patterns'>Patterns</Link>
+            <BoardList/>
         </>
   )
 }
