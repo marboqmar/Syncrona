@@ -7,16 +7,17 @@ import BoardCard from "./BoardCard";
 import AddCardOrList from "./AddCardOrList";
 import styles from "../style.scss"; 
 import colors from "../colors.scss"; 
+import { Title } from "@material-ui/icons";
 
 
 
 
 const BoardList = () => {
-   const classes= useStyle()
+  
     return (
         <Paper className="livvic-thin Card">
             <CssBaseline/>
-            <ListTitle className={}/>
+            <ListTitle/>
             <BoardCard/>
             <AddCardOrList/> 
         </Paper>
@@ -24,13 +25,6 @@ const BoardList = () => {
 };
 
 
-const useStyle = makeStyles (theme => ({
-    
-    title: {
-        display= "flex",
-        
-    }
-}))
 
 export default BoardList;
 
