@@ -1,12 +1,16 @@
 import React from "react";
+import { Paper } from "@material-ui/core";
 
 
 const AddCardOrList = () => {
     return (
-        <>
-        <h3>Add Card</h3>
         
-        </>
+        <Paper className="List__AddCard">
+        Add Card
+        </Paper>
+       
+        
+        
 
     )
 }

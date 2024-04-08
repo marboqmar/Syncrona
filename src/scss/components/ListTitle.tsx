@@ -6,7 +6,7 @@ import { makeStyles } from "@material-ui/core";
 const ListTitle = () => {
     
     return (
-        <div className="Card__Title">
+        <div className="List__Title">
             <h2 >Title</h2>
             
             <MoreHorizIcon/>

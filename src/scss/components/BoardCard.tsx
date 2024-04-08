@@ -1,11 +1,11 @@
 import React from "react";
-
+import { Paper } from "@material-ui/core";
 const BoardCard = () => {
     return (
-        <>
-        <h3>Card</h3>
+       <Paper className="List__Card">
+        Card
+       </Paper>
         
-        </> 
     )
 }
 

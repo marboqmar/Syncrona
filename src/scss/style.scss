@@ -107,13 +107,36 @@ html {
 // Card Parts//
 
 
-.Card {
+.List {
   min-width: 300px;
   max-width: 400px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  
+  
 }
 
-.Card__Title {
+.List__Title {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-left: 10px;
+}
+
+.List__Card {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.List__AddCard {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  margin-top: 10px;
+  
+
 }

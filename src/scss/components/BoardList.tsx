@@ -15,7 +15,7 @@ import { Title } from "@material-ui/icons";
 const BoardList = () => {
   
     return (
-        <Paper className="livvic-thin Card">
+        <Paper className="livvic-thin List">
             <CssBaseline/>
             <ListTitle/>
             <BoardCard/>
