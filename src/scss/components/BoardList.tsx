@@ -15,12 +15,17 @@ import { Title } from "@material-ui/icons";
 const BoardList = () => {
   
     return (
-        <Paper className="livvic-thin List">
+        <Paper className="List__Container">
+            <div className="livvic-thin List">
             <CssBaseline/>
             <ListTitle/>
             <BoardCard/>
-            <AddCardOrList/> 
+            <AddCardOrList/>
+
+            </div>
         </Paper>
+        
+       
     );
 };
 

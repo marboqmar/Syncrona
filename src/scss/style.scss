@@ -106,13 +106,17 @@ html {
 
 // Card Parts//
 
-
-.List {
+.List__Container {
   min-width: 300px;
   max-width: 400px;
+}
+
+.List {
+  
   padding: 10px;
   display: flex;
   flex-direction: column;
+  background-color: #FEF5F9;
   
   
 }
