@@ -2,16 +2,12 @@ import React from "react";
 
 import { makeStyles } from "@material-ui/core";
 
-const AddCradOrListText = () => {
-    return (
-        <div className="livvic-thin">
-        <input type="text" defaultValue="Type something" className="input"/>
+const AddCardOrListText = () => {
+  return (
+    <div className="livvic-thin">
+      <input type="text" placeholder="Type something" className="input" />
+    </div>
+  );
+};
 
-        </div>
-    )
-}
-
-
-
-
-export default AddCradOrListText
+export default AddCardOrListText;
