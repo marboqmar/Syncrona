@@ -17,6 +17,7 @@ const AddCardOrList = () => {
       <Paper >
       {Newbutton ? <AddCardOrListText /> : null}
       </Paper>
+      
       <Paper
         className="List__AddCardOrListButton"
         style={{ display: "inline-block" }}
