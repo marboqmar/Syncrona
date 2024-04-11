@@ -1,5 +1,5 @@
-html {
-}
+@import './colors.scss';
+
 
 .livvic-thin {
   font-family: "Livvic", sans-serif;
@@ -116,7 +116,7 @@ html {
   padding: 10px;
   display: flex;
   flex-direction: column;
-  background-color: #FEF5F9;
+  background-color: $Syncrona-white;
   
   
 }

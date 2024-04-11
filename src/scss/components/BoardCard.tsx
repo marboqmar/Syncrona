@@ -3,7 +3,7 @@ import { Paper } from "@material-ui/core";
 const BoardCard = () => {
     return (
        <Paper className="List__Card">
-        Card
+              <input type="text" placeholder="Type something" className="input" />
        </Paper>
         
     )
