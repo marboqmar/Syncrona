@@ -14,7 +14,7 @@ const AddCardOrList = () => {
         <AddCardOrListText />
       </Paper>
 
-      <Paper className="">
+      <Paper >
       {Newbutton ? <AddCardOrListText /> : null}
       </Paper>
       <Paper
