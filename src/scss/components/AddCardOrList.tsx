@@ -1,12 +1,16 @@
-import React, { useState } from "react";
+import React, { ReactElement, useState } from "react";
 import { Paper } from "@material-ui/core";
 import AddCardOrListText from "./AddCardOrListText";
 import { ErrorTwoTone } from "@material-ui/icons";
 
 const AddCardOrList = () => {
-  const [Newbutton,setNewButton] = useState (false);
-  const createNewButton = ( ) => {
-    setNewButton(true);
+  const [NewCard,setNewCard] = useState<ReactElement[]> ([]);
+  const createNewCard = ( ) => {
+  const id = NewCard.length + 1;
+  const newCard = <AddCardOrListText  key={id}/>;
+  setNewCard([...NewCard,newCard]);
+
+
   };
   return (
     <>
@@ -15,7 +19,10 @@ const AddCardOrList = () => {
       </Paper>
 
       <Paper >
-      {Newbutton ? <AddCardOrListText /> : null}
+      {NewCard.map((component) => (
+        <Paper key={component.key}>{component}</Paper>
+      ))}
+
       </Paper>
       
       <Paper
@@ -23,7 +30,7 @@ const AddCardOrList = () => {
         style={{ display: "inline-block" }}
       >
         
-        <button style={{ width: "100%" }} onClick={createNewButton}>Add new Card</button>
+        <button style={{ width: "100%" }} onClick={createNewCard}>Add new Card</button>
       </Paper>
     </>
   );
