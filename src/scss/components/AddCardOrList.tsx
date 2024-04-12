@@ -18,9 +18,9 @@ const AddCardOrList = () => {
         <AddCardOrListText />
       </Paper>
 
-      <Paper >
+      <Paper style={{background: "transparent"}}>
       {NewCard.map((component) => (
-        <Paper key={component.key}>{component}</Paper>
+        <Paper key={component.key} className="List__NewCard" >{component}</Paper>
       ))}
 
       </Paper>
