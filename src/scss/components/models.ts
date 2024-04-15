@@ -3,4 +3,6 @@ export interface Cards {
     id: number;
 }
 
-
+export interface newBoard {
+    
+}
