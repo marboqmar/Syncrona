@@ -1,26 +1,27 @@
 import React, { ReactElement, useState } from "react";
-import { Paper } from "@material-ui/core";
+import { Card, Paper } from "@material-ui/core";
 import AddCardOrListText from "./AddCardOrListText";
 import { ErrorTwoTone } from "@material-ui/icons";
+import { Cards } from "./models";
 
 const AddCardOrList = () => {
-  const [NewCard,setNewCard] = useState<ReactElement[]> ([]);
+  const [card,setCard] = useState<Cards[]> ([]);
   const createNewCard = ( ) => {
-  const id = NewCard.length + 1;
-  const newCard = <AddCardOrListText  key={id}/>;
-  setNewCard([...NewCard,newCard]);
+  const id = card.length + 1;
+  const newCard: Cards = {text:'', id};
+  setCard([...card,newCard]);
 
 
   };
   return (
     <>
-      <Paper className="List__AddCard">
-        <AddCardOrListText />
-      </Paper>
+     
 
       <Paper style={{background: "transparent"}}>
-      {NewCard.map((component) => (
-        <Paper key={component.key} className="List__NewCard" >{component}</Paper>
+      {card.map((Cards) => (
+        <Paper key={Cards.id} className="List__NewCard" >
+          <AddCardOrListText cardInfo={card}/>
+        </Paper>
       ))}
 
       </Paper>
