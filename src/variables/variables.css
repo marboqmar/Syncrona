@@ -35,19 +35,21 @@
   --Syncrona-Orange-Dark: #af4a2c;
   --Syncrona-Orange-Darker: #853523;
   /*YELLOW*/
-
+  --Syncrona-main-yellow: var(--Syncrona-yellow);
   --Syncrona-yellow: #edaa45;
   --Syncrona-yellow-light: #f9c06c;
   --Syncrona-yellow-lighter: #fbd59d;
   --Syncrona-yellow-dark: #d89027;
   --Syncrona-yellow-darker: #a56b27;
   /*WHITE*/
+  --Syncrona-main-white: var(--Syncrona-white);
   --Syncrona-white: #fef5f9;
   --Syncrona-white-light: #ffffff;
   --Syncrona-white-lighter: #ffffff;
   --Syncrona-white-dark: #ead4de;
   --Syncrona-white-darker: #cdbac3;
   /*GRAY*/
+  --Syncrona-main-gray: var(--Syncrona-gray1);
   --Syncrona-gray1: #9c9699;
   --Syncrona-gray1-light: #b5b0b2;
   --Syncrona-gray1-lighter: #cecacc;
