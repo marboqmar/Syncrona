@@ -18,10 +18,7 @@ const BoardList = () => {
           <BoardCard />
           <AddCardOrList />
         </div>
-      </Paper>
-
-      <Paper>
-        <div className="livvic-thin List List__Container">
+        <div className="livvic-thin List ">
           <AddNewBoard />
         </div>
       </Paper>
