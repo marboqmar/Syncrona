@@ -3,7 +3,7 @@ import { Boards } from "./models";
 import { newBoard } from "./models";
 
 export interface AddNewBoardProp {
-  boardInfo: newBoard;
+  boardInfo: Board;
 }
 
 const AddnewBoardButton = (props: AddNewBoardProp) => {

@@ -6,23 +6,24 @@ import AddCardOrList from "./AddCardOrList";
 import styles from "../style.scss";
 import colors from "../colors.scss";
 import { Title } from "@material-ui/icons";
-import AddNewBoard from './NewBoard'
+import AddNewBoard from "./NewBoard";
 
 const BoardList = () => {
   return (
     <>
       <Paper className="List__Container">
-        <div className="livvic-thin List">
+        <div className="livvic-thin List ">
           <CssBaseline />
           <ListTitle />
           <BoardCard />
           <AddCardOrList />
         </div>
-        
-        <div>
-          <AddNewBoard/>
-        </div>
 
+        <Paper>
+          <div className="livvic-thin List">
+            <AddNewBoard />
+          </div>
+        </Paper>
       </Paper>
     </>
   );

@@ -1,5 +1,4 @@
-@import './colors.scss';
-
+@import "./colors.scss";
 
 .livvic-thin {
   font-family: "Livvic", sans-serif;
@@ -103,22 +102,18 @@
   font-style: normal;
 }
 
-
 // Card Parts//
 
 .List__Container {
   min-width: 300px;
-  max-width: 400px;
+  max-width: 30%;
 }
 
 .List {
-  
   padding: 10px;
   display: flex;
   flex-direction: column;
   background-color: $Syncrona-white;
-  
-  
 }
 
 .List__Title {
@@ -142,7 +137,6 @@
   padding-top: 10px;
   margin-top: 10px;
   display: flex;
-
 }
 
 .List__NewCard {
@@ -152,18 +146,16 @@
   margin-top: 10px;
   display: flex;
   margin-bottom: 10px;
- 
 }
 
 .List__AddCard > div {
   width: 100%;
   height: 100%;
-
 }
 
 .List__AddCardOrListButton {
   margin-top: 10px;
-  width: calc(100%/2)
+  width: calc(100% / 2);
 }
 
 //UTILITIES
@@ -173,5 +165,4 @@
   box-sizing: border-box;
   outline: none;
   border: none;
-
 }
