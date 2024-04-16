@@ -6,6 +6,7 @@ import AddCardOrList from "./AddCardOrList";
 import styles from "../style.scss";
 import colors from "../colors.scss";
 import { Title } from "@material-ui/icons";
+import AddNewBoard from './NewBoard'
 
 const BoardList = () => {
   return (
@@ -17,6 +18,11 @@ const BoardList = () => {
           <BoardCard />
           <AddCardOrList />
         </div>
+        
+        <div>
+          <AddNewBoard/>
+        </div>
+
       </Paper>
     </>
   );

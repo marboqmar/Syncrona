@@ -1,21 +1,36 @@
-import React from "react";
-import { Boards } from "./models";
-import { newBoard } from "./models";
+import React, { ReactElement, useState } from "react";
+import { Card, Paper } from "@material-ui/core";
+import { ErrorTwoTone } from "@material-ui/icons";
+import { Board } from "./models";
+import AddnewBoardButton  from './NewBoardButton'
 
-export interface AddNewBoardProp {
-  boardInfo: newBoard;
+
+
+
+const AddNewBoard = () => {
+    const [board,setBoard] = useState<Board[]> ([]);
+    const createNewBoard = () => {
+        const id = board.length + 1;
+        const newBoard: Board = {Boards:[], id};
+        setBoard([...board,newBoard]);
+
+    }
+
+    return (
+        <>
+        <Paper>
+            {board.map((Board)=> (
+                <Paper key={Board.id}>
+                    <AddnewBoardButton boardInfo={board}/>
+
+                </Paper>
+            ))}
+        </Paper>
+
+
+        </>
+    )
+
 }
 
-const AddnewBoard = (props: AddNewBoardProp) => {
-  const { boardInfo } = props;
-  return (
-    <div>
-      <input
-        type="text"
-        placeholder="Add new Board"
-        className="input"
-        value={boardInfo}
-      />
-    </div>
-  );
-};
+export default AddNewBoard;

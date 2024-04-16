@@ -3,6 +3,14 @@ export interface Cards {
   id: number;
 }
 
-export interface newBoard {
-  Boards: string[];
+export interface Board {
+  Boards: newBoardArray[] ;
+  id:number;
+}
+
+export interface newBoardArray {
+  title: string;
+  card: string;
+  button: string;
+
 }
