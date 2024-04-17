@@ -3,6 +3,7 @@ import { Card, Paper } from "@material-ui/core";
 import { ErrorTwoTone } from "@material-ui/icons";
 import { Board } from "./models";
 import AddnewBoardButton from "./NewBoardButton";
+import BoardList from './BoardList'
 
 const AddNewBoard = () => {
   const [board, setBoard] = useState<Board[]>([]);
@@ -17,7 +18,7 @@ const AddNewBoard = () => {
       <Paper>
         {board.map((Board) => (
           <Paper key={Board.id} className="List__NewCard">
-            <AddnewBoardButton boardInfo={board} />
+            <BoardList boardInfo={board} />
           </Paper>
         ))}
       </Paper>
