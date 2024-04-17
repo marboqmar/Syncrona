@@ -15,7 +15,7 @@ const AddnewBoardButton = (props: AddNewBoardProp) => {
         type="text"
         placeholder="Add new Board"
         className="input"
-        value: ={BoardList}
+        value ={boardInfo.Boards}
       />
     </div>
   );
