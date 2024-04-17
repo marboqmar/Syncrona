@@ -4,8 +4,9 @@ export interface Cards {
 }
 
 export interface Board {
-  Boards: newBoardArray[] ;
+   
   id:number;
+  Boards: newBoardArray[];
 }
 
 export interface newBoardArray {

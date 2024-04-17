@@ -1,6 +1,7 @@
 import React from "react";
 import { Boards } from "./models";
-import { newBoard } from "./models";
+import { Board } from "./models";
+import BoardList from './BoardList'
 
 export interface AddNewBoardProp {
   boardInfo: Board;
@@ -14,7 +15,7 @@ const AddnewBoardButton = (props: AddNewBoardProp) => {
         type="text"
         placeholder="Add new Board"
         className="input"
-        value={boardInfo}
+        value: ={BoardList}
       />
     </div>
   );
