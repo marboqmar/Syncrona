@@ -15,7 +15,7 @@ const AddNewBoard = () => {
 
   return (
     <>
-      <Paper>
+      <Paper >
         {board.map((Board) => (
           <Paper key={Board.id} className="List__NewCard">
             <BoardList boardInfo={board} />
@@ -24,9 +24,9 @@ const AddNewBoard = () => {
       </Paper>
       <Paper
         className="List__AddCardOrListButton"
-        style={{ display: "inline-block" }}
+        style={{ display: "inline-block"}}
       >
-        <button style={{ width: "100%" }} onClick={createNewBoard}>
+        <button style={{ width: "100%"}} onClick={createNewBoard}>
           Add new Board
         </button>
       </Paper>
