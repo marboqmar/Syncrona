@@ -7,10 +7,11 @@ import styles from "../style.scss";
 import colors from "../colors.scss";
 import { Title } from "@material-ui/icons";
 import AddNewBoard from "./NewBoard";
+import '../colors.scss'
 
 const BoardList = () => {
   return (
-    <>
+    <div className="display_flex">
       <Paper className="List__Container">
         <div className="livvic-thin List ">
           <CssBaseline />
@@ -20,14 +21,15 @@ const BoardList = () => {
         </div>
        
       </Paper>
-      
-      <Paper>
-      <div className="livvic-thin List List__Container ">
+
+      <Paper className="List__Container" >
+      <div className="livvic-thin List  ">
           <AddNewBoard />
         </div>
       </Paper>
      
-    </>
+    </div>
+   
   );
 };
 
