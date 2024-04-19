@@ -106,7 +106,7 @@
 
 .List__Container {
   min-width: 300px;
-  max-width: 30%;
+  max-width: 33%;
 }
 
 .List {
@@ -121,6 +121,15 @@
   align-items: center;
   justify-content: space-between;
   padding-left: 10px;
+}
+
+.List__Tittle--Text {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 90%;
 }
 
 .List__Card {
@@ -162,7 +171,7 @@
 
 //UTILITIES
 
-.syncrona-white{
+.syncrona-white {
   background: $Syncrona-white;
 }
 
@@ -186,4 +195,6 @@
   align-items: center;
 }
 
-
+.margin__bottom__auto {
+  margin-bottom: auto;
+}

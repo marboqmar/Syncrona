@@ -19,15 +19,7 @@ const BoardList = () => {
           <BoardCard />
           <AddCardOrList />
         </div>
-       
       </Paper>
-
-      <Paper className="List__Container" >
-      <div className="livvic-thin List  " style={{height:"100%"}}>
-          <AddNewBoard />
-        </div>
-      </Paper>
-     
     </div>
   );
 };

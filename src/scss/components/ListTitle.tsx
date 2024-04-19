@@ -1,19 +1,15 @@
 import React from "react";
-import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
+import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import { makeStyles } from "@material-ui/core";
 
-
 const ListTitle = () => {
-    
-    return (
-        <div className="List__Title">
-            <h2 >Title</h2>
-            
-            <MoreHorizIcon/>
-        </div>   
-    )
-}
+  return (
+    <div className="List__Title">
+      <input type="text" placeholder="Tittle" className="List__Tittle--Text" />
 
+      <MoreHorizIcon />
+    </div>
+  );
+};
 
-
-export default ListTitle
+export default ListTitle;
