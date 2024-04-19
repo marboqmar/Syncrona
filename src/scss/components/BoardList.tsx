@@ -7,7 +7,7 @@ import styles from "../style.scss";
 import colors from "../colors.scss";
 import { Title } from "@material-ui/icons";
 import AddNewBoard from "./NewBoard";
-import '../colors.scss'
+import "../colors.scss";
 
 const BoardList = () => {
   return (
@@ -22,6 +22,11 @@ const BoardList = () => {
        
       </Paper>
 
+      <Paper className="List__Container" >
+      <div className="livvic-thin List  " style={{height:"100%"}}>
+          <AddNewBoard />
+        </div>
+      </Paper>
      
     </div>
   );
