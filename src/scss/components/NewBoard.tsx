@@ -15,15 +15,15 @@ const AddNewBoard = () => {
 
   return (
     <>
-      <Paper >
+      <Paper className="syncrona-white" >
         {board.map((Board) => (
-          <Paper key={Board.id} className="List__NewCard">
+          <Paper key={Board.id} className="List__Container">
             <BoardList boardInfo={board} />
           </Paper>
         ))}
       </Paper>
       <Paper
-        className="List__AddCardOrListButton"
+        className="List__AddCardOrListButton List__Container"
         style={{ display: "inline-block"}}
       >
         <button style={{ width: "100%"}} onClick={createNewBoard}>
