@@ -1,6 +1,5 @@
 import React, { ReactElement, useState } from "react";
-import { Card, Paper } from "@material-ui/core";
-import { ErrorTwoTone } from "@material-ui/icons";
+
 import { Board } from "./models";
 import AddnewBoardButton from "./NewBoardButton";
 import BoardList from "./BoardList";
@@ -15,21 +14,21 @@ const AddNewBoard = () => {
 
   return (
     <>
-      <Paper className="syncrona-white ">
+      <div className="syncrona-white ">
         {board.map((Board) => (
-          <Paper key={Board.id} className="List__Container">
+          <div key={Board.id} className="List__Container">
             <BoardList boardInfo={board} />
-          </Paper>
+          </div>
         ))}
-      </Paper>
-      <Paper
+      </div>
+      <div
         className="  List__Container margin__bottom__auto"
         style={{ display: "inline-block" }}
       >
         <button style={{ width: "100%" }} onClick={createNewBoard}>
           Add new Board
         </button>
-      </Paper>
+      </div>
     </>
   );
 };
