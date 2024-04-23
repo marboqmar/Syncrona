@@ -1,6 +1,6 @@
 import React, { ReactElement, useState } from "react";
 import AddCardOrListText from "./AddCardOrListText";
-
+import { useDrag } from "react-dnd";
 import { Cards } from "./models";
 
 const AddCardOrList = () => {
@@ -15,8 +15,12 @@ const AddCardOrList = () => {
       <div style={{ background: "transparent" }}>
         {card.map((Cards) => (
           <div className="List__NewCard">
-            <div key={Cards.id} className=" shadow__effect " style={{ width: "100%" }}>
-              <AddCardOrListText cardInfo={card}  />
+            <div
+              key={Cards.id}
+              className=" shadow__effect "
+              style={{ width: "100%" }}
+            >
+              <AddCardOrListText cardInfo={card} />
             </div>
           </div>
         ))}

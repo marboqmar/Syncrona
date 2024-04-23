@@ -5,7 +5,7 @@ import AddCardOrList from "./AddCardOrList";
 import styles from "../style.scss";
 import colors from "../colors.scss";
 import typography from "../typography.scss";
-
+import { useDrag } from "react-dnd";
 import AddNewBoard from "./NewBoard";
 import "../colors.scss";
 
