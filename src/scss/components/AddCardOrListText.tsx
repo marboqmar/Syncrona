@@ -13,8 +13,9 @@ const AddCardOrListText = (props: AddCardOrListTextProp) => {
       <input
         type="text"
         placeholder="Type something"
-        className="input"
+        className="input padding__0"
         value={cardInfo.text}
+        style={{ width: "100%" }}
       />
     </div>
   );

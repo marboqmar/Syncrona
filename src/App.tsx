@@ -6,10 +6,14 @@ import AddNewBoard from "../src/scss/components/NewBoard";
 function App() {
   return (
     <div className="display_flex">
-      <BoardList />
-
-      <AddNewBoard />
+      <div >
+        <BoardList />
+      </div>
+      <div className="display_flex">
+        <AddNewBoard />
+      </div>
     </div>
+   
   );
 }
 

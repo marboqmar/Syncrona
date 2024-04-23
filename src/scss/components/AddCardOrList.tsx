@@ -14,9 +14,9 @@ const AddCardOrList = () => {
     <>
       <div style={{ background: "transparent" }}>
         {card.map((Cards) => (
-          <div className="display__flex__between align__items__center">
-            <div key={Cards.id} className="List__NewCard">
-              <AddCardOrListText cardInfo={card} />
+          <div className="List__NewCard">
+            <div key={Cards.id} className=" shadow__effect " style={{ width: "100%" }}>
+              <AddCardOrListText cardInfo={card}  />
             </div>
           </div>
         ))}
