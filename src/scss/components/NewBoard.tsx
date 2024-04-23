@@ -14,13 +14,11 @@ const AddNewBoard = () => {
 
   return (
     <>
-      <div className="syncrona-white ">
-        {board.map((Board) => (
-          <div key={Board.id} className="List__Container">
-            <BoardList boardInfo={board} />
-          </div>
-        ))}
-      </div>
+      {board.map((Board) => (
+        <div key={Board.id} className="List__Container">
+          <BoardList boardInfo={board} />
+        </div>
+      ))}
       <div
         className="  List__Container margin__bottom__auto"
         style={{ display: "inline-block" }}
