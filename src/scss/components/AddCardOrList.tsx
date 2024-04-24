@@ -1,7 +1,7 @@
 import React, { ReactElement, useState } from "react";
 import AddCardOrListText from "./AddCardOrListText";
 import { useDrag } from "react-dnd";
-import { Cards } from "./models";
+import { Cards, ItemTypes } from "./models";
 
 const AddCardOrList = () => {
   const [card, setCard] = useState<Cards[]>([]);
@@ -10,6 +10,13 @@ const AddCardOrList = () => {
     const newCard: Cards = { text: "", id };
     setCard([...card, newCard]);
   };
+
+  const [{isDragging},drag] = useDrag(() => ({
+    type: ItemTypes.CARD,
+    collect: (monitor: any) => ({
+      isDragging: !!monitor.isDragging()
+    })
+  }));
   return (
     <>
       <div style={{ background: "transparent" }}>

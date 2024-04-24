@@ -23,7 +23,7 @@ const AddNewBoard = () => {
         className="  List__Container margin__bottom__auto"
         style={{ display: "inline-block" }}
       >
-        <button style={{ width: "100%" }} onClick={createNewBoard}>
+        <button style={{ width: "50%" }} onClick={createNewBoard} className="padding__0 ">
           Add new Board
         </button>
       </div>

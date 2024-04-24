@@ -15,3 +15,7 @@ export interface newBoardArray {
   button: string;
 
 }
+
+export const ItemTypes = {
+  CARD: 'card',
+}
