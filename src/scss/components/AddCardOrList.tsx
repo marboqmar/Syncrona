@@ -3,6 +3,16 @@ import AddCardOrListText from "./AddCardOrListText";
 import { useDrag } from "react-dnd";
 import { Cards, ItemTypes } from "./models";
 
+
+const [{isDragging},drag] = useDrag(() => ({
+  type: ItemTypes.CARD,
+  collect: (monitor: any) => ({
+    isDragging: !!monitor.isDragging()
+  })
+}));
+
+
+
 const AddCardOrList = () => {
   const [card, setCard] = useState<Cards[]>([]);
   const createNewCard = () => {
@@ -11,12 +21,7 @@ const AddCardOrList = () => {
     setCard([...card, newCard]);
   };
 
-  const [{isDragging},drag] = useDrag(() => ({
-    type: ItemTypes.CARD,
-    collect: (monitor: any) => ({
-      isDragging: !!monitor.isDragging()
-    })
-  }));
+ 
   return (
     <>
       <div style={{ background: "transparent" }}>
@@ -27,10 +32,13 @@ const AddCardOrList = () => {
               className=" shadow__effect "
               style={{ width: "100%" }}
             >
-              <AddCardOrListText cardInfo={card} ref={drag}   style = {{
-                opacity: isDragging? 0.7 : 1,
-                cursor: 'move',
-              }} />
+              <AddCardOrListText cardInfo={card} ref={drag}
+                style={{
+                        opacity: isDragging ? 0.5 : 1,
+                        fontSize: 25,
+                        fontWeight: 'bold',
+                        cursor: 'move',
+                      }}/>
             </div>
           </div>
         ))}
@@ -47,5 +55,8 @@ const AddCardOrList = () => {
     </>
   );
 };
+
+
+
 
 export default AddCardOrList;
