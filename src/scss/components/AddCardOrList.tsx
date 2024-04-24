@@ -4,12 +4,6 @@ import { useDrag } from "react-dnd";
 import { Cards, ItemTypes } from "./models";
 
 
-const [{isDragging},drag] = useDrag(() => ({
-  type: ItemTypes.CARD,
-  collect: (monitor: any) => ({
-    isDragging: !!monitor.isDragging()
-  })
-}));
 
 
 
@@ -21,7 +15,13 @@ const AddCardOrList = () => {
     setCard([...card, newCard]);
   };
 
- 
+  const [{isDragging},drag] = useDrag(() => ({
+    type: ItemTypes.CARD,
+    collect: (monitor: any) => ({
+      isDragging: !!monitor.isDragging()
+    })
+  }));
+  
   return (
     <>
       <div style={{ background: "transparent" }}>
