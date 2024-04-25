@@ -11,12 +11,12 @@ const AddCardOrList = () => {
     setCard([...card, newCard]);
   };
 
-  const [{ isDragging }, drag] = useDrag(() => ({
+  /*const [{ isDragging }, drag] = useDrag(() => ({
     type: ItemTypes.CARD,
     collect: (monitor: any) => ({
       isDragging: !!monitor.isDragging(),
     }),
-  }));
+  }));*/
 
   return (
     <>
@@ -30,13 +30,9 @@ const AddCardOrList = () => {
             >
               <AddCardOrListText
                 cardInfo={card}
-                ref={drag}
-                style={{
-                  opacity: isDragging ? 0.5 : 1,
-                  fontSize: 25,
-                  fontWeight: "bold",
-                  cursor: "move",
-                }}
+                /*ref={drag}*/
+                /*style={{ opacity: isDragging ? 0.5 : 1,fontSize: 25,fontWeight: "bold",cursor: "move",
+                }}*/
               />
             </div>
           </div>
