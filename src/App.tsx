@@ -12,12 +12,14 @@ function App() {
       <div>
         <Topbar />
       </div>
-      <div className="display_flex">
-        <div>
-          <BoardList />
-        </div>
-        <div className="display_flex">
-          <AddNewBoard />
+      <div className="align__center">
+        <div className="display_flex ">
+          <div className="margin__5p align__center">
+            <BoardList />
+          </div>
+          <div className="display_flex align__center  ">
+            <AddNewBoard />
+          </div>
         </div>
       </div>
     </div>
