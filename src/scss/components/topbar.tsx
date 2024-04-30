@@ -21,13 +21,12 @@ const Topbar = () => {
       />
 
       <div className="align__items__center">
-        <button
-          onClick={() => i18n.changeLanguage("en")}
-          className="move__20px__Y"
-        >
+        <button onClick={() => i18n.changeLanguage("en")} className="move__Y">
           English
         </button>
-        <button onClick={() => i18n.changeLanguage("es")}>Spanish</button>
+        <button onClick={() => i18n.changeLanguage("es")} className="move__Y">
+          Spanish
+        </button>
         <label className="switch">
           <input type="checkbox" onClick={darkmode} />
           <span className="slider round"></span>
