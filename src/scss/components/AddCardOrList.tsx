@@ -11,7 +11,7 @@ const AddCardOrList = () => {
     setCard([...card, newCard]);
   };
 
-  const {t, i18n} = useTranslation();
+  const {t, i18n} = useTranslation(['common', 'list']);
 
   /*const [{ isDragging }, drag] = useDrag(() => ({
     type: ItemTypes.CARD,
@@ -46,10 +46,10 @@ const AddCardOrList = () => {
         style={{ display: "inline-block" }}
       >
         <button style={{ width: "50%" }} onClick={createNewCard}>
-          {t('list:all')}
+          {t('list:card')}
         </button>
         <button style={{ width: "50%" }} onClick={ () => i18n.changeLanguage('es')} >
-          Change to Spanish
+          Spanish
         </button>
       </div>
     </>
