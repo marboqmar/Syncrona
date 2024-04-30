@@ -16,7 +16,7 @@ const Topbar = () => {
     <div className="topbar">
       <input
         type="text"
-        placeholder="Tittle Page"
+        placeholder={t("common:Tittle")}
         className="Board__Page__Tittle livvic-regular"
       />
 
