@@ -13,7 +13,7 @@ const Topbar = () => {
 
   return (
     <div className="topbar">
-      <input type="text" placeholder="Tittle Page" />
+      <input type="text" placeholder="Tittle Page" className="Board__Page__Tittle livvic-regular" />
       <label className="switch">
       <input type="checkbox" onClick={darkmode}/>
       <span className="slider round"></span>
