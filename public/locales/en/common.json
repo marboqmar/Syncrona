@@ -1,3 +1,6 @@
 {
-    "all": "Todos"
+  "all": "All",
+  "placeholder": "Type something",
+  "new board": "new board",
+  "Tittle": "Tittle"
 }

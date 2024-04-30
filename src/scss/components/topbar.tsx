@@ -21,12 +21,8 @@ const Topbar = () => {
       />
 
       <div className="align__items__center">
-        <button
-          style={{ width: "50%" }}
-          onClick={() => i18n.changeLanguage("es")}
-        >
-          Spanish
-        </button>
+        <button onClick={() => i18n.changeLanguage("en")}>English</button>
+        <button onClick={() => i18n.changeLanguage("es")}>Spanish</button>
         <label className="switch">
           <input type="checkbox" onClick={darkmode} />
           <span className="slider round"></span>
