@@ -2,7 +2,7 @@ import React, { ReactElement, useState } from "react";
 import AddCardOrListText from "./AddCardOrListText";
 import { useDrag, DragDropContextProvider, DragDrop } from "react-dnd";
 import { Cards, ItemTypes } from "./models";
-
+import {useTranslation} from 'react-i18next';
 const AddCardOrList = () => {
   const [card, setCard] = useState<Cards[]>([]);
   const createNewCard = () => {
@@ -10,6 +10,8 @@ const AddCardOrList = () => {
     const newCard: Cards = { text: "", id };
     setCard([...card, newCard]);
   };
+
+  const {t, i18n} = useTranslation();
 
   /*const [{ isDragging }, drag] = useDrag(() => ({
     type: ItemTypes.CARD,
@@ -43,8 +45,11 @@ const AddCardOrList = () => {
         className="List__AddCardOrListButton"
         style={{ display: "inline-block" }}
       >
-        <button style={{ width: "100%" }} onClick={createNewCard}>
-          Add new Card
+        <button style={{ width: "50%" }} onClick={createNewCard}>
+          {t('list:all')}
+        </button>
+        <button style={{ width: "50%" }} onClick={ () => i18n.changeLanguage('es')} >
+          Change to Spanish
         </button>
       </div>
     </>
