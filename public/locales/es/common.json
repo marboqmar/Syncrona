@@ -1,3 +1,5 @@
 {
-    "all": "Todos"
+    "all": "Todos",
+    "placeholder": "Escribe algo",
+    "new board": "nueva tabla"
 }

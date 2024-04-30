@@ -3,6 +3,8 @@ import React, { ReactElement, useState } from "react";
 import { Board } from "./models";
 import AddnewBoardButton from "./NewBoardButton";
 import BoardList from "./BoardList";
+import {useTranslation} from 'react-i18next';
+
 
 const AddNewBoard = () => {
   const [board, setBoard] = useState<Board[]>([]);
@@ -11,6 +13,7 @@ const AddNewBoard = () => {
     const newBoard: Board = { Boards: [], id };
     setBoard([...board, newBoard]);
   };
+  const {t, i18n} = useTranslation(['common', 'list']);
 
   return (
     <>
@@ -24,7 +27,7 @@ const AddNewBoard = () => {
         style={{ display: "inline-block" }}
       >
         <button style={{ width: "50%" }} onClick={createNewBoard} className="padding__0 ">
-          Add new Board
+        {t('common:new board')}
         </button>
       </div>
     </>
