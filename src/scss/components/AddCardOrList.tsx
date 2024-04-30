@@ -45,7 +45,7 @@ const AddCardOrList = () => {
         className="List__AddCardOrListButton"
         style={{ display: "inline-block" }}
       >
-        <button style={{ width: "50%" }} onClick={createNewCard}>
+        <button style={{ width: "100%" }} onClick={createNewCard}>
           {t("list:card")}
         </button>
       </div>
