@@ -10,12 +10,12 @@
 
 .topbar {
   background-color: --main-color;
-  color: black;
+  color: --color-text;
   display: flex;
   justify-content: space-between;
   height: 40px;
   border-style: solid;
-  border-color: $Syncrona-black-darker;
+  border-color: var(--color-text);
   padding: 10px;
 }
 
@@ -178,7 +178,7 @@ input:checked + .slider:before {
 }
 
 .shadow__effect {
-  box-shadow: 0.5px 0.5px 0.5px 0.5px black;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px var(--color-text);
 }
 
 .width__border__box {
