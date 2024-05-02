@@ -13,11 +13,11 @@ function App() {
         <Topbar />
       </div>
       <div className="align__center">
-        <div className="display_flex ">
+        <div className="display__flex ">
           <div className="margin__5p align__center">
             <BoardList />
           </div>
-          <div className="display_flex align__center  ">
+          <div className="display__flex align__center  ">
             <AddNewBoard />
           </div>
         </div>

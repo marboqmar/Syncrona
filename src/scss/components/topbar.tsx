@@ -8,6 +8,11 @@ const Topbar = () => {
   const [dark, setDark] = useState(false);
   const darkmode = () => {
     setDark(!dark);
+    if (dark === false)  {
+        document.documentElement.style.setProperty("--color-text","#FEF5F9");
+        document.documentElement.style.setProperty("--main-color","#211C1E");
+    };
+    
   };
 
   const { t, i18n } = useTranslation(["common", "list"]);
@@ -20,16 +25,16 @@ const Topbar = () => {
         className="Board__Page__Tittle livvic-regular"
       />
 
-      <div className="align__items__center">
-        <button onClick={() => i18n.changeLanguage("en")} className="move__Y">
+      <div className="align__items__center ">
+        <button onClick={() => i18n.changeLanguage("en")} className="move__Y Topbar__Options">
           English
         </button>
-        <button onClick={() => i18n.changeLanguage("es")} className="move__Y">
+        <button onClick={() => i18n.changeLanguage("es")} className="move__Y Topbar__Options">
           Spanish
         </button>
         <label className="switch">
           <input type="checkbox" onClick={darkmode} />
-          <span className="slider round"></span>
+          <span className="slider round Topbar__Options"></span>
         </label>
       </div>
     </div>

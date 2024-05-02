@@ -11,7 +11,7 @@ import "../colors.scss";
 
 const BoardList = () => {
   return (
-    <div className="display_flex shadow__effect align__center ">
+    <div className="display__flex shadow__effect align__center ">
       <div className="livvic-thin List List__Container margin__5p">
         <ListTitle />
         <BoardCard />
