@@ -11,7 +11,10 @@ const Topbar = () => {
     if (dark === false)  {
         document.documentElement.style.setProperty("--color-text","#FEF5F9");
         document.documentElement.style.setProperty("--main-color","#211C1E");
-    };
+    } else {
+      document.documentElement.style.setProperty("--color-text","#211C1E");
+        document.documentElement.style.setProperty("--main-color","#FEF5F9");
+    }
     
   };
 
