@@ -31,7 +31,7 @@ const AddCardOrList = () => {
               style={{ width: "100%" }}
             >
               <div ref={drag}
-                style={{ opacity: isDragging ? 0.5 : 1,fontSize: 25,fontWeight: "bold",cursor: "move",
+                style={{ opacity: isDragging ? 0.5 : 1,fontSize: 25,fontWeight: "bold",cursor: "move", background: "transparent", border: "none"
                 }}>
               <AddCardOrListText
                 cardInfo={card}
