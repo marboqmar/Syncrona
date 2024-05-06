@@ -8,7 +8,8 @@ import Topbar from "./scss/components/topbar";
 
 function App() {
   return (
-    <div>
+    <DndProvider backend={HTML5Backend}>
+         <div>
       <div>
         <Topbar />
       </div>
@@ -23,6 +24,8 @@ function App() {
         </div>
       </div>
     </div>
+    </DndProvider>
+   
   );
 }
 

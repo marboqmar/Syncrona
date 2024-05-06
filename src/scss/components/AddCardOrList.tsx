@@ -1,6 +1,6 @@
 import React, { ReactElement, useState } from "react";
 import AddCardOrListText from "./AddCardOrListText";
-import { useDrag, DragDropContextProvider, DragDrop } from "react-dnd";
+import { useDrag} from "react-dnd";
 import { Cards, ItemTypes } from "./models";
 import { useTranslation } from "react-i18next";
 const AddCardOrList = () => {
@@ -13,12 +13,12 @@ const AddCardOrList = () => {
 
   const { t, i18n } = useTranslation(["common", "list"]);
 
-  /*const [{ isDragging }, drag] = useDrag(() => ({
+  const [{ isDragging }, drag] = useDrag(() => ({
     type: ItemTypes.CARD,
     collect: (monitor: any) => ({
       isDragging: !!monitor.isDragging(),
     }),
-  }));*/
+  }));
 
   return (
     <>
@@ -32,9 +32,9 @@ const AddCardOrList = () => {
             >
               <AddCardOrListText
                 cardInfo={card}
-                /*ref={drag}*/
-                /*style={{ opacity: isDragging ? 0.5 : 1,fontSize: 25,fontWeight: "bold",cursor: "move",
-                }}*/
+                ref={drag}
+                style={{ opacity: isDragging ? 0.5 : 1,fontSize: 25,fontWeight: "bold",cursor: "move",
+                }}
               />
             </div>
           </div>
