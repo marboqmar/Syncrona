@@ -30,12 +30,15 @@ const AddCardOrList = () => {
               className=" shadow__effect "
               style={{ width: "100%" }}
             >
+              <div ref={drag}
+                style={{ opacity: isDragging ? 0.5 : 1,fontSize: 25,fontWeight: "bold",cursor: "move",
+                }}>
               <AddCardOrListText
                 cardInfo={card}
-                ref={drag}
-                style={{ opacity: isDragging ? 0.5 : 1,fontSize: 25,fontWeight: "bold",cursor: "move",
-                }}
+                
               />
+              </div>
+             
             </div>
           </div>
         ))}
