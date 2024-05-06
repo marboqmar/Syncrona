@@ -1,6 +1,6 @@
 import React, { ReactElement, useState } from "react";
 import AddCardOrListText from "./AddCardOrListText";
-import { useDrag} from "react-dnd";
+import { useDrag } from "react-dnd";
 import { Cards, ItemTypes } from "./models";
 import { useTranslation } from "react-i18next";
 const AddCardOrList = () => {
@@ -30,15 +30,19 @@ const AddCardOrList = () => {
               className=" shadow__effect "
               style={{ width: "100%" }}
             >
-              <div ref={drag}
-                style={{ opacity: isDragging ? 0.5 : 1,fontSize: 25,fontWeight: "bold",cursor: "move", background: "transparent", border: "none"
-                }}>
-              <AddCardOrListText
-                cardInfo={card}
-                
-              />
+              <div
+                ref={drag}
+                style={{
+                  opacity: isDragging ? 0.5 : 1,
+                  fontSize: 25,
+                  fontWeight: "bold",
+                  cursor: "move",
+                  background: "white",
+                  border: "none",
+                }}
+              >
+                <AddCardOrListText cardInfo={card} />
               </div>
-             
             </div>
           </div>
         ))}
