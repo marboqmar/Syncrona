@@ -1,6 +1,6 @@
 import React, { ReactElement, useState } from "react";
 import AddCardOrListText from "./AddCardOrListText";
-import { useDrag } from "react-dnd";
+import { useDrag, useDrop} from "react-dnd";
 import { Cards, ItemTypes } from "./models";
 import { useTranslation } from "react-i18next";
 const AddCardOrList = () => {
@@ -20,6 +20,13 @@ const AddCardOrList = () => {
     }),
   }));
 
+  const [drop] = useDrop(() => ({
+    accept: ItemTypes.CARD,
+    drop:()=> isDragging
+
+    
+  }))
+
   return (
     <>
       <div style={{ background: "transparent" }}>
@@ -30,6 +37,8 @@ const AddCardOrList = () => {
               className=" shadow__effect "
               style={{ width: "100%" }}
             >
+              < div ref={drop}>
+              </div>
               <div
                 ref={drag}
                 style={{
