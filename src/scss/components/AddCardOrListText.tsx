@@ -17,7 +17,7 @@ const AddCardOrListText = (props: AddCardOrListTextProp) => {
     }),
     item: cardInfo,
   }));
-
+  console.log(bchfdihbvsibvsib);
   const { t } = useTranslation(["common", "list"]);
 
   return (
