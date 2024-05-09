@@ -20,9 +20,9 @@ const AddCardOrList = () => {
     }),
   }));
 
-  function Draggable() {
-    const ref = useRef(null);
+  const ref = useRef(null);
 
+  function Draggable() {
     const [drop] = useDrop(() => ({
       accept: ItemTypes.CARD,
       hover(ItemTypes: any, monitor) {

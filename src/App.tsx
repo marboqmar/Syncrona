@@ -9,12 +9,11 @@ import Topbar from "./scss/components/topbar";
 function App() {
   return (
     <DndProvider backend={HTML5Backend}>
-         <div>
       <div>
-        <Topbar />
-      </div>
-      <div className="align__center">
-        <div className="display__flex ">
+        <div>
+          <Topbar />
+        </div>
+        <div className="align__center display__flex ">
           <div className="margin__5p align__center">
             <BoardList />
           </div>
@@ -23,9 +22,7 @@ function App() {
           </div>
         </div>
       </div>
-    </div>
     </DndProvider>
-   
   );
 }
 
