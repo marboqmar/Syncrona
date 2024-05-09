@@ -1,6 +1,7 @@
 import React from "react";
 import { Cards } from "./models";
-import {useTranslation} from 'react-i18next';
+import { useTranslation } from "react-i18next";
+import { useDrag, useDrop } from "react-dnd";
 
 export interface AddCardOrListTextProp {
   cardInfo: Cards;
@@ -8,15 +9,29 @@ export interface AddCardOrListTextProp {
 
 const AddCardOrListText = (props: AddCardOrListTextProp) => {
   const { cardInfo } = props;
-  const {t, i18n} = useTranslation(['common', 'list']);
+
+  const [{ isDragging }, drag] = useDrag(() => ({
+    type: "card",
+    collect: (monitor) => ({
+      isDragging: !!monitor.isDragging(),
+    }),
+    item: cardInfo,
+  }));
+
+  const { t } = useTranslation(["common", "list"]);
+
   return (
-    <div className="livvic-thin">
+    <div
+      ref={drag}
+      className="livvic-thin"
+      style={{ padding: "20px", background: "yellow" }}
+    >
       <input
         type="text"
-        placeholder={t('common:placeholder')}
+        placeholder={t("common:placeholder")}
         className="input padding__0"
         value={cardInfo.text}
-        style={{ width: "100%" }}
+        style={{ width: "100%", background: isDragging ? "blue" : undefined }}
       />
     </div>
   );

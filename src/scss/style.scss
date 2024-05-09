@@ -1,8 +1,8 @@
 @import "./colors.scss";
 
 :root {
-  --color-text: #211C1E;
-  --main-color: #FEF5F9 ;
+  --color-text: #211c1e;
+  --main-color: #fef5f9;
   background-color: var(--main-color);
 }
 
@@ -91,7 +91,7 @@ input:checked + .slider:before {
 .List__Container {
   min-width: 300px;
   max-width: 33%;
-  margin: 5px;
+  margin: 15px;
 }
 
 .List {
@@ -203,4 +203,3 @@ input:checked + .slider:before {
 .move__Y {
   transform: translateY(8px);
 }
-
