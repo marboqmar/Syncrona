@@ -1,12 +1,16 @@
-import './sass/style.scss'
+import "./scss/style.scss";
+import { Link } from "react-router-dom";
+import BoardList from "../src/scss/components/BoardList";
+import AddNewBoard from "../src/scss/components/NewBoard";
 
 function App() {
-    return (
-        <>
-            <h1>Home</h1>
-            <a href='/src/login-register/login.html'>Login</a>
-        </>
-  )
+  return (
+    <div className="display_flex">
+      <BoardList />
+
+      <AddNewBoard />
+    </div>
+  );
 }
 
-export default App
+export default App;
