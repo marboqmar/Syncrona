@@ -1,5 +1,4 @@
 function Boards() {
-  h;
   return (
     <>
       <h1>
