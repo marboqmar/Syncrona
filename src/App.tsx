@@ -11,7 +11,7 @@ function App() {
   return (
     <DndProvider backend={HTML5Backend}>
       <div>
-        <UserContext.Provider>
+        <UserContextProvider>
         <div>
           <Topbar />
         </div>
@@ -23,7 +23,7 @@ function App() {
             <AddNewBoard />
           </div>
         </div>
-        </UserContext.Provider>
+        </UserContextProvider>
        
       </div>
     </DndProvider>

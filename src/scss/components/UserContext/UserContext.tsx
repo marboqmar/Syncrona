@@ -18,7 +18,12 @@ interface UserContextProviderProps {
 }
 
 export const UserContextProvider = ({children}:UserContextProviderProps ): JSX.Element => {
-    const contextValue = {};
-    return <UserContext.Provider value={{contextValue}}>{children}</UserContext.Provider>
+    const contextValue = {
+        ListTitle,
+        BoardCard,
+        AddCardOrList,
+        AddNewBoard
+    };
+    return <UserContextProvider value={{contextValue}}>{children}</UserContextProvider>
 };
  
