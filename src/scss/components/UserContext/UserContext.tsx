@@ -1,14 +1,16 @@
-import { ReactNode, createContext } from "react";
+import { ReactNode, createContext, useState } from "react";
 
 
 interface UserContextModel {
-    ListTitle?: string;
+    ListTitle: string;
     BoardCard?: string;
     AddCardOrList?: string;
     AddNewBoard?: string;
 }
 
-const context: UserContextModel = {};
+const context: UserContextModel = {
+    ListTitle: "",
+};
 
 export const UserContext = createContext<UserContextModel>(context);
 
@@ -18,11 +20,13 @@ interface UserContextProviderProps {
 }
 
 export const UserContextProvider = ({children}:UserContextProviderProps ): JSX.Element => {
+    const [title, setTitle] = useState<String>()
+
     const contextValue = {
-        ListTitle,
-        BoardCard,
-        AddCardOrList,
-        AddNewBoard
+        ListTitle: setTitle,
+        BoardCard: "",
+        AddCardOrList: "",
+        AddNewBoard:""
     };
     return <UserContextProvider value={{contextValue}}>{children}</UserContextProvider>
 };
