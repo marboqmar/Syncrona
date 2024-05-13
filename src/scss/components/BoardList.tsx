@@ -1,9 +1,11 @@
 import ListTitle from './ListTitle';
-import BoardCard from './BoardCards';
+import BoardCards from './BoardCards';
 import AddCardOrList from './AddCardOrList';
 import { useDrop } from 'react-dnd';
 
 import '../colors.scss';
+import { UserContextProvider } from './UserContext/UserContext';
+import { Children } from 'react';
 
 
 interface BoardListProps {
@@ -32,7 +34,7 @@ const BoardInfo = ({board}) => {
       style={{ background: isOver ? 'red' : undefined }}
     >
       <div className="livvic-thin List List__Container margin__5p">
-        <ListTitle />
+        <ListTitle title={UserContextProvider: ({ListTitle})}/>
         <BoardCards cards={board.cards} onAddCard={hola}/>
         <AddCardOrList />
       </div>
