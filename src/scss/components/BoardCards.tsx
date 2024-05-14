@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-const BoardCard = () => {
+const BoardCards = () => {
   const { t, i18n } = useTranslation(["common", "list"]);
 
   return (
@@ -18,4 +18,4 @@ const BoardCard = () => {
   );
 };
 
-export default BoardCard;
+export default BoardCards;

@@ -5,11 +5,13 @@ import AddNewBoard from "../src/scss/components/NewBoard";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import Topbar from "./scss/components/topbar";
+import { UserContextProvider } from "./scss/components/UserContext/UserContext";
 
 function App() {
   return (
     <DndProvider backend={HTML5Backend}>
       <div>
+        <UserContextProvider>
         <div>
           <Topbar />
         </div>
@@ -21,6 +23,8 @@ function App() {
             <AddNewBoard />
           </div>
         </div>
+        </UserContextProvider>
+       
       </div>
     </DndProvider>
   );

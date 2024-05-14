@@ -1,4 +1,4 @@
-export interface Cards {
+export interface Card {
   text: string;
   id: number;
 }
@@ -6,7 +6,7 @@ export interface Cards {
 export interface Board {
    
   id:number;
-  Boards: newBoardArray[];
+  cards: Card[];
 }
 
 export interface newBoardArray {
