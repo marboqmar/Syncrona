@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import { useState } from "react";
 import AddCardOrListText from "./AddCardOrListText";
 import { Cards } from "./models";
@@ -15,13 +15,12 @@ import { useTranslation } from 'react-i18next';
 
 
 
->>>>>>> 43c99a2241b3a03c25031452c8a91ab5df4ee924
 
 const AddCardOrList = () => {
   const [cards, setCards] = useState<Cards[]>([]);
   const createNewCard = () => {
     const id = cards.length + 1;
-<<<<<<< HEAD
+
     const newCard: Cards = { text: "", id };
     setCards([...cards, newCard]);
   };
@@ -86,7 +85,7 @@ const AddCardOrList = () => {
       <div style={{ background: 'transparent' }}>
         {cards.map((card, index) => (
           <div key={card.id} className=" shadow__effect " style={{ width: '100%' }}>
->>>>>>> 43c99a2241b3a03c25031452c8a91ab5df4ee924
+
             <AddCardOrListText cardInfo={card} />
           </div>
         ))}
