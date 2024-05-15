@@ -2,6 +2,7 @@ import React from "react";
 import { Cards } from "./models";
 import { useTranslation } from "react-i18next";
 import { useDrag, useDrop } from "react-dnd";
+
 export interface AddCardOrListTextProp {
   cardInfo: Cards;
 }

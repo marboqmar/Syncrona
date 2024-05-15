@@ -1,33 +1,43 @@
 import { ReactNode, createContext, useState } from "react";
 
-
-interface UserContextModel {
-    ListTitle: string;
-    BoardCard?: string;
-    AddCardOrList?: string;
-    AddNewBoard?: string;
-}
+interface TaskBoard {}
 
 const context: UserContextModel = {
-    ListTitle: "",
+  TaskBoard,
+  ChangeTask: () => {
+    return;
+  },
+  DeleteTask: () => {
+    return;
+  },
+  AddTask: () => {
+    return;
+  },
+  AddTaskBoard: () => {
+    return;
+  },
 };
 
 export const UserContext = createContext<UserContextModel>(context);
 
-
 interface UserContextProviderProps {
-    children: ReactNode;
+  children: ReactNode;
 }
 
-export const UserContextProvider = ({children}:UserContextProviderProps ): JSX.Element => {
-    const [title, setTitle] = useState<String>()
+export const UserContextProvider = ({
+  children,
+}: UserContextProviderProps): JSX.Element => {
+  const [title, setTitle] = useState<String>();
 
-    const contextValue = {
-        ListTitle: setTitle,
-        BoardCard: "",
-        AddCardOrList: "",
-        AddNewBoard:""
-    };
-    return <UserContextProvider value={{contextValue}}>{children}</UserContextProvider>
+  const contextValue = {
+    ListTitle: setTitle,
+    BoardCard: "",
+    AddCardOrList: "",
+    AddNewBoard: "",
+  };
+  return (
+    <UserContextProvider value={{ contextValue }}>
+      {children}
+    </UserContextProvider>
+  );
 };
- 

@@ -2,15 +2,10 @@ import ListTitle from "./ListTitle";
 import BoardCards from "./BoardCards";
 import AddCardOrList from "./AddCardOrList";
 import { useDrop } from "react-dnd";
+
 import "../colors.scss";
-import { UserContextProvider } from "./UserContext/UserContext";
-import { Children } from "react";
 
-interface BoardListProps {
-  board: Board;
-}
-
-const BoardInfo = ({ board }) => {
+const BoardList = () => {
   const [{ isOver }, drop] = useDrop({
     accept: "card",
     drop: (item) => {
@@ -33,12 +28,11 @@ const BoardInfo = ({ board }) => {
     >
       <div className="livvic-thin List List__Container margin__5p">
         <ListTitle />
-        <BoardCards cards={board.cards} onAddCard={hola} />
-
+        <BoardCards />
         <AddCardOrList />
       </div>
     </div>
   );
 };
 
-export default BoardInfo;
+export default BoardList;

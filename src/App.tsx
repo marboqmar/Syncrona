@@ -12,19 +12,18 @@ function App() {
     <DndProvider backend={HTML5Backend}>
       <div>
         <UserContextProvider>
-        <div>
-          <Topbar />
-        </div>
-        <div className="align__center display__flex ">
-          <div className="margin__5p align__center">
-            <BoardList />
+          <div>
+            <Topbar />
           </div>
-          <div className="display__flex align__center  ">
-            <AddNewBoard />
+          <div className="align__center display__flex ">
+            <div className="margin__5p align__center">
+              <BoardList />
+            </div>
+            <div className="display__flex align__center  ">
+              <AddNewBoard />
+            </div>
           </div>
-        </div>
         </UserContextProvider>
-       
       </div>
     </DndProvider>
   );
