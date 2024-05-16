@@ -1,19 +1,41 @@
 import { ReactNode, createContext, useState } from "react";
 
-interface TaskBoard {}
+interface TaskBoardListModel {
+  taskboards: TaskBoardModel[];
+  background: string;
+  id: number;
+}
+
+interface TaskBoardModel {
+  title: string;
+  tasks: TaskModel[];
+}
+
+interface TaskModel {
+  text: string;
+  images?: string[];
+  id: number;
+}
+
+interface UserContextModel {
+  taskboardList: TaskBoardListModel;
+  updateTask: (taskID: number, newTaskProps: Task) => void;
+  deleteTask: (taskID: number) => void;
+  newTaskBoard;
+  updateTaskBoardTitle: (taskBoardID: number, newTitle: string) => void;
+}
 
 const context: UserContextModel = {
-  TaskBoard,
-  ChangeTask: () => {
+  updateTask: () => {
     return;
   },
-  DeleteTask: () => {
+  updateTaskBoardTitle: () => {
     return;
   },
-  AddTask: () => {
+  deleteTask: () => {
     return;
   },
-  AddTaskBoard: () => {
+  newTaskBoard: () => {
     return;
   },
 };
