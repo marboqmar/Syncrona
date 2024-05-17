@@ -21,7 +21,7 @@ interface UserContextModel {
   taskboardList: TaskBoardListModel;
   updateTask: (taskID: number, newTaskProps: Task) => void;
   deleteTask: (taskID: number) => void;
-  newTaskBoard;
+  newTaskBoard: (boardID: number, newBoardProps: Board) => void;
   updateTaskBoardTitle: (taskBoardID: number, newTitle: string) => void;
 }
 
@@ -49,14 +49,7 @@ interface UserContextProviderProps {
 export const UserContextProvider = ({
   children,
 }: UserContextProviderProps): JSX.Element => {
-  const [title, setTitle] = useState<String>();
-
-  const contextValue = {
-    ListTitle: setTitle,
-    BoardCard: "",
-    AddCardOrList: "",
-    AddNewBoard: "",
-  };
+  const contextValue = {};
   return (
     <UserContextProvider value={{ contextValue }}>
       {children}
