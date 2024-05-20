@@ -26,6 +26,12 @@ interface UserContextModel {
 }
 
 const context: UserContextModel = {
+  taskboardList: {
+    taskboards: [],
+    background: "",
+    id: 0,
+  },
+
   updateTask: () => {
     return;
   },
