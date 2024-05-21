@@ -55,43 +55,36 @@ interface UserContextProviderProps {
 export const UserContextProvider = ({
   children,
 }: UserContextProviderProps): JSX.Element => {
-  const [tasks,setTasks] = useState<TaskModel[]>([]);
-  const [title,setTitle] = useState<TaskBoardModel[]>([]);
-  const [board,setBoard] = useState<TaskBoardModel[]>([]);
-  const newTaskBoard = (newBoard:TaskBoardModel) => {
-    setBoard(prevBoard => {
-      return [...prevBoard,newBoard]
-    })
+  const [tasks, setTasks] = useState<TaskModel[]>([]);
+  const [title, setTitle] = useState<TaskBoardModel[]>([]);
+  const [board, setBoard] = useState<TaskBoardModel[]>([]);
+  const newTaskBoard = (newBoard: TaskBoardModel) => {
+    setBoard((prevBoard) => {
+      return [...prevBoard, newBoard];
+    });
   };
-  const updateTaskBoardTitle = (newTitle: TaskModel) => {
-    setTitle(prevTitle => {
-      return [...prevTitle,newTitle]
-    })
+  const updateTaskBoardTitle = (newTitle: TaskBoardModel) => {
+    setTitle((prevTitle) => {
+      return [...prevTitle, newTitle];
+    });
   };
   const updateTask = (newTask: TaskModel) => {
-    setTasks(prevTaskState => {
-      return [...prevTaskState,newTask]
-    })
+    setTasks((prevTaskState) => {
+      return [...prevTaskState, newTask];
+    });
   };
-
-
-
 
   const contextValue = {
     updateTask,
     updateTaskBoardTitle,
     newTaskBoard,
-
   };
   return (
-    <UserContextProvider value={{ contextValue }}>
+    <UserContext.Provider value={{ contextValue }}>
       {children}
-    </UserContextProvider>
+    </UserContext.Provider>
   );
 };
-
-
-
 
 /*
 

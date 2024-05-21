@@ -24,14 +24,14 @@ const AddCardOrListText = (props: AddCardOrListTextProp) => {
     <div
       ref={drag}
       className="livvic-thin"
-      style={{ padding: "20px", background: "yellow" }}
+      style={{ padding: "10px", background: "yellow" }}
     >
       <input
         type="text"
         placeholder={t("common:placeholder")}
         className="input padding__0"
         value={cardInfo.text}
-        style={{ width: "100%", background: isDragging ? "blue" : undefined }}
+        style={{ width: "10j0%", background: isDragging ? "blue" : undefined }}
       />
     </div>
   );

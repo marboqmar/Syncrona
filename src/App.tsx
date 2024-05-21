@@ -15,11 +15,14 @@ function App() {
           <div>
             <Topbar />
           </div>
-          <div className="align__center display__flex ">
-            <div className="margin__5p align__center">
+          <div className="align__center display__flex  ">
+            <div className=" align__center" style={{ margin: "10px" }}>
               <BoardList />
             </div>
-            <div className="display__flex align__center  ">
+            <div
+              className="display__flex align__center  "
+              style={{ margin: "10px" }}
+            >
               <AddNewBoard />
             </div>
           </div>

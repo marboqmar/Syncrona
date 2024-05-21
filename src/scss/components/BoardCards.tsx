@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 const BoardCards = () => {
-  const { t, i18n } = useTranslation(["common", "list"]);
+  const { t } = useTranslation(["common", "list"]);
 
   return (
     <div className="display__flex__between align__items__center">
