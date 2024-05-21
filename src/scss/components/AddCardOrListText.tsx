@@ -21,11 +21,7 @@ const AddCardOrListText = (props: AddCardOrListTextProp) => {
   const { t } = useTranslation(["common", "list"]);
 
   return (
-    <div
-      ref={drag}
-      className="livvic-thin"
-      style={{ padding: "10px", background: "yellow" }}
-    >
+    <div ref={drag} className="livvic-thin List__Card shadow__effect">
       <input
         type="text"
         placeholder={t("common:placeholder")}

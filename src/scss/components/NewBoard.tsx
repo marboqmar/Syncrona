@@ -17,7 +17,7 @@ const AddNewBoard = () => {
   return (
     <>
       {board.map((Board) => (
-        <div key={Board.id} className="List__Container">
+        <div key={Board.id} className="List__Container ">
           <BoardList boardInfo={board} />
         </div>
       ))}
