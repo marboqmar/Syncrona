@@ -31,7 +31,7 @@ const AddCardOrListText = (props: AddCardOrListTextProp) => {
         placeholder={t("common:placeholder")}
         className="input padding__0"
         value={cardInfo.text}
-        style={{ width: "10j0%", background: isDragging ? "blue" : undefined }}
+        style={{ width: "100%", background: isDragging ? "blue" : undefined }}
       />
     </div>
   );
