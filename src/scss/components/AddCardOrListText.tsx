@@ -3,13 +3,14 @@ import { Cards } from "./models";
 import { useTranslation } from "react-i18next";
 import { useDrag, useDrop } from "react-dnd";
 
+
 export interface AddCardOrListTextProp {
   cardInfo: Cards;
 }
 
 const AddCardOrListText = (props: AddCardOrListTextProp) => {
+  
   const { cardInfo } = props;
-
   const [{ isDragging }, drag] = useDrag(() => ({
     type: "card",
     collect: (monitor) => ({

@@ -19,10 +19,10 @@ interface TaskModel {
 
 interface UserContextModel {
   taskboardList: TaskBoardListModel;
-  updateTask: (taskID: number, newTaskProps: Task) => void;
-  deleteTask: (taskID: number) => void;
-  newTaskBoard: (boardID: number, newBoardProps: Board) => void;
-  updateTaskBoardTitle: (taskBoardID: number, newTitle: string) => void;
+  updateTask: (taskid: number, newTaskProps: Task) => void;
+  deleteTask: (taskid: number) => void;
+  newTaskBoard: (boardid: number, newBoardProps: Board) => void;
+  updateTaskBoardTitle: (taskBoardid: number, newTitle: string) => void;
 }
 
 const context: UserContextModel = {

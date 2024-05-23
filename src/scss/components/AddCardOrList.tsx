@@ -2,8 +2,11 @@ import { useState } from "react";
 import AddCardOrListText from "./AddCardOrListText";
 import { Cards } from "./models";
 import { useTranslation } from "react-i18next";
+import { UserContext } from "./UserContext/UserContext";
+import { useContext } from "react";
 
 const AddCardOrList = () => {
+  const {id} = useContext(UserContext);
   const [cards, setCards] = useState<Cards[]>([]);
   const createNewCard = () => {
     const id = cards.length + 1;
@@ -11,6 +14,14 @@ const AddCardOrList = () => {
     setCards([...cards, newCard]);
   };
 
+
+  const handleTaskBoardID = () => {
+    const createNewCard = () => {
+      const id = cards.length + 1;
+      const newCard: Cards = { text: "", id };
+      setCards([...cards, newCard]);
+    };
+  }
   const { t } = useTranslation(["common", "list"]);
 
   return (
