@@ -15,7 +15,7 @@ const AddCardOrList = () => {
   };
 
 
-  const handleTaskBoardID = () => {
+  const handleTaskBoardID = (event: MouseEvent) => {
     const createNewCard = () => {
       const id = cards.length + 1;
       const newCard: Cards = { text: "", id };
