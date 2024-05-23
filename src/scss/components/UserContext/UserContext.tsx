@@ -9,6 +9,7 @@ interface TaskBoardListModel {
 interface TaskBoardModel {
   title: string;
   tasks: TaskModel[];
+  id: number;
 }
 
 interface TaskModel {

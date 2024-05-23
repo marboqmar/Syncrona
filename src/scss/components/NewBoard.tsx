@@ -4,14 +4,22 @@ import { Board } from "./models";
 import AddnewBoardButton from "./NewBoardButton";
 import BoardList from "./BoardList";
 import { useTranslation } from "react-i18next";
+import { UserContext } from "./UserContext/UserContext";
+import { useContext } from "react";
 
 const AddNewBoard = () => {
+  const { id } = useContext(UserContext);
   const [board, setBoard] = useState<Board[]>([]);
   const createNewBoard = () => {
     const id = board.length + 1;
     const newBoard: Board = { Boards: [], id };
     setBoard([...board, newBoard]);
   };
+
+  const handleTaskBoardID = (event: MouseEvent) => {
+    createNewBoard();
+  };
+
   const { t, i18n } = useTranslation(["common", "list"]);
 
   return (
@@ -27,7 +35,7 @@ const AddNewBoard = () => {
       >
         <button
           style={{ width: "50%" }}
-          onClick={createNewBoard}
+          onClick={handleTaskBoardID}
           className="padding__0 "
         >
           {t("new board")}

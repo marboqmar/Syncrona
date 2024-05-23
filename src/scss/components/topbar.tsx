@@ -5,17 +5,16 @@ import typography from "../typography.scss";
 import { useTranslation } from "react-i18next";
 
 const Topbar = () => {
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(true);
   const darkmode = () => {
-    setDark(!dark);
-    if (dark === false)  {
-        document.documentElement.style.setProperty("--color-text","#FEF5F9");
-        document.documentElement.style.setProperty("--main-color","#211C1E");
+    if (dark) {
+      document.documentElement.style.setProperty("--color-text", "#FEF5F9");
+      document.documentElement.style.setProperty("--main-color", "#211C1E");
     } else {
-      document.documentElement.style.setProperty("--color-text","#211C1E");
-        document.documentElement.style.setProperty("--main-color","#FEF5F9");
+      document.documentElement.style.setProperty("--color-text", "#211C1E");
+      document.documentElement.style.setProperty("--main-color", "#FEF5F9");
     }
-    
+    setDark(!dark);
   };
 
   const { t, i18n } = useTranslation(["common", "list"]);
@@ -29,10 +28,16 @@ const Topbar = () => {
       />
 
       <div className="align__items__center ">
-        <button onClick={() => i18n.changeLanguage("en")} className="move__Y Topbar__Options">
+        <button
+          onClick={() => i18n.changeLanguage("en")}
+          className="move__Y Topbar__Options"
+        >
           English
         </button>
-        <button onClick={() => i18n.changeLanguage("es")} className="move__Y Topbar__Options">
+        <button
+          onClick={() => i18n.changeLanguage("es")}
+          className="move__Y Topbar__Options"
+        >
           Spanish
         </button>
         <label className="switch">
