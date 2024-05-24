@@ -17,7 +17,7 @@ const AddNewBoard = () => {
   };
 
   const handleTaskBoardID = (event: MouseEvent) => {
-    createNewBoard();
+    createNewBoard(id);
   };
 
   const { t, i18n } = useTranslation(["common", "list"]);
