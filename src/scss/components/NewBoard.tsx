@@ -17,6 +17,7 @@ const AddNewBoard = () => {
   };
 
   const handleTaskBoardID = (event: MouseEvent) => {
+    console.log("estás cogiendo el id majo")
     createNewBoard(id);
   };
 
