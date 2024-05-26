@@ -1,15 +1,16 @@
 import {useState} from 'react';
-import { Button,Input } from "../components/atoms";
+import { Button,Input, Checkbox} from "../components/atoms";
 
 const Login = () => {
     const [userName,setUserName]=useState('');
     const [password,setPassword]=useState('');
+    const [checked,setChecked]=useState(false);
     const logIn = ()=>{
         console.log("me clickearon banda");
     };
     return (
         <>
-            <h1>Login</h1>
+            <h1>Login</h1>9
             <Input            
                 placeholder='username' 
                 value={userName}
@@ -32,7 +33,14 @@ const Login = () => {
             <Button text='Log in' type='primary' onClick={logIn} width={"155px"} height={"55px"}/>
             <p>tu user name: {userName}</p>
             <p>tu contraseña: {password}</p>
-            
+            <Checkbox  
+                setChecked={setChecked}
+                text='henlo'
+                checked={checked}
+                name= 'cualquier nombre'
+            />
+
+        
 
         </>
     )
