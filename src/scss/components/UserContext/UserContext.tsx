@@ -19,7 +19,11 @@ interface TaskModel {
 }
 
 interface UserContextModel {
-  taskboardList: TaskBoardListModel;
+  taskboardList: {
+    taskboards: [],
+    background: "",
+    id: 0,
+  },
   updateTask: (taskid: number, newTaskProps: Task) => void;
   deleteTask: (taskid: number) => void;
   newTaskBoard: (boardid: number, newBoardProps: Board) => void;
@@ -59,29 +63,33 @@ export const UserContextProvider = ({
   const [tasks, setTasks] = useState<TaskModel[]>([]);
   const [title, setTitle] = useState<TaskBoardModel[]>([]);
   const [board, setBoard] = useState<TaskBoardModel[]>([]);
+
+  const deleteTask = (taskId: number) => {
+    const filteredTasks = tasks.filter((task) => task.id !== taskId);
+    setTasks(filteredTasks);
+  };
+
   const newTaskBoard = (newBoard: TaskBoardModel) => {
-    setBoard((prevBoard) => {
-      return [...prevBoard, newBoard];
-    });
+    setBoard((prevBoard) => [...prevBoard, newBoard]);
   };
+
   const updateTaskBoardTitle = (newTitle: TaskBoardModel) => {
-    setTitle((prevTitle) => {
-      return [...prevTitle, newTitle];
-    });
+    setTitle((prevTitle) => [...prevTitle, newTitle]);
   };
+
   const updateTask = (newTask: TaskModel) => {
-    setTasks((prevTaskState) => {
-      return [...prevTaskState, newTask];
-    });
+    setTasks((prevTaskState) => [...prevTaskState, newTask]);
   };
 
   const contextValue = {
     updateTask,
     updateTaskBoardTitle,
     newTaskBoard,
+    deleteTask,
   };
+
   return (
-    <UserContext.Provider value={{ contextValue }}>
+    <UserContext.Provider value={contextValue}>
       {children}
     </UserContext.Provider>
   );
