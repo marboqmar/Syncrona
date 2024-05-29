@@ -6,27 +6,8 @@ import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import Topbar from "./scss/components/topbar";
 import { UserContextProvider } from "./scss/components/UserContext/UserContext";
-import { UserContext } from "./scss/components/UserContext/UserContext";
-import { useContext } from "react";
-import { Board } from "./scss/components/models";
-
 
 function App() {
-  const { id } = useContext(UserContext);
-
-  const handleTaskBoardList = (boardListID: number) => {
-    const newBoardListMap = .map((boardListInfo: Board) => {
-      if (board.id === boardListInfo.id) {
-        const newBoardListInfo = { ...boardListInfo };
-        return newBoardListInfo;
-      }
-
-      return boardListInfo;
-    });
-
-    (newBoardListMap);
-  };
-
   return (
     <DndProvider backend={HTML5Backend}>
       <div>
@@ -36,13 +17,13 @@ function App() {
           </div>
           <div className="align__center display__flex  ">
             <div className=" align__center" style={{ margin: "10px" }}>
-              <BoardList value={id}/>
+              <BoardList value={id} />
             </div>
             <div
               className="display__flex align__center  "
               style={{ margin: "10px" }}
             >
-              <AddNewBoard value={id}/>
+              <AddNewBoard />
             </div>
           </div>
         </UserContextProvider>

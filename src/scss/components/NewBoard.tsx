@@ -5,9 +5,7 @@ import AddnewBoardButton from "./NewBoardButton";
 import BoardList from "./BoardList";
 import { useTranslation } from "react-i18next";
 
-
 const AddNewBoard = () => {
-  
   const [board, setBoard] = useState<Board[]>([]);
   const createNewBoard = () => {
     const id = board.length + 1;
@@ -20,7 +18,7 @@ const AddNewBoard = () => {
     createNewBoard(id);
   };*/
 
-  const { t, i18n } = useTranslation(["common", "list"]);
+  const { t } = useTranslation(["common", "list"]);
 
   return (
     <>

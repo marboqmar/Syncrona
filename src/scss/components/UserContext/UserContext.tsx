@@ -20,10 +20,10 @@ interface TaskModel {
 
 interface UserContextModel {
   taskboardList: {
-    taskboards: [],
-    background: "",
-    id: 0,
-  },
+    taskboards: [];
+    background: "";
+    id: 0;
+  };
   updateTask: (taskid: number, newTaskProps: Task) => void;
   deleteTask: (taskid: number) => void;
   newTaskBoard: (boardid: number, newBoardProps: Board) => void;
@@ -90,9 +90,7 @@ export const UserContextProvider = ({
   };
 
   return (
-    <UserContext.Provider value={contextValue}>
-      {children}
-    </UserContext.Provider>
+    <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>
   );
 };
 
