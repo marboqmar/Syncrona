@@ -1,5 +1,5 @@
 import { ReactNode, createContext, useState } from "react";
-
+import { Board } from "../models";
 interface TaskBoardListModel {
   taskboards: TaskBoardModel[];
   background: string;
@@ -62,7 +62,8 @@ export const UserContextProvider = ({
 }: UserContextProviderProps): JSX.Element => {
   const [tasks, setTasks] = useState<TaskModel[]>([]);
   const [title, setTitle] = useState<TaskBoardModel[]>([]);
-  const [board, setBoard] = useState<TaskBoardModel[]>([]);
+  const [boards, setBoards] = useState<TaskBoardModel[]>([]);
+  const [board, setBoard] = useState<Board[]>([]);
 
   const deleteTask = (taskId: number) => {
     const filteredTasks = tasks.filter((task) => task.id !== taskId);
@@ -70,7 +71,7 @@ export const UserContextProvider = ({
   };
 
   const newTaskBoard = (newBoard: TaskBoardModel) => {
-    setBoard((prevBoard) => [...prevBoard, newBoard]);
+    setBoards((prevBoard) => [...prevBoard, newBoard]);
   };
 
   const updateTaskBoardTitle = (newTitle: TaskBoardModel) => {

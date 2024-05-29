@@ -8,9 +8,25 @@ import Topbar from "./scss/components/topbar";
 import { UserContextProvider } from "./scss/components/UserContext/UserContext";
 import { UserContext } from "./scss/components/UserContext/UserContext";
 import { useContext } from "react";
+import { Board } from "./scss/components/models";
+
 
 function App() {
-  const { updateTask } = useContext(UserContext);
+  const { id } = useContext(UserContext);
+
+  const handleTaskBoardList = (boardListID: number) => {
+    const newBoardListMap = pokemons.map((boardListInfo: Board) => {
+      if (pokemonId === pokemonInfo.id) {
+        const newPokemonInfo = { ...pokemonInfo };
+        newPokemonInfo.isHidden = true;
+        return newPokemonInfo;
+      }
+
+      return pokemonInfo;
+    });
+
+    setPokemons(newPokemonsMap);
+  };
 
   return (
     <DndProvider backend={HTML5Backend}>
@@ -21,13 +37,13 @@ function App() {
           </div>
           <div className="align__center display__flex  ">
             <div className=" align__center" style={{ margin: "10px" }}>
-              <BoardList value={updateTask}/>
+              <BoardList value={id}/>
             </div>
             <div
               className="display__flex align__center  "
               style={{ margin: "10px" }}
             >
-              <AddNewBoard value={updateTask}/>
+              <AddNewBoard value={id}/>
             </div>
           </div>
         </UserContextProvider>
