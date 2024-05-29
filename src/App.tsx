@@ -15,17 +15,16 @@ function App() {
   const { id } = useContext(UserContext);
 
   const handleTaskBoardList = (boardListID: number) => {
-    const newBoardListMap = pokemons.map((boardListInfo: Board) => {
-      if (pokemonId === pokemonInfo.id) {
-        const newPokemonInfo = { ...pokemonInfo };
-        newPokemonInfo.isHidden = true;
-        return newPokemonInfo;
+    const newBoardListMap = .map((boardListInfo: Board) => {
+      if (board.id === boardListInfo.id) {
+        const newBoardListInfo = { ...boardListInfo };
+        return newBoardListInfo;
       }
 
-      return pokemonInfo;
+      return boardListInfo;
     });
 
-    setPokemons(newPokemonsMap);
+    (newBoardListMap);
   };
 
   return (
