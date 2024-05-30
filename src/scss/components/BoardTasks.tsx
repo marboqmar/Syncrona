@@ -26,7 +26,6 @@ const BoardTasks = ({ boardId, tasks }: BoardTasksProps) => {
           placeholder={t("common:placeholder")}
           className="input width__border__box"
           style={{ width: "100%" }}
-          value={tasks}
         />
       </div>
     </div>
