@@ -3,11 +3,11 @@ import { Board } from "../models";
 
 export interface TaskBoardModel {
   title: string;
-  tasks: TaskModel[];
+  tasks: TaskModel;
   id: number;
 }
 
-interface TaskModel {
+export interface TaskModel {
   text: string;
   images?: string[];
   id: number;
