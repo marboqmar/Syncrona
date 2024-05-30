@@ -1,8 +1,8 @@
 @import "./colors.scss";
 
-/*html {
+html {
   background-image: url("./images/Frame\ 66.jpg");
-}*/
+}
 
 :root {
   --color-text: #211c1e;
@@ -202,9 +202,13 @@ input:checked + .slider:before {
 }
 
 .margin__5p {
-  margin-top: 5px;
+  margin: 5px;
 }
 
 .move__Y {
   transform: translateY(8px);
+}
+
+.bg__image {
+  background-image: url("./images/Frame\ 66.jpg");
 }

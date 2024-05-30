@@ -1,7 +1,15 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { useContext } from "react";
+import { UserContext } from "./UserContext/UserContext";
 
-const BoardCards = () => {
+interface BoardTasksProps {
+  tasks: string;
+  boardId: number;
+}
+
+const BoardTasks = ({ boardId, tasks }: BoardTasksProps) => {
+  const { updateBoard } = useContext(UserContext);
   const { t } = useTranslation(["common", "list"]);
 
   return (
@@ -12,10 +20,11 @@ const BoardCards = () => {
           placeholder={t("common:placeholder")}
           className="input width__border__box"
           style={{ width: "100%" }}
+          value={tasks}
         />
       </div>
     </div>
   );
 };
 
-export default BoardCards;
+export default BoardTasks;

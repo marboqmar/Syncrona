@@ -1,7 +1,6 @@
 import { ReactNode, createContext, useState } from "react";
 import { Board } from "../models";
 
-
 export interface TaskBoardModel {
   title: string;
   tasks: TaskModel[];
@@ -16,8 +15,11 @@ interface TaskModel {
 
 interface UserContextModel {
   boards: TaskBoardModel[];
-  newBoard: (board: TaskBoardModel)=> void;
-  updateBoard: (boardId: number, propsToUpdate: Pick<TaskBoardModel, 'title'> ) => void; 
+  newBoard: (board: TaskBoardModel) => void;
+  updateBoard: (
+    boardId: number,
+    propsToUpdate: Pick<TaskBoardModel, "title" | "tasks">
+  ) => void;
   /*updateTask: (taskid: number, newTaskProps: Task) => void;
   deleteTask: (taskid: number) => void;
   newTaskBoard: (boardid: number, newBoardProps: Board) => void;
@@ -25,10 +27,10 @@ interface UserContextModel {
 }
 
 const context: UserContextModel = {
- boards: [],
- newBoard: () => {},
-updateBoard: () => {},
-/*  updateTask: () => {
+  boards: [],
+  newBoard: () => {},
+  updateBoard: () => {},
+  /*  updateTask: () => {
     return;
   },
   updateTaskBoardTitle: () => {
@@ -55,7 +57,6 @@ export const UserContextProvider = ({
 
   const [boards, setBoards] = useState<TaskBoardModel[]>([]);
 
-
   /*const deleteTask = (taskId: number) => {
     const filteredTasks = tasks.filter((task) => task.id !== taskId);
     setTasks(filteredTasks);
@@ -64,22 +65,24 @@ export const UserContextProvider = ({
   const newBoard = (newBoard: TaskBoardModel) => {
     setBoards((prevBoard) => [...prevBoard, newBoard]);
   };
-  const updateBoard =(boardId: number, propsToUpdate: Pick<TaskBoardModel, 'title'> ) => {
-    setBoards((prevBoards)=> {{
-      return prevBoards.map((board)=> {
-        if (board.id === boardId) {
-             
-              return {
-                ...board,
-                ...propsToUpdate
-              };
-        }
-        return board;
-      })
-
-    }})
+  const updateBoard = (
+    boardId: number,
+    propsToUpdate: Pick<TaskBoardModel, "title" | "tasks">
+  ) => {
+    setBoards((prevBoards) => {
+      {
+        return prevBoards.map((board) => {
+          if (board.id === boardId) {
+            return {
+              ...board,
+              ...propsToUpdate,
+            };
+          }
+          return board;
+        });
+      }
+    });
   };
-
 
   /*const updateTaskBoardTitle = (newTitle: TaskBoardModel) => {
     setTitle((prevTitle) => [...prevTitle, newTitle]);
@@ -92,7 +95,7 @@ export const UserContextProvider = ({
   const contextValue: UserContextModel = {
     boards,
     newBoard,
-    updateBoard
+    updateBoard,
     /*updateTask,
     updateTaskBoardTitle,
     newTaskBoard,
@@ -103,4 +106,3 @@ export const UserContextProvider = ({
     <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>
   );
 };
-
