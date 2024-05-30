@@ -1,55 +1,25 @@
-import ListTitle from "./ListTitle";
-import BoardCards from "./BoardCards";
-import AddCardOrList from "./AddCardOrList";
-import { useDrop } from "react-dnd";
-import { UserContext } from "./UserContext/UserContext";
-import { useContext, useState } from "react";
+import React, { ReactElement, useState } from "react";
+import { UserContext,  } from "./UserContext/UserContext";
+import { useContext } from "react";
 import { Board } from "./models";
-import { useParams } from "react-router-dom";
+import AddnewBoardButton from "./NewBoardButton";
+import BoardInfo from "./BoardInfo";
+import { useTranslation } from "react-i18next";
+
 
 const BoardList = () => {
-  const [id, setId] = useState();
-  const { updateTaskBoardTitle } = useContext(UserContext);
-  const { setBoard, createNewBoard } = useParams();
-
-  const handleTaskBoardList = (boardListID: number) => {
-    const newBoardListMap = createNewBoard.map((boardListInfo: Board) => {
-      if (boardListID === boardListInfo.id) {
-        const newBoardListInfo = { ...boardListInfo };
-        return newBoardListInfo;
-      }
-
-      return boardListInfo;
-    });
-
-    setBoard(newBoardListMap);
-  };
-
-  const [{ isOver }, drop] = useDrop({
-    accept: "card",
-    drop: (item) => {
-      console.log("test drop", item);
-    },
-    collect: (monitor) => ({
-      isOver: !!monitor.isOver(),
-    }),
-    canDrop: (item) => {
-      return true;
-    },
-  });
+  const {boards} = useContext(UserContext);
 
   return (
-    <div
-      ref={drop}
-      className="display__flex shadow__effect align__center "
-      style={{ background: isOver ? "red" : undefined }}
-    >
-      <div className="livvic-thin List List__Container margin__5p">
-        <ListTitle />
-        <BoardCards />
-        <AddCardOrList />
-      </div>
-    </div>
+    <>
+      {boards.map((board) => (
+        <div key={board.id} className="List__Container ">
+          <BoardInfo board={board} />
+        </div>
+      ))}
+      
+     
+    </>
   );
 };
 

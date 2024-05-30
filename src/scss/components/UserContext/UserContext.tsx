@@ -1,12 +1,8 @@
 import { ReactNode, createContext, useState } from "react";
 import { Board } from "../models";
-interface TaskBoardListModel {
-  taskboards: TaskBoardModel[];
-  background: string;
-  id: number;
-}
 
-interface TaskBoardModel {
+
+export interface TaskBoardModel {
   title: string;
   tasks: TaskModel[];
   id: number;
@@ -19,25 +15,20 @@ interface TaskModel {
 }
 
 interface UserContextModel {
-  taskboardList: {
-    taskboards: [];
-    background: "";
-    id: 0;
-  };
-  updateTask: (taskid: number, newTaskProps: Task) => void;
+  boards: TaskBoardModel[];
+  newBoard: (board: TaskBoardModel)=> void;
+  updateBoard: (boardId: number, propsToUpdate: Pick<TaskBoardModel, 'title'> ) => void; 
+  /*updateTask: (taskid: number, newTaskProps: Task) => void;
   deleteTask: (taskid: number) => void;
   newTaskBoard: (boardid: number, newBoardProps: Board) => void;
-  updateTaskBoardTitle: (taskBoardid: number, newTitle: string) => void;
+  updateTaskBoardTitle: (taskBoardid: number, newTitle: string) => void;*/
 }
 
 const context: UserContextModel = {
-  taskboardList: {
-    taskboards: [],
-    background: "",
-    id: 0,
-  },
-
-  updateTask: () => {
+ boards: [],
+ newBoard: () => {},
+updateBoard: () => {},
+/*  updateTask: () => {
     return;
   },
   updateTaskBoardTitle: () => {
@@ -48,7 +39,7 @@ const context: UserContextModel = {
   },
   newTaskBoard: () => {
     return;
-  },
+  },*/
 };
 
 export const UserContext = createContext<UserContextModel>(context);
@@ -60,33 +51,52 @@ interface UserContextProviderProps {
 export const UserContextProvider = ({
   children,
 }: UserContextProviderProps): JSX.Element => {
-  const [tasks, setTasks] = useState<TaskModel[]>([]);
-  const [title, setTitle] = useState<TaskBoardModel[]>([]);
-  const [boards, setBoards] = useState<TaskBoardModel[]>([]);
-  const [board, setBoard] = useState<Board[]>([]);
+  /*const [tasks, setTasks] = useState<TaskModel[]>([]);*/
 
-  const deleteTask = (taskId: number) => {
+  const [boards, setBoards] = useState<TaskBoardModel[]>([]);
+
+
+  /*const deleteTask = (taskId: number) => {
     const filteredTasks = tasks.filter((task) => task.id !== taskId);
     setTasks(filteredTasks);
-  };
+  };*/
 
-  const newTaskBoard = (newBoard: TaskBoardModel) => {
+  const newBoard = (newBoard: TaskBoardModel) => {
     setBoards((prevBoard) => [...prevBoard, newBoard]);
   };
+  const updateBoard =(boardId: number, propsToUpdate: Pick<TaskBoardModel, 'title'> ) => {
+    setBoards((prevBoards)=> {{
+      return prevBoards.map((board)=> {
+        if (board.id === boardId) {
+             
+              return {
+                ...board,
+                ...propsToUpdate
+              };
+        }
+        return board;
+      })
 
-  const updateTaskBoardTitle = (newTitle: TaskBoardModel) => {
+    }})
+  };
+
+
+  /*const updateTaskBoardTitle = (newTitle: TaskBoardModel) => {
     setTitle((prevTitle) => [...prevTitle, newTitle]);
   };
 
   const updateTask = (newTask: TaskModel) => {
     setTasks((prevTaskState) => [...prevTaskState, newTask]);
-  };
+  };*/
 
-  const contextValue = {
-    updateTask,
+  const contextValue: UserContextModel = {
+    boards,
+    newBoard,
+    updateBoard
+    /*updateTask,
     updateTaskBoardTitle,
     newTaskBoard,
-    deleteTask,
+    deleteTask,*/
   };
 
   return (
@@ -94,24 +104,3 @@ export const UserContextProvider = ({
   );
 };
 
-/*
-
-export const UserContextProvider = ({
-  children,
-}: UserContextProviderProps): JSX.Element => {
-  const [tasks, setTasks] = useState<TaskModel[]>([]);
-  const addTask = (newTask: TaskModel) => {
-    setTasks(prevTasksState => {
-       return [...prevTasksState, newTask];
-    });
-  }
-  const contextValue = {
-    addTask
-  };
-  return (
-    <UserContextProvider value={{ contextValue }}>
-      {children}
-    </UserContextProvider>
-  );
-};
-*/

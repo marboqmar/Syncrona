@@ -1,16 +1,23 @@
 import React, { ReactElement, useState } from "react";
-
+import { UserContext,  } from "./UserContext/UserContext";
+import { useContext } from "react";
 import { Board } from "./models";
 import AddnewBoardButton from "./NewBoardButton";
-import BoardList from "./BoardList";
+import BoardList from "./BoardInfo";
 import { useTranslation } from "react-i18next";
 
+
 const AddNewBoard = () => {
-  const [board, setBoard] = useState<Board[]>([]);
+  const {newBoard} = useContext(UserContext);
   const createNewBoard = () => {
-    const id = board.length + 1;
+    newBoard({
+      id: Date.now(),
+      tasks:[],
+      title:'hola',
+    })
+    /*const id = board.length + 1;
     const newBoard: Board = { Boards: [], id };
-    setBoard([...board, newBoard]);
+    setBoard([...board, newBoard]);*/
   };
 
   /*const handleTaskBoardID = (event: MouseEvent) => {
@@ -22,11 +29,6 @@ const AddNewBoard = () => {
 
   return (
     <>
-      {board.map((Board) => (
-        <div key={Board.id} className="List__Container ">
-          <BoardList boardInfo={board} />
-        </div>
-      ))}
       <div
         className="  List__Container margin__bottom__auto"
         style={{ display: "inline-block" }}
