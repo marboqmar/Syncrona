@@ -2,6 +2,10 @@
 
 html {
   background-image: url("./images/Frame\ 66.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 :root {
@@ -93,9 +97,8 @@ input:checked + .slider:before {
 // List Parts//
 
 .List__Container {
-  min-width: 300px;
-  max-width: 33%;
-  background: none;
+  display: block;
+  width: 300px;
 }
 
 .List {
@@ -211,4 +214,8 @@ input:checked + .slider:before {
 
 .bg__image {
   background-image: url("./images/Frame\ 66.jpg");
+}
+
+.bg__color__yellow {
+  background-color: $Syncrona-yellow;
 }

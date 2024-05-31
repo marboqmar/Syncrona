@@ -46,10 +46,10 @@ const BoardInfo = ({ board }: BoardListProps) => {
   return (
     <div
       ref={drop}
-      className="display__flex shadow__effect align__center margin__5p "
+      className="display__flex shadow__effect align__center margin__5p bg__color__yellow "
       style={{ background: isOver ? "red" : undefined }}
     >
-      <div className="livvic-thin List List__Container margin__5p">
+      <div className="livvic-thin List List__Container margin__5p ">
         <ListTitle boardId={board.id} title={board.title} />
         <BoardTasks boardId={board.id} tasks={board.tasks} />
         <AddCardOrList />
