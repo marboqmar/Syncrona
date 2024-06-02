@@ -29,14 +29,14 @@ const AddCardOrListText = (props: AddCardOrListTextProp) => {
   };
 
   return (
-    <div ref={drag} className="livvic-thin List__Card shadow__effect">
+    <div ref={drag} className="livvic-thin List__Card shadow__effect ">
       <input
         type="text"
         placeholder={t("common:placeholder")}
-        className="input padding__0"
+        className="input padding__0 "
         value={inputValue}  // Usa el estado local
         onChange={handleInputChange}  // Maneja los cambios en el input
-        style={{ width: "100%", background: isDragging ? "blue" : undefined }}
+        style={{ width: "100%", background: isDragging ? "#b5d1e5" : undefined }}
       />
     </div>
   );
