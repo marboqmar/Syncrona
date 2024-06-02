@@ -29,6 +29,7 @@ const AddCardOrListText = (props: AddCardOrListTextProp) => {
         className="input padding__0"
         value={cardInfo.text}
         style={{ width: "100%", background: isDragging ? "blue" : undefined }}
+      
       />
     </div>
   );
