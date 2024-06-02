@@ -31,7 +31,7 @@ const BoardInfo = ({ board }: BoardListProps) => {
     <div
       ref={drop}
       className="display__flex shadow__effect align__center margin__5p bg__color__yellow "
-      style={{ background: isOver ? "red" : undefined }}
+      style={{ background: isOver ? "black" : undefined }}
     >
       <div className="livvic-thin List List__Container margin__5p ">
         <ListTitle boardId={board.id} title={board.title} />

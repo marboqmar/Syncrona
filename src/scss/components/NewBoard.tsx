@@ -14,15 +14,8 @@ const AddNewBoard = () => {
       tasks: [],
       title: "",
     });
-    /*const id = board.length + 1;
-    const newBoard: Board = { Boards: [], id };
-    setBoard([...board, newBoard]);*/
-  };
 
-  /*const handleTaskBoardID = (event: MouseEvent) => {
-    console.log("estás cogiendo el id majo")
-    createNewBoard(id);
-  };*/
+  };
 
   const { t } = useTranslation(["common", "list"]);
 
