@@ -19,7 +19,7 @@ const AddCardOrList = () => {
         {cards.map((card, index) => (
           <div
             key={card.id}
-            className=" shadow__effec margin__5p "
+            className=" shadow__effec  "
             style={{ width: "100%" }}
           >
             <AddCardOrListText cardInfo={card} />
