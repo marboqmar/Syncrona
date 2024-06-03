@@ -1,12 +1,5 @@
 @import "./colors.scss";
 
-:root {
-  --login-main-color: $Syncrona-pink-light;
-}
-
-html {
-}
-
 .margin__center {
   margin-left: 30%;
   margin-right: 30%;
@@ -17,4 +10,15 @@ html {
 }
 
 .bg__login {
+  background-color: $Syncrona-pink-lighter;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.width {
+  width: 100%;
+}
+
+.margin0P {
+  margin: 0px;
 }
