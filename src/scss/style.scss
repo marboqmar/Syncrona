@@ -1,4 +1,7 @@
-@import "./colors.scss": root {
+@import "./colors.scss";
+
+:root {
+  --login-main-color: $Syncrona-pink-light;
 }
 
 html {
@@ -11,4 +14,7 @@ html {
 
 .align__center {
   align-items: center;
+}
+
+.bg__login {
 }
