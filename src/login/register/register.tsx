@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Button, Input } from "../components/atoms";
+import { Button, Input } from "../../components/atoms";
+
 interface RegisterFormData {
   username: string;
   email: string;
@@ -44,7 +45,7 @@ const Register = () => {
   return (
     <>
       <h1>Registration</h1>
-      <form onSubmit={handleRegister}>
+      <form onSubmit={handleRegister} className="">
         <Input
           placeholder="Enter your username"
           value={formData.username}
