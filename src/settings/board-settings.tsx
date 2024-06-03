@@ -13,7 +13,24 @@ const BoardSettings = () => {
         </Button>
         <h1>Settings</h1>
       </div>
-      <div></div>
+      <div>Theme</div>
+      <div>Languages</div>
+      <div>Views</div>
+      <div>Account Details</div>
+      <div>Notify me</div>
+      <div>
+        <a>
+          <span>Need more help? You can check our FAQ</span>
+        </a>
+      </div>
+      <div>
+        <Button>Apply</Button>
+      </div>
+      <div>
+        <a>
+          <span>Terms and Conditions</span>
+        </a>
+      </div>
     </div>
   );
 };
