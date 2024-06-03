@@ -4,6 +4,7 @@ import { Button } from "./components/atoms";
 import { useState } from "react";
 import Register from "./login/register/register";
 import Login from "./login/login";
+import Header from "./scss/components/Header";
 
 const funcionDelClick = () => {
   console.log("me clickearon banda");
@@ -11,9 +12,10 @@ const funcionDelClick = () => {
 
 function App() {
   return (
-    <>
+    <div className="align__center">
+      <Header />
       <Login />
-    </>
+    </div>
   );
 }
 

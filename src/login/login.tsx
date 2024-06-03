@@ -10,7 +10,6 @@ const Login = () => {
   };
   return (
     <>
-      <h1>Login</h1>9
       <Input
         placeholder="username"
         value={userName}
