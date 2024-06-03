@@ -1,5 +1,9 @@
 const Header = () => {
-  return <h1>Syncrona</h1>;
+  return (
+    <div>
+      <h1 className="margin__Header align__center">Syncrona</h1>
+    </div>
+  );
 };
 
 export default Header;

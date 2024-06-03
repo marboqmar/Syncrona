@@ -9,7 +9,7 @@ const Login = () => {
     console.log("me clickearon banda");
   };
   return (
-    <>
+    <div className="margin__Header">
       <Input
         placeholder="username"
         value={userName}
@@ -44,7 +44,7 @@ const Login = () => {
         checked={checked}
         name="cualquier nombre"
       />
-    </>
+    </div>
   );
 };
 
