@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../scss/components/Header";
 import { Button } from "../components/atoms";
+import Footer from "../scss/components/Footer";
 
 
 
@@ -32,9 +33,9 @@ const Landing = () => {
                     <p>Syncrona shows an exceptionally intuitive user interface, empowering customers to navigate effortlessly and accomplish tasks with ease. </p>
                     <p>Roles</p>
                     <p>From project managers to contributors, our intuitive interface simplifies role allocation, fostering effective teamwork and streamlined progress.</p>
-                    
                 </div>
             </div>
+            <Footer/>
         </div>
         
         
