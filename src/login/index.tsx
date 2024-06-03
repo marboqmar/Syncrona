@@ -1,16 +1,17 @@
 import {useState} from 'react';
-import { Button,Input, Checkbox} from "../components/atoms";
+import { Button,Input, Checkbox, Radio} from "../components/atoms";
 
 const Login = () => {
     const [userName,setUserName]=useState('');
     const [password,setPassword]=useState('');
     const [checked,setChecked]=useState(false);
+    const [selectedOption,setSelectedOption]=useState('este radiobox en concreto');
     const logIn = ()=>{
         console.log("me clickearon banda");
     };
     return (
         <>
-            <h1>Login</h1>9
+            <h1>Login</h1>
             <Input            
                 placeholder='username' 
                 value={userName}
@@ -35,12 +36,25 @@ const Login = () => {
             <p>tu contraseña: {password}</p>
             <Checkbox  
                 setChecked={setChecked}
-                text='henlo'
+                text='Acepto los términos, condiciones y la política de Privacidad de Syncrona'
                 checked={checked}
                 name= 'cualquier nombre'
             />
-
-        
+            <Radio 
+                value='este radiobox en concreto'
+                selectedOption={selectedOption}
+                setSelectedOption={setSelectedOption}
+                text='ayura'
+                groupName='Miaw'
+            />
+            <Radio 
+                value='este otro radiobox en concreto'
+                selectedOption={selectedOption}
+                setSelectedOption={setSelectedOption}
+                text='pollo'
+                groupName='Miaw'
+            />
+            
 
         </>
     )
