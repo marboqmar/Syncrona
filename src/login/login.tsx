@@ -9,7 +9,7 @@ const Login = () => {
     console.log("me clickearon banda");
   };
   return (
-    <div className="margin__Header">
+    <div className="margin__center">
       <Input
         placeholder="username"
         value={userName}
