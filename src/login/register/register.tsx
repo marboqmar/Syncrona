@@ -44,45 +44,47 @@ const Register = () => {
   };
   return (
     <>
-      <h1>Registration</h1>
-      <form onSubmit={handleRegister} className="">
-        <Input
-          placeholder="Enter your username"
-          value={formData.username}
-          onChange={handleChange}
-          name="username"
-          width="440px"
-          height="68px"
-          inputLabel="Username"
-        />
-        <Input
-          type="email"
-          placeholder="Enter your email"
-          value={formData.email}
-          onChange={handleChange}
-          name="email"
-          width="440px"
-          height="68px"
-          inputLabel="Email"
-        />
-        <Input
-          type="password"
-          placeholder="Enter your password"
-          value={formData.password}
-          onChange={handleChange}
-          name="password"
-          width="440px"
-          height="68px"
-          inputLabel="Password"
-        />
-        <Button
-          text="Create Account"
-          type="primary"
-          onClick={handleRegister}
-          width="155px"
-          height="55px"
-        />
-      </form>
+      <h1>Syncrona</h1>
+      <div className="register__board">
+        <form onSubmit={handleRegister}>
+          <Input
+            placeholder="Enter your username man"
+            value={formData.username}
+            onChange={handleChange}
+            name="username"
+            width="440px"
+            height="68px"
+            inputLabel="Username"
+          />
+          <Input
+            type="email"
+            placeholder="Enter your email"
+            value={formData.email}
+            onChange={handleChange}
+            name="email"
+            width="440px"
+            height="68px"
+            inputLabel="Email"
+          />
+          <Input
+            type="password"
+            placeholder="Enter your password"
+            value={formData.password}
+            onChange={handleChange}
+            name="password"
+            width="440px"
+            height="68px"
+            inputLabel="Password"
+          />
+          <Button
+            text="Create Account"
+            type="primary"
+            onClick={handleRegister}
+            width="155px"
+            height="55px"
+          />
+        </form>
+      </div>
     </>
   );
 };
