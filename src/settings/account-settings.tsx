@@ -1,10 +1,20 @@
-function AccountSettings() {
+import React from "react";
+import Button from "../components/atoms";
 
-    return (
-        <>
-            <h1>AccountSettings</h1>
-        </>
-    )
-}
+const accountSettings = ({ username, email, accountDate, profilePicture }) => {
+  return (
+    <div>
+      <div>
+        <img src={profilePicture} alt="Profile Picture" className="" />
+        <Button>Change Profile Picture</Button>
+      </div>
+      <div>
+        <p>{username}</p>
+        <p>{email}</p>
+        <p>{accountDate}</p>
+      </div>
+    </div>
+  );
+};
 
-export default AccountSettings
+export default accountSettings;
