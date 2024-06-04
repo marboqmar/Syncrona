@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import { Button,Input, Checkbox, Radio} from "../components/atoms";
+import { Button,Input, Checkbox, Radio, Image} from "../components/atoms";
 
 const Login = () => {
     const [userName,setUserName]=useState('');
@@ -11,6 +11,11 @@ const Login = () => {
     };
     return (
         <>
+        <Image
+        src='https://cdn.pixabay.com/photo/2014/02/24/21/39/pepperoni-273982_1280.jpg'
+        alt='Un chile emo siendo rebanado por una cuchilla, circa 189172819'
+        width='327 px'
+        ></Image>
             <h1>Login</h1>
             <Input            
                 placeholder='username' 

@@ -3,3 +3,4 @@ export { default as Input } from "./input";
 export { default as Checkbox } from "./checkbox";
 export { default as Inputs } from "./inputs";
 export { default as Radio } from "./radio";
+export { default as Image } from "./image";
