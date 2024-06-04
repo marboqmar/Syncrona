@@ -30,7 +30,7 @@ const Input = ({
         </div>
       )}
       <input
-      className={`${type} ${className}`}
+        className={`${type} ${className}`}
         type={type || "text"}
         disabled={disabled}
         style={styles}

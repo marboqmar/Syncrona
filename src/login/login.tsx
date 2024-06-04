@@ -14,11 +14,26 @@ const Login = () => {
         <div className="flex__column">
           <div>
             <p className="login__input__tittle  livvic-regular">Username</p>
-            <input type="text" className="bg__input  livvic-regular" />
+
+            <Input
+              placeholder=""
+              width="80%"
+              height="2rem"
+              value={userName}
+              name="name"
+              className="bg__input"
+            />
           </div>
           <div>
             <p className="login__input__tittle">Password</p>
-            <input type="text" className="bg__input " />
+            <Input
+              placeholder=""
+              width="80%"
+              height="2rem"
+              value={password}
+              name="name"
+              className="bg__input"
+            />
           </div>
         </div>
 
