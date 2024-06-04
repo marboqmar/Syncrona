@@ -1,26 +1,14 @@
 @import "./colors.scss";
 
-.margin__center {
-  margin-left: 30%;
-  margin-right: 30%;
+html{
+  font-size: 16px;
 }
 
-.align__center {
-  align-items: center;
-}
-
+//Main Login//
 .bg__login {
   background-color: $Syncrona-pink-lighter;
   border-radius: 20px;
-  padding: 20px;
-}
-
-.width {
-  width: 100%;
-}
-
-.margin0P {
-  margin: 0px;
+  padding: 1.25rem;
 }
 
 .color__syncrona--white {
@@ -31,4 +19,41 @@
   background-color: $Syncrona-pink;
   border-radius: 15px;
   color: $Syncrona-white;
+  font-size: 1.25rem;
+}
+
+.login__input__tittle {
+  font-size: 1.5rem;
+  color: $Syncrona-white;
+
+}
+
+.bg__input {
+  width: 100%;
+  height: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+}
+
+.flex__column {
+  display: flex;
+  flex-direction: column;
+}
+//UTILITIES//
+
+.width {
+  width: 100%;
+}
+
+.margin0P {
+  margin: 0px;
+}
+
+.margin__center {
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.align__center {
+  align-items: center;
 }

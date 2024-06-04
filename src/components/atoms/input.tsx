@@ -10,6 +10,7 @@ const Input = ({
   value,
   name,
   inputLabel,
+  className,
   setValue,
 }: InputProps) => {
   const onChange = (event: React.ChangeEvent) =>
@@ -18,7 +19,7 @@ const Input = ({
   const styles = {
     width,
     height,
-    margin: "10px",
+    margin: "",
   };
   return (
     <div>
@@ -29,6 +30,7 @@ const Input = ({
         </div>
       )}
       <input
+      className={`${type} ${className}`}
         type={type || "text"}
         disabled={disabled}
         style={styles}

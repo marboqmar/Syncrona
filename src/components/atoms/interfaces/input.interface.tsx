@@ -10,6 +10,7 @@ interface InputProps {
   type?: InputType;
   disabled?: boolean;
   setValue: SetInputValue;
+  className?:string
 }
 
 export default InputProps;

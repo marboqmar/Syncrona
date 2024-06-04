@@ -11,29 +11,17 @@ const Login = () => {
   return (
     <div className="margin__center ">
       <div className="bg__login align__center ">
-        <div className="color__syncrona--white ">
-          <Input
-            placeholder="username"
-            value={userName}
-            width="90%"
-            height="68px"
-            inputLabel="Username"
-            name="username"
-            setValue={setUserName}
-          />
+        <div className="flex__column">
+          <div>
+          <p className="login__input__tittle">Username</p>
+          <input type="text"  className="bg__input "/>
+          </div>
+          <div>
+            <p className="login__input__tittle">Password</p>
+          <input type="text" className="bg__input "/>
+          </div>
         </div>
-        <div className="color__syncrona--white ">
-          <Input
-            placeholder="password"
-            value={password}
-            width="90%"
-            height="68px"
-            inputLabel="Password"
-            name="password"
-            setValue={setPassword}
-            type="password"
-          />
-        </div>
+        
         <div className="align__center" >
         <Button
           text="Log in"
