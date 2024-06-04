@@ -10,11 +10,11 @@ const Login = () => {
   };
   return (
     <div className="margin__center ">
-      <div className="bg__login align__center ">
+      <div className="bg__login align__center  ">
         <div className="flex__column">
           <div>
-            <p className="login__input__tittle">Username</p>
-            <input type="text" className="bg__input " />
+            <p className="login__input__tittle  livvic-regular">Username</p>
+            <input type="text" className="bg__input  livvic-regular" />
           </div>
           <div>
             <p className="login__input__tittle">Password</p>
@@ -29,23 +29,25 @@ const Login = () => {
             onClick={logIn}
             width={"9.68rem"}
             height={"3.43rem"}
-            className="login__button "
+            className="login__button  livvic-regular "
           />
         </div>
         <div className="align__center flex__column">
           <p>
-            <span className="color__syncrona--white">
+            <span className="color__syncrona--white  livvic-regular">
               Forgot your password?
             </span>{" "}
-            <span className="color__synrcona--black">
+            <span className="color__synrcona--black  livvic-regular">
               Recover your password
             </span>
           </p>
           <p>
-            <span className="color__syncrona--white">
+            <span className="color__syncrona--white  livvic-regular">
               Don’t have an account?
             </span>
-            <span className="color__synrcona--black">Register now</span>
+            <span className="color__synrcona--black  livvic-regulars">
+              Register now
+            </span>
           </p>
         </div>
       </div>

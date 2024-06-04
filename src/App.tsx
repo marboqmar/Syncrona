@@ -12,7 +12,7 @@ const funcionDelClick = () => {
 
 function App() {
   return (
-    <div>
+    <div className="angled-gradient ">
       <Header />
       <Login />
     </div>

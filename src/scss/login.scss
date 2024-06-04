@@ -2,13 +2,20 @@
 
 html {
   font-size: 16px;
+  overflow: hidden;
+  margin-left: 0;
+  padding: 0px;
 }
 
+body {
+  margin: 0px;
+}
 //Main Login//
 .bg__login {
   background-color: $Syncrona-pink-lighter;
   border-radius: 20px;
   padding: 1.25rem;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 .login__button {
@@ -68,4 +75,26 @@ html {
 .flex__column {
   display: flex;
   flex-direction: column;
+}
+
+.angled-gradient {
+  background: radial-gradient(
+      circle at top left,
+      $Syncrona-white,
+      transparent 20%
+    ),
+    linear-gradient(
+      170deg,
+      transparent 20%,
+      $Syncrona-pink-lighter 60%,
+      $Syncrona-yellow-light 100%
+    );
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+.overflow__hidden {
+  overflow: hidden;
 }
