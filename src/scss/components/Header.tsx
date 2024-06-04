@@ -1,7 +1,7 @@
 const Header = () => {
   return (
-    <div>
-      <h1 className="margin__center align__center">Syncrona</h1>
+    <div className="align__center flex__column ">
+      <h1 className="login__tittle livvic-regular">Syncrona</h1>
     </div>
   );
 };

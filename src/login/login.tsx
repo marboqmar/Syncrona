@@ -13,24 +13,40 @@ const Login = () => {
       <div className="bg__login align__center ">
         <div className="flex__column">
           <div>
-          <p className="login__input__tittle">Username</p>
-          <input type="text"  className="bg__input "/>
+            <p className="login__input__tittle">Username</p>
+            <input type="text" className="bg__input " />
           </div>
-          <div >
+          <div>
             <p className="login__input__tittle">Password</p>
-            <input type="text" className="bg__input "/>
+            <input type="text" className="bg__input " />
           </div>
         </div>
-        
-        <div className="margin__center " >
-        <Button
-          text="Log in"
-          type="primary"
-          onClick={logIn}
-          width={"155px"}
-          height={"55px"}
-          className="login__button "
-        />
+
+        <div className="margin__center flex__column align__center ">
+          <Button
+            text="Log in"
+            type="primary"
+            onClick={logIn}
+            width={"9.68rem"}
+            height={"3.43rem"}
+            className="login__button "
+          />
+        </div>
+        <div className="align__center flex__column">
+          <p>
+            <span className="color__syncrona--white">
+              Forgot your password?
+            </span>{" "}
+            <span className="color__synrcona--black">
+              Recover your password
+            </span>
+          </p>
+          <p>
+            <span className="color__syncrona--white">
+              Don’t have an account?
+            </span>
+            <span className="color__synrcona--black">Register now</span>
+          </p>
         </div>
       </div>
     </div>
