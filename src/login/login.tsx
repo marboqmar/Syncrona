@@ -16,13 +16,13 @@ const Login = () => {
           <p className="login__input__tittle">Username</p>
           <input type="text"  className="bg__input "/>
           </div>
-          <div>
+          <div >
             <p className="login__input__tittle">Password</p>
-          <input type="text" className="bg__input "/>
+            <input type="text" className="bg__input "/>
           </div>
         </div>
         
-        <div className="align__center" >
+        <div className="margin__center " >
         <Button
           text="Log in"
           type="primary"
