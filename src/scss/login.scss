@@ -10,6 +10,19 @@ html {
 body {
   margin: 0px;
 }
+
+@media (max-width: 1000px) and (min-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+/* Para pantallas de 767px o menos */
+@media (max-width: 767px) {
+  html {
+    font-size: 8px;
+  }
+}
 //Main Login//
 .bg__login {
   background-color: $Syncrona-pink-lighter;
@@ -78,17 +91,13 @@ body {
 }
 
 .angled-gradient {
-  background: radial-gradient(
-      circle at top left,
-      $Syncrona-white,
-      transparent 20%
-    ),
-    linear-gradient(
-      170deg,
-      transparent 20%,
-      $Syncrona-pink-lighter 50%,
-      $Syncrona-yellow-light 100%
-    );
+  background: rgb(253, 237, 244);
+  background: linear-gradient(
+    170deg,
+    rgba(253, 237, 244, 1) 46%,
+    rgba(234, 123, 172, 1) 46%,
+    rgba(249, 192, 108, 1) 100%
+  );
   height: 100vh;
   width: 100vw;
   margin: 0;
