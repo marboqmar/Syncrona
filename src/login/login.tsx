@@ -10,8 +10,8 @@ const Login = () => {
   };
   return (
     <div className="margin__center ">
-      <div className="bg__login ">
-        <div>
+      <div className="bg__login align__center ">
+        <div className="color__syncrona--white ">
           <Input
             placeholder="username"
             value={userName}
@@ -22,7 +22,7 @@ const Login = () => {
             setValue={setUserName}
           />
         </div>
-        <div style={{ borderRadius: "10px" }}>
+        <div className="color__syncrona--white ">
           <Input
             placeholder="password"
             value={password}
@@ -34,22 +34,16 @@ const Login = () => {
             type="password"
           />
         </div>
-
+        <div className="align__center" >
         <Button
           text="Log in"
           type="primary"
           onClick={logIn}
           width={"155px"}
           height={"55px"}
+          className="login__button "
         />
-        <p>tu user name: {userName}</p>
-        <p>tu contraseña: {password}</p>
-        <Checkbox
-          setChecked={setChecked}
-          text="henlo"
-          checked={checked}
-          name="cualquier nombre"
-        />
+        </div>
       </div>
     </div>
   );

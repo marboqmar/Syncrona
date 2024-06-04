@@ -1,10 +1,9 @@
 function ForgotPass() {
-
-    return (
-        <>
-            <h1>ForgotPass</h1>
-        </>
-    )
+  return (
+    <>
+      <h1>ForgotPass</h1>
+    </>
+  );
 }
 
-export default ForgotPass
+export default ForgotPass;

@@ -1,10 +1,9 @@
 function BoardSettings() {
-
-    return (
-        <>
-            <h1>BoardSettings</h1>
-        </>
-    )
+  return (
+    <>
+      <h1>BoardSettings</h1>
+    </>
+  );
 }
 
-export default BoardSettings
+export default BoardSettings;
