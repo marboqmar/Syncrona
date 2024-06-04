@@ -8,11 +8,11 @@ const Topbar = () => {
   const [dark, setDark] = useState(true);
   const darkmode = () => {
     if (dark) {
-      document.documentElement.style.setProperty("--color-text", "#f9c06c");
+      document.documentElement.style.setProperty("--color-text", "#fef5f9");
       document.documentElement.style.setProperty("--main-color", "#211C1E");
     } else {
       document.documentElement.style.setProperty("--color-text", "#211C1E");
-      document.documentElement.style.setProperty("--main-color", "#f9c06c");
+      document.documentElement.style.setProperty("--main-color", "#fef5f9");
     }
     setDark(!dark);
   };
