@@ -1,6 +1,5 @@
 import {useState} from 'react';
-import { Button,Input, Checkbox, Radio, Image} from "../components/atoms";
-
+import { Button,Input, Checkbox, Radio, Image, Icon, Logo} from "../components/atoms";
 const Login = () => {
     const [userName,setUserName]=useState('');
     const [password,setPassword]=useState('');
@@ -11,6 +10,8 @@ const Login = () => {
     };
     return (
         <>
+        <Logo logoTheme='OrangeTheme'
+        width='24px'/>
         <Image
         src='https://cdn.pixabay.com/photo/2014/02/24/21/39/pepperoni-273982_1280.jpg'
         alt='Un chile emo siendo rebanado por una cuchilla, circa 189172819'
@@ -59,7 +60,22 @@ const Login = () => {
                 text='pollo'
                 groupName='Miaw'
             />
-            
+            <Icon
+            iconName='Home'
+            iconType='navigation'
+            height= '20px'
+            fill= 'black'
+            stroke= '2px'
+            strokeWidth= '4px'
+            />
+            <Icon
+            iconName='Clock'
+            iconType='settings'
+            height= '20px'
+            fill= 'black'
+            stroke= '2px'
+            strokeWidth= '4px'
+            />
 
         </>
     )

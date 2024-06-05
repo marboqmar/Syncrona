@@ -4,3 +4,5 @@ export { default as Checkbox } from "./checkbox";
 export { default as Inputs } from "./inputs";
 export { default as Radio } from "./radio";
 export { default as Image } from "./image";
+export { default as Icon } from "./icon";
+export {default as Logo } from "./logo";
