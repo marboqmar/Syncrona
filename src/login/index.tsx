@@ -1,10 +1,12 @@
 import {useState} from 'react';
 import { Button,Input, Checkbox, Radio, Image, Icon, Logo} from "../components/atoms";
+import Task from '../components/molecules/task';
 const Login = () => {
     const [userName,setUserName]=useState('');
     const [password,setPassword]=useState('');
     const [checked,setChecked]=useState(false);
     const [selectedOption,setSelectedOption]=useState('este radiobox en concreto');
+    const [task0,setTask0]=useState({title: '', positionId: 0, isFinished: false});
     const logIn = ()=>{
         console.log("me clickearon banda");
     };
@@ -76,6 +78,10 @@ const Login = () => {
             stroke= '2px'
             strokeWidth= '4px'
             />
+            <Task 
+            name='task-0'
+            data={task0}
+            setData={setTask0}/>
 
         </>
     )
