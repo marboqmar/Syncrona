@@ -3,7 +3,7 @@ type SetInputValue = (value: string) =>void;
 interface InputProps {
   placeholder: string;
   width: string;
-  height: string;
+  height?: string;
   value: string;
   inputLabel?: string;
   name: string;

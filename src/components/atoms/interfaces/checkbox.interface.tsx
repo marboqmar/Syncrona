@@ -4,7 +4,7 @@ interface CheckboxProps {
     disabled?: boolean;
     checked: boolean;
     setChecked: SetCheckboxValue;
-    text: string;
+    text?: string;
     name: string;
 }
 
