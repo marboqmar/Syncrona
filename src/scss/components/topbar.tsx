@@ -3,6 +3,7 @@ import styles from "../style.scss";
 import colors from "../colors.scss";
 import typography from "../typography.scss";
 import { useTranslation } from "react-i18next";
+import Icon from "../../components/atoms/icon";
 
 const Topbar = () => {
   const [dark, setDark] = useState(true);
@@ -21,6 +22,15 @@ const Topbar = () => {
 
   return (
     <div className="topbar">
+      <Icon
+        iconName="LeftArrow2"
+        iconType="navigation"
+        height="20px"
+        fill="black"
+        stroke="2px"
+        strokeWidth="4px"
+      />
+
       <input
         type="text"
         placeholder={t("common:Tittle")}

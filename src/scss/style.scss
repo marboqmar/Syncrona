@@ -8,10 +8,14 @@ html {
   background-position: center;
 }
 
+body {
+  margin: 0px;
+}
 :root {
   --color-text: #211c1e;
-  --main-color: #f9c06c;
-  background-color: var(--main-color);
+  --main-color: #fef5f9;
+  --yellow-theme-color: #f9c06c;
+  background-color: var(--yellow-theme-color);
 }
 
 //Topbar//
@@ -22,7 +26,7 @@ html {
   display: flex;
   justify-content: space-between;
   height: 40px;
-  border-style: solid;
+  outline-style: solid;
   border-color: var(--color-text);
   padding: 10px;
 }
@@ -217,7 +221,7 @@ input:checked + .slider:before {
 }
 
 .bg__color__yellow {
-  background-color: var(--main-color);
+  background-color: var(--yellow-theme-color);
 }
 
 .margin__top--10px {
