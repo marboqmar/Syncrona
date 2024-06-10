@@ -1,0 +1,225 @@
+@import "./colors.scss";
+
+html {
+  background-image: url("./images/Frame\ 66.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+:root {
+  --color-text: #211c1e;
+  --main-color: #f9c06c;
+  background-color: var(--main-color);
+}
+
+//Topbar//
+
+.topbar {
+  background-color: var(--main-color);
+  color: --color-text;
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  border-style: solid;
+  border-color: var(--color-text);
+  padding: 10px;
+}
+
+.Board__Page__Tittle {
+  background-color: transparent;
+  border: none;
+  color: var(--color-text);
+}
+
+//Topbar.Options//
+
+.Topbar__Options {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+//Topbar.Switch//
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+input:checked + .slider {
+  background-color: $Syncrona-info-dark;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+}
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+
+// List Parts//
+
+.List__Container {
+  display: block;
+  width: 300px;
+}
+
+.List {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--main-color);
+}
+
+.List__Title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.List__Tittle--Text {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 90%;
+}
+
+.List__Card {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 90%;
+}
+
+.List__AddCard {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  margin-top: 10px;
+  display: flex;
+}
+
+.List__NewCard {
+  padding-top: 10px;
+  margin-top: 10px;
+  display: flex;
+  margin-bottom: 10px;
+  width: 90%;
+}
+
+.List__AddCard > div {
+  width: 100%;
+  height: 100%;
+}
+
+.List__AddCardOrListButton {
+  margin-top: 10px;
+  width: calc(100% / 2);
+}
+
+//UTILITIES
+
+.syncrona-white {
+  background: --main-color;
+}
+
+.input {
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+.display__flex {
+  display: flex;
+}
+
+.display__flex__between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.align__items__center {
+  align-items: center;
+}
+
+.margin__bottom__auto {
+  margin-bottom: auto;
+}
+
+.shadow__effect {
+  box-shadow: 1px 1px 1px 1px var(--color-text);
+}
+
+.width__border__box {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.padding__0 {
+  padding: 0px;
+}
+
+.margin__center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.margin__5p {
+  margin: 5px;
+}
+
+.move__Y {
+  transform: translateY(8px);
+}
+
+.bg__image {
+  background-image: url("./images/Frame\ 66.jpg");
+}
+
+.bg__color__yellow {
+  background-color: var(--main-color);
+}
+
+.margin__top--10px {
+  margin-top: 10px;
+}
