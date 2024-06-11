@@ -12,71 +12,61 @@ const Login = () => {
         console.log("me clickearon banda");
     };
     return (
-        <div className="margin__center ">
-               
-       
-            <Input            
-                placeholder='username' 
-                value={userName}
-                width='80%'
-                height='2rem'
-                inputLabel='Username'
-                name='username'
-                setValue={setUserName}
-            />
-            <Input            
-                placeholder='password' 
-                value={password}
-                width='80%'
-                height='2rem'
-                inputLabel='Password'
-                name='password'
-                setValue={setPassword}
-                type='password'
-            />
-            <Button text='Log in' type='primary' onClick={logIn} width={"9.68rem"} height={"3.43rem"}/>
-            <p>tu user name: {userName}</p>
-            <p>tu contraseña: {password}</p>
-            <Checkbox  
-                setChecked={setChecked}
-                text='Acepto los términos, condiciones y la política de Privacidad de Syncrona'
-                checked={checked}
-                name= 'cualquier nombre'
-            />
-            <Radio 
-                value='este radiobox en concreto'
-                selectedOption={selectedOption}
-                setSelectedOption={setSelectedOption}
-                text='ayura'
-                groupName='Miaw'
-            />
-            <Radio 
-                value='este otro radiobox en concreto'
-                selectedOption={selectedOption}
-                setSelectedOption={setSelectedOption}
-                text='pollo'
-                groupName='Miaw'
-            />
-            <Icon
-            iconName='Home'
-            iconType='navigation'
-            height= '1.25rem'
-            fill= 'black'
-            stroke= '0.13rem'
-            strokeWidth= '0.25rem'
-            />
-            <Icon
-            iconName='Clock'
-            iconType='settings'
-            height= '1.25rem'
-            fill= 'black'
-            stroke= '0.13rem'
-            strokeWidth= '0.25rem'
-            />
-            <Task 
-            name='task-0'
-            data={task0}
-            setData={setTask0}/>
+        <div >
+                    <div className="margin__center bg__login align__center ">
+                                        <div>
+                                                            <div>
+                                                                <p className="login__input__tittle  livvic-regular">Username</p>
+                                                            <Input            
+                                                            placeholder='username' 
+                                                            value={userName}
+                                                            width='80%'
+                                                            height='2rem'
+                                                            inputLabel=''
+                                                            name='username'
+                                                            setValue={setUserName}
+                                                            className="bg__input"
+                                                        />
+                                                            </div>
+                                                            <div>
+                                                            <p className="login__input__tittle">Password</p>
+                                                            <Input            
+                                                            placeholder='password' 
+                                                            value={password}
+                                                            width='80%'
+                                                            height='2rem'
+                                                            inputLabel=''
+                                                            name='password'
+                                                            setValue={setPassword}
+                                                            type='password'
+                                                            className="bg__input"
+                                                        />
+                                                            </div>
+                                        </div>
+                                            <div className="margin__center flex__column align__center ">
+                                                    <Button text='Log in' type='primary' onClick={logIn} width={"9.68rem"} height={"3.43rem"} className="login__button  livvic-regular "/>
+                                            </div>
+                                        
+        </div>
+        
+            
+                    <div  className='margin__center  TermsAndConditions flex__row '>
+                                            <Checkbox  
+                                        setChecked={setChecked}
+                                        text='Términos y Condiciones'
+                                        checked={checked}
+                                        name= 'cualquier nombre'
+                                    />
+                                    <Checkbox  
+                                        setChecked={setChecked}
+                                        text='Política de privacidad'
+                                        checked={checked}
+                                        name= 'cualquier nombre'
+                                    />
+                        </div>                      
+           
+            
+            
         </div>
             
 
