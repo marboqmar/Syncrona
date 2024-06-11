@@ -1,7 +1,8 @@
 import {useState} from 'react';
 import { Button,Input, Checkbox, Radio, Image, Icon, Logo} from "../components/atoms";
 import Task from '../components/molecules/task';
-import "../scss/login.scss"
+import "../scss/login.scss";
+import { useTranslation } from "react-i18next";
 const Login = () => {
     const [userName,setUserName]=useState('');
     const [password,setPassword]=useState('');
@@ -63,9 +64,23 @@ const Login = () => {
                                         checked={checked}
                                         name= 'cualquier nombre'
                                     />
+                                    
                         </div>                      
-           
-            
+                        <div className='margin__center '>
+                        <button
+                                        onClick={() => i18n.changeLanguage("en")}
+                                        className="move__Y Topbar__Options"
+                                        >
+                                        English
+                                        </button>
+                                        <button
+                                        onClick={() => i18n.changeLanguage("es")}
+                                        className="move__Y Topbar__Options"
+                                        >
+                                        Spanish
+                                        </button>
+                        </div>
+                        
             
         </div>
             
