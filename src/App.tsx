@@ -7,7 +7,7 @@ import { HTML5Backend } from "react-dnd-html5-backend";
 import Topbar from "./scss/components/topbar";
 import { UserContextProvider } from "./scss/components/UserContext/UserContext";
 import Header from "./scss/components/Header";
-import Login from "../src/login/login";
+import Login from "../src/login/index";
 
 function App() {
   return (

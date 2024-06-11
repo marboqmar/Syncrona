@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import { Button,Input, Checkbox, Radio, Image, Icon, Logo} from "../components/atoms";
 import Task from '../components/molecules/task';
+import "../scss/login.scss"
 const Login = () => {
     const [userName,setUserName]=useState('');
     const [password,setPassword]=useState('');
@@ -11,20 +12,14 @@ const Login = () => {
         console.log("me clickearon banda");
     };
     return (
-        <>
-        <Logo logoTheme='OrangeTheme'
-        width='24px'/>
-        <Image
-        src='https://cdn.pixabay.com/photo/2014/02/24/21/39/pepperoni-273982_1280.jpg'
-        alt='Un chile emo siendo rebanado por una cuchilla, circa 189172819'
-        width='327 px'
-        ></Image>
-            <h1>Login</h1>
+        <div className="margin__center ">
+               
+       
             <Input            
                 placeholder='username' 
                 value={userName}
-                width='440px'
-                height='68px'
+                width='80%'
+                height='2rem'
                 inputLabel='Username'
                 name='username'
                 setValue={setUserName}
@@ -32,14 +27,14 @@ const Login = () => {
             <Input            
                 placeholder='password' 
                 value={password}
-                width='440px'
-                height='68px'
+                width='80%'
+                height='2rem'
                 inputLabel='Password'
                 name='password'
                 setValue={setPassword}
                 type='password'
             />
-            <Button text='Log in' type='primary' onClick={logIn} width={"155px"} height={"55px"}/>
+            <Button text='Log in' type='primary' onClick={logIn} width={"9.68rem"} height={"3.43rem"}/>
             <p>tu user name: {userName}</p>
             <p>tu contraseña: {password}</p>
             <Checkbox  
@@ -65,25 +60,27 @@ const Login = () => {
             <Icon
             iconName='Home'
             iconType='navigation'
-            height= '20px'
+            height= '1.25rem'
             fill= 'black'
-            stroke= '2px'
-            strokeWidth= '4px'
+            stroke= '0.13rem'
+            strokeWidth= '0.25rem'
             />
             <Icon
             iconName='Clock'
             iconType='settings'
-            height= '20px'
+            height= '1.25rem'
             fill= 'black'
-            stroke= '2px'
-            strokeWidth= '4px'
+            stroke= '0.13rem'
+            strokeWidth= '0.25rem'
             />
             <Task 
             name='task-0'
             data={task0}
             setData={setTask0}/>
+        </div>
+            
 
-        </>
+        
     )
 }
 
