@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button, Input, Checkbox } from "../components/atoms";
+import "../scss/login.scss"
 
 const Login = () => {
   const [userName, setUserName] = useState("");
