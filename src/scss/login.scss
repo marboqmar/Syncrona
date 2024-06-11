@@ -40,6 +40,13 @@ body {
   margin-left: 10%;
 }
 
+.login__button--translation {
+  background-color: $Syncrona-white;
+  color: $Syncrona-black-darker;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+}
+
 .login__input__tittle {
   font-size: 1.5rem;
   color: $Syncrona-white;
@@ -100,8 +107,8 @@ body {
   background: rgb(253, 237, 244);
   background: linear-gradient(
     170deg,
-    rgba(253, 237, 244, 1) 46%,
-    rgba(234, 123, 172, 1) 46%,
+    rgba(253, 237, 244, 1) 50%,
+    rgba(234, 123, 172, 1) 50%,
     rgba(249, 192, 108, 1) 100%
   );
   height: 100vh;
@@ -116,4 +123,9 @@ body {
 
 .flex {
   display: flex;
+}
+
+.center {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
 }

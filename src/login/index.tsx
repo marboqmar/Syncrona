@@ -10,7 +10,10 @@ import {
 } from "../components/atoms";
 import Task from "../components/molecules/task";
 import "../scss/login.scss";
+import "../scss/style.scss";
 import { useTranslation } from "react-i18next";
+import Boards from "../boards/Boards";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const { t, i18n } = useTranslation(["common", "list"]);
@@ -63,14 +66,16 @@ const Login = () => {
           </div>
         </div>
         <div className="margin__center flex__column align__center ">
-          <Button
-            text="Log in"
-            type="primary"
-            onClick={logIn}
-            width={"9.68rem"}
-            height={"3.43rem"}
-            className="login__button  livvic-regular "
-          />
+          <Link to="/Boards">
+            <Button
+              text="Log in"
+              type="primary"
+              onClick={logIn}
+              width={"9.68rem"}
+              height={"3.43rem"}
+              className="login__button  livvic-regular "
+            />
+          </Link>
         </div>
       </div>
       <div className="justify__center">
@@ -90,8 +95,18 @@ const Login = () => {
         </div>
         <div className="margin__center TermsAndConditions ">
           <div>
-            <button onClick={() => i18n.changeLanguage("en")}>English</button>
-            <button onClick={() => i18n.changeLanguage("es")}>Spanish</button>
+            <button
+              onClick={() => i18n.changeLanguage("en")}
+              className="login__button--translation  livvic-regular "
+            >
+              English
+            </button>
+            <button
+              onClick={() => i18n.changeLanguage("es")}
+              className="login__button--translation  livvic-regular "
+            >
+              Spanish
+            </button>
           </div>
         </div>
       </div>
