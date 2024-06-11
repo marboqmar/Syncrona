@@ -25,7 +25,6 @@ body {
 }
 //Main Login//
 
-
 .bg__login {
   background-color: $Syncrona-pink-lighter;
   border-radius: 20px;
@@ -63,10 +62,7 @@ body {
 }
 
 .TermsAndConditions {
-  width: 25rem;
-  justify-content: space-between;
-  margin-top: 3rem;
- 
+  margin-top: 1rem;
 }
 //UTILITIES//
 
@@ -118,6 +114,6 @@ body {
   overflow: hidden;
 }
 
-.flex{
+.flex {
   display: flex;
 }

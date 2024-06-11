@@ -2,5 +2,8 @@
   "all": "All",
   "placeholder": "Type something",
   "new board": "new board",
-  "Tittle": "Tittle"
+  "Tittle": "Tittle",
+  "Username": "Username",
+  "Password": "Password",
+  "Log in": "Log in"
 }

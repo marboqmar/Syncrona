@@ -2,5 +2,8 @@
   "all": "Todos",
   "placeholder": "Escribe algo",
   "new board": "nueva tabla",
-  "Tittle": "Título"
+  "Tittle": "Título",
+  "Username": "Usuario",
+  "Password": "Contraseña",
+  "Log in": "Iniciar sesión"
 }
