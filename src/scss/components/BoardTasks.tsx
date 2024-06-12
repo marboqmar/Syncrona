@@ -1,7 +1,11 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { useContext } from "react";
-import { UserContext, TaskModel, TaskBoardModel} from "./UserContext/UserContext";
+import {
+  UserContext,
+  TaskModel,
+  TaskBoardModel,
+} from "./UserContext/UserContext";
 import { ChangeEvent } from "react";
 
 interface BoardTasksProps {
@@ -16,7 +20,7 @@ const BoardTasks = ({ boardId, tasks }: BoardTasksProps) => {
   const handleTasksChange = (event: ChangeEvent<HTMLInputElement>) => {
     const newtask = event.target.value;
     updateBoard(boardId, { tasks: newtask });
-    console.log('estás actualizando')
+    console.log("estás actualizando");
   };
 
   return (

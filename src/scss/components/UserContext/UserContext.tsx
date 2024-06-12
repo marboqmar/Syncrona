@@ -37,7 +37,6 @@ interface UserContextProviderProps {
 export const UserContextProvider = ({
   children,
 }: UserContextProviderProps): JSX.Element => {
-
   const [boards, setBoards] = useState<TaskBoardModel[]>([]);
 
   const newBoard = (newBoard: TaskBoardModel) => {
@@ -61,7 +60,6 @@ export const UserContextProvider = ({
       }
     });
   };
-
 
   const contextValue: UserContextModel = {
     boards,

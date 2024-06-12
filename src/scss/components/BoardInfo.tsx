@@ -22,9 +22,6 @@ const BoardInfo = ({ board }: BoardListProps) => {
     collect: (monitor) => ({
       isOver: !!monitor.isOver(),
     }),
-    canDrop: (item) => {
-      return true;
-    },
   });
 
   return (

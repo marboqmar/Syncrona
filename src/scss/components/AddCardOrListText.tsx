@@ -9,7 +9,7 @@ export interface AddCardOrListTextProp {
 
 const AddCardOrListText = (props: AddCardOrListTextProp) => {
   const { cardInfo } = props;
-  
+
   // Estado local para el valor del input
   const [inputValue, setInputValue] = useState(cardInfo.text);
 
@@ -33,10 +33,13 @@ const AddCardOrListText = (props: AddCardOrListTextProp) => {
       <input
         type="text"
         placeholder={t("common:placeholder")}
-        className="input padding__0 "
-        value={inputValue}  // Usa el estado local
-        onChange={handleInputChange}  // Maneja los cambios en el input
-        style={{ width: "100%", background: isDragging ? "#b5d1e5" : undefined }}
+        className="input  "
+        value={inputValue} // Usa el estado local
+        onChange={handleInputChange} // Maneja los cambios en el input
+        style={{
+          width: "100%",
+          background: isDragging ? "#b5d1e5" : undefined,
+        }}
       />
     </div>
   );
