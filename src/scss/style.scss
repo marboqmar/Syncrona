@@ -10,6 +10,7 @@ html {
 
 body {
   margin: 0px;
+  padding: 0px;
 }
 :root {
   --color-text: #211c1e;
@@ -228,8 +229,7 @@ input:checked + .slider:before {
   margin-top: 10px;
 }
 
-
-.flex__row{
+.flex__row {
   display: flex;
   flex-direction: row;
 }
