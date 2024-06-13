@@ -46,7 +46,7 @@ const Register = () => {
     }
   };
   return (
-    <div className="angled-gradient ">
+    <div className="angled-gradient r">
       <div className="align__center flex margin__center justify__center">
         <h1 className="login__tittle livvic-regular">Syncrona</h1>
       </div>
@@ -60,7 +60,7 @@ const Register = () => {
                 value={formData.username}
                 onChange={handleChange}
                 name="username"
-                width="32rem"
+                width="80%"
                 height="4.85rem"
                 className="bg__input "
               />
@@ -73,7 +73,7 @@ const Register = () => {
                 value={formData.email}
                 onChange={handleChange}
                 name="email"
-                width="32rem"
+                width="80%"
                 height="4.85rem"
                 className="bg__input"
               />
@@ -86,7 +86,7 @@ const Register = () => {
                 value={formData.password}
                 onChange={handleChange}
                 name="password"
-                width="32rem"
+                width="80%"
                 height="4.85rem"
                 className="bg__input"
               />
@@ -97,7 +97,7 @@ const Register = () => {
                 text="Create Account"
                 type="primary"
                 onClick={handleRegister}
-                width="20rem"
+                width="80%"
                 height="3.44rem"
                 className="login__button  livvic-regular "
               />
