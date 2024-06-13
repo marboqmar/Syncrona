@@ -15,7 +15,7 @@ const RecoverPassword = () => {
 
   return (
     <div>
-      <div className="angled-gradient">
+      <div className="angled-gradient ">
         <div className="justify__center display__flex">
           <h1 className="login__tittle livvic-regular">Recover Password</h1>
         </div>
