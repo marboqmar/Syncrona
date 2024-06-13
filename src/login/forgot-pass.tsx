@@ -29,7 +29,7 @@ const ForgotPassword = () => {
         <div className="recover__dimensions margin__centerA  ">
           <div>
             <p className="login__input__tittle livvic-regular">Enter your email</p>
-            <p className="login__input__tittle  livvic-regular">You will receive a link to recover your password.</p>
+            <p className="login__input__tittle  livvic-regular">You will receive a link to recover.</p>
           </div>
           <Input
             placeholder=""
