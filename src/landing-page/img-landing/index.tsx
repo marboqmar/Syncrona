@@ -1,0 +1,1 @@
+export {default as board_image} from './img-landing/TrelloUICollage_4x_1.png';

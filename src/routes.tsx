@@ -5,12 +5,13 @@ import Login from './login/login.tsx';
 import Register from './login/register.tsx';
 import RecoverPass from '../src/login/recover-pass.tsx';
 import Boards from './boards/Boards.tsx';
+import Landing from './landing-page/landing-page.tsx';
 
 export const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    children: [
+  },
       {
         path: '/',
         element: <Login />,
@@ -27,6 +28,9 @@ export const router = createBrowserRouter([
         path: '/Boards',
         element: <Boards />,
       },
+      {
+        path: '/Landing',
+        element: <Landing />,
+      },
     ],
-  },
-]);
+  );

@@ -1,0 +1,86 @@
+@import "../../scss/colors.scss";
+
+.bg__gradient {
+  background: linear-gradient(
+    170deg,
+    rgba(249, 192, 108, 1) 30%,
+    rgba(234, 123, 172, 1) 100%,
+  );
+  padding: 4rem;
+}
+
+.bg__regular {
+    background: $Syncrona-white;
+    padding: 4rem;
+    overflow-y: auto;
+  }
+
+.landing__header__white_panel {
+    background-color: rgba(255, 255, 255, 0.3);
+    height: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border-radius: 1rem;
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
+    margin-left: 12rem;
+    margin-right: 12rem;
+    align-self: center;
+}
+
+.landing__header_text_distribution {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+    padding-right: 2.25rem;
+    padding-left: 4rem;
+    width: 50%;
+}
+
+.landing__header_wrapper_distribution{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.landing__header_button {
+    border-color: $Syncrona-pink-dark;
+    background-color: $Syncrona-pink;
+    color: $Syncrona-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+    font-style: normal;
+    font-family: Livvic;
+    font-weight: 500;
+    line-height: normal;
+    border-radius: 15px;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.landing__input__title {
+    font-family: Livvic;
+    font-size: 2.25rem;
+    color: $Syncrona-black-darker;
+    font-weight: bold;
+  }
+
+  .landing__input__secondary_text {
+    font-family: Livvic;
+    font-size: 1.5rem;
+    color: $Syncrona-black-darker;
+    font-weight: semi-bold;
+  }
+
+  .landing__input__paragraph{
+    font-family: Livvic;
+    font-size: 1rem;
+    color: $Syncrona-black-darker;
+    font-weight: normal;
+  }
+  
