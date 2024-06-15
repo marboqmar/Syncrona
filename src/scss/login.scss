@@ -2,10 +2,10 @@
 
 html {
   font-size: 16px;
-  overflow: hidden;
   margin-left: 0;
   padding: 0px;
 }
+
 
 body {
   margin: 0px;
@@ -30,6 +30,10 @@ body {
   border-radius: 20px;
   padding: 1.25rem;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.overflow__login_page {
+  overflow: hidden;
 }
 
 .login__button {
