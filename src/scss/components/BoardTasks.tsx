@@ -11,13 +11,17 @@ import { ChangeEvent } from "react";
 interface BoardTasksProps {
   tasks: TaskModel;
   boardId: number;
+  moverboard: (sourceIndex: number, destinationIndex: number) => void;
 }
 
 const BoardTasks = ({ boardId, tasks }: BoardTasksProps) => {
   const { updateBoard } = useContext(UserContext);
   const { t } = useTranslation(["common", "list"]);
 
-  const handleTasksChange = (event: ChangeEvent<HTMLInputElement>) => {
+  const handleTasksChange = (
+    event: ChangeEvent<HTMLInputElement>,
+    taskIndex: number
+  ) => {
     const newtask = event.target.value;
     updateBoard(boardId, { tasks: newtask });
     console.log("estás actualizando");

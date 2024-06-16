@@ -3,8 +3,7 @@ import BoardTasks from "./BoardTasks";
 import AddCardOrList from "./AddCardOrList";
 import { useDrop } from "react-dnd";
 import { UserContext, TaskBoardModel } from "./UserContext/UserContext";
-import { useContext, useState } from "react";
-import { Board } from "./models";
+import { useContext } from "react";
 import { useParams } from "react-router-dom";
 
 interface BoardListProps {
@@ -12,12 +11,12 @@ interface BoardListProps {
 }
 
 const BoardInfo = ({ board }: BoardListProps) => {
-  const { boards } = useContext(UserContext);
+  const { boards, moverboard } = useContext(UserContext);
 
   const [{ isOver }, drop] = useDrop({
     accept: "card",
     drop: (item) => {
-      console.log("test drop", item);
+      console.log("Item dropped", item);
     },
     collect: (monitor) => ({
       isOver: !!monitor.isOver(),
@@ -27,16 +26,22 @@ const BoardInfo = ({ board }: BoardListProps) => {
   return (
     <div
       ref={drop}
-      className="display__flex shadow__effect align__center margin__5p bg__color__yellow "
+      className="display__flex shadow__effect align__center margin__5p bg__color__yellow"
       style={{ background: isOver ? "black" : undefined }}
     >
-      <div className="livvic-thin List List__Container margin__5p ">
+      <div className="livvic-thin List List__Container margin__5p">
         <ListTitle boardId={board.id} title={board.title} />
-        <BoardTasks boardId={board.id} tasks={board.tasks} />
+        <BoardTasks
+          boardId={board.id}
+          tasks={board.tasks}
+          moverboard={moverboard}
+        />
         <AddCardOrList />
       </div>
     </div>
   );
 };
+
+//e
 
 export default BoardInfo;

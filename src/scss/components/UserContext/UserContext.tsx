@@ -1,9 +1,8 @@
 import { ReactNode, createContext, useState } from "react";
-import { Board } from "../models";
 
 export interface TaskBoardModel {
   title: string;
-  tasks: TaskModel;
+  tasks: TaskModel[];
   id: number;
 }
 
@@ -20,12 +19,14 @@ interface UserContextModel {
     boardId: number,
     propsToUpdate: Pick<TaskBoardModel, "title" | "tasks">
   ) => void;
+  moverboard: (sourceIndex: number, destinationIndex: number) => void;
 }
 
 const context: UserContextModel = {
   boards: [],
   newBoard: () => {},
   updateBoard: () => {},
+  moverboard: () => {},
 };
 
 export const UserContext = createContext<UserContextModel>(context);
@@ -42,22 +43,30 @@ export const UserContextProvider = ({
   const newBoard = (newBoard: TaskBoardModel) => {
     setBoards((prevBoard) => [...prevBoard, newBoard]);
   };
+
+  const moverboard = (sourceIndex: number, destinationIndex: number) => {
+    setBoards((prevBoards) => {
+      const items = Array.from(prevBoards);
+      const [movedItem] = items.splice(sourceIndex, 1);
+      items.splice(destinationIndex, 0, movedItem);
+      return items;
+    });
+  };
+
   const updateBoard = (
     boardId: number,
     propsToUpdate: Pick<TaskBoardModel, "title" | "tasks">
   ) => {
     setBoards((prevBoards) => {
-      {
-        return prevBoards.map((board) => {
-          if (board.id === boardId) {
-            return {
-              ...board,
-              ...propsToUpdate,
-            };
-          }
-          return board;
-        });
-      }
+      return prevBoards.map((board) => {
+        if (board.id === boardId) {
+          return {
+            ...board,
+            ...propsToUpdate,
+          };
+        }
+        return board;
+      });
     });
   };
 
@@ -65,6 +74,7 @@ export const UserContextProvider = ({
     boards,
     newBoard,
     updateBoard,
+    moverboard,
   };
 
   return (
