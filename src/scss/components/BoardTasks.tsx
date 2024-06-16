@@ -15,7 +15,7 @@ interface BoardTasksProps {
 }
 
 const BoardTasks = ({ boardId, tasks }: BoardTasksProps) => {
-  const { updateBoard } = useContext(UserContext);
+  const { updateBoard, moverboard } = useContext(UserContext);
   const { t } = useTranslation(["common", "list"]);
 
   const handleTasksChange = (
@@ -24,7 +24,9 @@ const BoardTasks = ({ boardId, tasks }: BoardTasksProps) => {
   ) => {
     const newtask = event.target.value;
     updateBoard(boardId, { tasks: newtask });
+    moverboard(boardId, { taskIndex: newtask });
     console.log("estás actualizando");
+    const newIndex = event.target.index;
   };
 
   return (
