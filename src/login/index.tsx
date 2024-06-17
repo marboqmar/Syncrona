@@ -3,6 +3,7 @@ import { Button, Input, Checkbox, Radio, Image, Icon, Logo } from '../components
 import Task from '../components/molecules/task';
 import '../scss/login.scss';
 import '../scss/style.scss';
+import '../scss/style.scss';
 import { useTranslation } from 'react-i18next';
 import Boards from '../boards/Boards';
 import { Link } from 'react-router-dom';
