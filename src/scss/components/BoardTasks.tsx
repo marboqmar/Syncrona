@@ -11,23 +11,20 @@ import { ChangeEvent } from "react";
 interface BoardTasksProps {
   tasks: TaskModel;
   boardId: number;
-  moverboard: (sourceIndex: number, destinationIndex: number) => void;
 }
 
 const BoardTasks = ({ boardId, tasks }: BoardTasksProps) => {
-  const { updateBoard, moverboard } = useContext(UserContext);
+  const { updateBoard, moveboard } = useContext(UserContext);
   const { t } = useTranslation(["common", "list"]);
 
-  const handleTasksChange = (
-    event: ChangeEvent<HTMLInputElement>,
-    taskIndex: number
-  ) => {
+  const handleTasksChange = (event: ChangeEvent<HTMLInputElement>) => {
     const newtask = event.target.value;
     updateBoard(boardId, { tasks: newtask });
-    moverboard(boardId, { taskIndex: newtask });
-    console.log("estás actualizando");
-    const newIndex = event.target.index;
   };
+
+  /*const handleposition = (sourceIndex: number, destinationIndex: number) => {
+    moveboard(sourceIndex, destinationIndex);
+  };*/
 
   return (
     <div className="display__flex__between align__items__center">

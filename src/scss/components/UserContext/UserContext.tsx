@@ -4,6 +4,7 @@ export interface TaskBoardModel {
   title: string;
   tasks: TaskModel[];
   id: number;
+  position: number;
 }
 
 export interface TaskModel {
@@ -19,14 +20,14 @@ interface UserContextModel {
     boardId: number,
     propsToUpdate: Pick<TaskBoardModel, "title" | "tasks">
   ) => void;
-  moverboard: (sourceIndex: number, destinationIndex: number) => void;
+  moveboard: (sourceIndex: number, destinationIndex: number) => void;
 }
 
 const context: UserContextModel = {
   boards: [],
   newBoard: () => {},
   updateBoard: () => {},
-  moverboard: () => {},
+  moveboard: () => {},
 };
 
 export const UserContext = createContext<UserContextModel>(context);
@@ -44,7 +45,7 @@ export const UserContextProvider = ({
     setBoards((prevBoard) => [...prevBoard, newBoard]);
   };
 
-  const moverboard = (sourceIndex: number, destinationIndex: number) => {
+  const moveboard = (sourceIndex: number, destinationIndex: number) => {
     setBoards((prevBoards) => {
       const items = Array.from(prevBoards);
       const [movedItem] = items.splice(sourceIndex, 1);
@@ -74,7 +75,7 @@ export const UserContextProvider = ({
     boards,
     newBoard,
     updateBoard,
-    moverboard,
+    moveboard,
   };
 
   return (

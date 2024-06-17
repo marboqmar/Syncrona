@@ -11,7 +11,7 @@ interface BoardListProps {
 }
 
 const BoardInfo = ({ board }: BoardListProps) => {
-  const { boards } = useContext(UserContext);
+  const { boards, moveboard } = useContext(UserContext);
 
   const [{ isOver }, drop] = useDrop({
     accept: "card",
@@ -23,6 +23,9 @@ const BoardInfo = ({ board }: BoardListProps) => {
     }),
   });
 
+  const handleposition = (sourceIndex: number, destinationIndex: number) => {
+    moveboard(sourceIndex, destinationIndex);
+  };
   return (
     <div
       ref={drop}
@@ -31,7 +34,11 @@ const BoardInfo = ({ board }: BoardListProps) => {
     >
       <div className="livvic-thin List List__Container margin__5p">
         <ListTitle boardId={board.id} title={board.title} />
-        <BoardTasks boardId={board.id} tasks={board.tasks} />
+        <BoardTasks
+          boardId={board.id}
+          tasks={board.tasks}
+          handleposition={handleposition}
+        />
         <AddCardOrList />
       </div>
     </div>
