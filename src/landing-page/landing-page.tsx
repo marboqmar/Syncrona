@@ -58,8 +58,14 @@ const Landing = () => {
                     <p className="landing__input__paragraph">From project managers to contributors, our intuitive interface simplifies role allocation, fostering effective teamwork and streamlined progress.</p>
                 </div>
         </div>
+        <div>
+            <div className="landing__wrapper_centered">
+                <h3 className="landing__smaller_subtitle_pink">Express yourself with Custom Designs</h3>
+                <p className="landing__input__paragraph">Tired of cookie-cutter interfaces? Our app lets you unleash your creativity by allowing you to submit your own designs. Have some  Say goodbye to generic layouts and hello to a canvas where you can truly express yourself.</p>
+            </div>
         </div>
-            
+        </div>
+        
             <Footer/>
         </div>
          
