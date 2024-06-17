@@ -5,3 +5,5 @@ export { default as Radio } from "./radio";
 export { default as Image } from "./image";
 export { default as Icon } from "./icon";
 export { default as Logo } from "./logo";
+export { default as Draggable } from './draggable';
+export { default as Droppable } from './droppable';

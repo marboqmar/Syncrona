@@ -13,7 +13,7 @@ interface ButtonProps {
   onClick: OnClickButton;
   width: string;
   height: string;
-  className?:string,
+  theme?:string,
 }
 
 export default ButtonProps;

@@ -6,6 +6,7 @@ interface CheckboxProps {
   setChecked: SetCheckboxValue;
   text?: string;
   name: string;
+  theme?: string;
 }
 
 export default CheckboxProps;

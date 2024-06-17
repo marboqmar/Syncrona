@@ -11,6 +11,7 @@ interface InputProps {
   disabled?: boolean;
   setValue: SetInputValue;
   className?:string
+  theme?: string
 }
 
 export default InputProps;

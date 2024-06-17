@@ -3,8 +3,10 @@ import SettingsIcons from "../../../assets/icons/settings";
 import SocialIcons from "../../../assets/icons/social";
 import NavigationIcons from "../../../assets/icons/navigation";
 import { FC, SVGProps } from "react";
+export type OnClick = () => void;
 
 export type IconTypes='action'|'navigation'|'settings'|'social';
+
 export type IconNames= keyof typeof ActionIcons 
     | keyof typeof SettingsIcons 
     | keyof typeof SocialIcons 
@@ -76,11 +78,10 @@ export interface IconProps {
     className?: string;
     width?:string;
     height?:string;
+    theme?: string;
     fill?: string;
-    stroke?: string;
-    strokeWidth?: string;
+    onClick?: OnClick;
     iconName: IconNames;
-    iconType: IconTypes;
-    
+    iconType: IconTypes;  
 }
 

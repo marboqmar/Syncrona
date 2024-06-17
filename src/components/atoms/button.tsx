@@ -8,16 +8,15 @@ const Button = ({
   onClick,
   width,
   height,
-  className,
+  theme,
 }: ButtonProps) => {
   const styles = {
     width,
     height,
-    margin: "10px",
   };
   return (
     <button
-    className={`${type} ${className}`}
+    className={`${type} ${theme}`}
       disabled={disabled}
       onClick={onClick}
       style={styles}

@@ -1,5 +1,6 @@
 import React from "react";
 import CheckboxProps from "./interfaces/checkbox.interface";
+import '../../scss/components/atoms/checkbox/base.scss';
 
 const Checkbox = ({
   setChecked,
@@ -7,6 +8,7 @@ const Checkbox = ({
   disabled,
   checked,
   name,
+  theme
 }: CheckboxProps) => {
   const onChange = () => setChecked(!checked);
   return (
@@ -18,6 +20,7 @@ const Checkbox = ({
         disabled={disabled}
         checked={checked}
         name={name}
+        className={`theme-${theme}`}
       />
       <label htmlFor={name}>{text}</label>
     </div>
