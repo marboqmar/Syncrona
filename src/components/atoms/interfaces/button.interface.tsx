@@ -1,10 +1,4 @@
-type ButtonType =
-  | "primary"
-  | "secondary"
-  | "warning"
-  | "success"
-  | "error"
-  | "info";
+type ButtonType = 'primary' | 'secondary' | 'warning' | 'success' | 'error' | 'info';
 type OnClickButton = () => void;
 interface ButtonProps {
   text: string;
@@ -13,7 +7,8 @@ interface ButtonProps {
   onClick: OnClickButton;
   width: string;
   height: string;
-  theme?:string,
+  theme?: string;
+  className?: string;
 }
 
 export default ButtonProps;
