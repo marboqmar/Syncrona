@@ -1,0 +1,42 @@
+.task-board-panel {
+    background-color: rgba(255, 255, 255, 0.50);
+    border-radius: 10px;
+    height: auto;
+    margin: 66px 34px;
+    padding: 24px 31px;
+    padding-bottom: 136px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    overflow: auto;
+    gap: 28px;
+}
+
+.theme-selectors {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.theme-selector {
+  width: 35px;
+  height: 35px;
+  border-radius: 15px;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.theme-selector.theme-syncrona-pink {
+  border-color: #732648;
+  background-color: #CF3076;
+}
+
+.theme-selector.theme-syncrona-orange {
+  border-color: #AF4A2C;
+  background-color: #DA5933;
+}
+
+.theme-selector.theme-syncrona-yellow {
+  border-color: #D89027;
+  background-color: #EDAA45;
+}

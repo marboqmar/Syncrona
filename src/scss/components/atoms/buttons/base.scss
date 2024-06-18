@@ -1,0 +1,54 @@
+@import './themes/syncrona-yellow.scss';
+@import './themes/syncrona-orange.scss';
+@import './themes/syncrona-pink.scss';
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-family: Livvic;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 15px;
+  border-width: 1px;
+  border-style: solid;
+}
+
+button.success {
+  border-color: #A0C38B;
+  background-color: #CAE7B9;
+  color: #5A4B51;
+}
+
+button.warning {
+  border-color: #E1CC0E;
+  background-color: #F2E641;
+  color: #5A4B51;
+}
+
+button.error {
+  border-color: #A8210B;
+  background-color: #D72A0E;
+  color: #FEF5F9;
+}
+
+button.info {
+  border-color: #5D9AC5;
+  background-color: #90BEDE;
+  color: #FFF;
+}
+
+button.primary:disabled {
+  border-color: #837C80;
+  background: #9C9699;
+  color: #CECACC;
+}
+
+button.secondary:disabled {
+  border-color: #CECACC;
+  background: #FEF5F9;
+  color: #CECACC;
+}

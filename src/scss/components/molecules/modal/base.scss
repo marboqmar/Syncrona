@@ -1,0 +1,36 @@
+dialog[open] {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    border-radius: 24px;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #FEF5F9;
+    padding: 29px 22px;
+    align-self: center;
+  }
+  
+  dialog h3 {
+    margin: 0;
+    color: #211C1E;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  
+  dialog .modal-content {
+    padding: 80px;
+    padding-top: 27px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 45px;
+  }
+  
+  dialog input[type=checkbox]{
+    width: 30px;
+    height: 30px;
+    border-width: 4px;
+    border-radius: 8px;
+  }
