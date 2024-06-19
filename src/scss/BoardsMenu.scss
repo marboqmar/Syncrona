@@ -1,0 +1,42 @@
+@import "../scss/colors.scss";
+
+.BoardsMenu__bg {
+  background: rgb(235, 124, 173);
+  background: linear-gradient(31deg, rgba(235, 124, 173, 1) 30%, rgba(250, 193, 109, 1) 53%);
+}
+
+.BoardsMenu__Title {
+  color: $Syncrona-black-darker;
+  margin-bottom: 5.5rem;
+  font-size: 1.5rem;
+}
+
+.BoardsMenu__Selector {
+  outline-style: solid;
+  border-color: $Syncrona-black-darker;
+  width: 20rem;
+  height: 16rem;
+  display: flex;
+  background-color: rgba($Syncrona-white, 0.5);
+  margin-bottom: 5.5rem;
+}
+
+.BoardsMenu__button {
+  background-color: $Syncrona-pink;
+  border-radius: 15px;
+  color: $Syncrona-white;
+  font-size: 1.25rem;
+}
+
+//UTILITIES
+
+.BoardsMenu__direction__column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Link__NoColor {
+  text-decoration: none;
+  color: inherit;
+}

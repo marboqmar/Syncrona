@@ -3,6 +3,7 @@ import { Button, Input, Checkbox, Radio, Image, Icon, Logo } from '../components
 import Task from '../components/molecules/task';
 import '../scss/login.scss';
 import '../scss/style.scss';
+import '../scss/style.scss';
 import { useTranslation } from 'react-i18next';
 import Boards from '../boards/Boards';
 import { Link } from 'react-router-dom';
@@ -54,9 +55,9 @@ const Login = () => {
           </div>
         </div>
         <div className="margin__center flex__column align__center ">
-          <Link to="/Boards">
+          <Link to="/BoardsMenu">
             <Button
-              text="Log in"
+              text={t('Log in')}
               type="primary"
               onClick={logIn}
               width={'9.68rem'}
@@ -68,8 +69,13 @@ const Login = () => {
       </div>
       <div className="justify__center">
         <div className="margin__center  TermsAndConditions flex__row ">
-          <Checkbox setChecked={setChecked} text="Terms and conditions" checked={checked} name="cualquier nombre" />
-          <Checkbox setChecked={setChecked} text="Privacy policy" checked={checked} name="cualquier nombre" />
+          <Checkbox
+            setChecked={setChecked}
+            text={t('Terms and conditions')}
+            checked={checked}
+            name="cualquier nombre"
+          />
+          <Checkbox setChecked={setChecked} text={t('Privacy policy')} checked={checked} name="cualquier nombre" />
         </div>
         <div className="margin__center TermsAndConditions ">
           <div>

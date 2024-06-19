@@ -8,7 +8,6 @@ html {
   background-position: center;
 }
 
-
 body {
   margin: 0px;
   padding: 0px;
@@ -248,10 +247,10 @@ body {
   font-family: Livvic;
 }
 //this is for the board pages
-.background__boardlist{
+.background__boardlist {
   display: grid;
   height: 100vh;
-  overflow-y:auto;
+  overflow-y: auto;
   background-repeat: no-repeat;
   background-size: cover;
   flex-direction: column;
