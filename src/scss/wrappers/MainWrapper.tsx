@@ -1,18 +1,18 @@
-import Header from '../components/Header.tsx'
-import Footer from '../components/Footer.tsx'
+import Header from "../components/Header.tsx";
+import Footer from "../components/Footer.tsx";
 
 type Props = {
-    children?: React.ReactNode
+  children?: React.ReactNode;
 };
 
-export const MainWrapper = ({children}: Props): React.ReactNode => {
-    return (
-        <div>
-            <Header />
-            {children}
-            <Footer />
-        </div>
-    );
+export const MainWrapper = ({ children }: Props): React.ReactNode => {
+  return (
+    <div>
+      <Header />
+      {children}
+      <Footer />
+    </div>
+  );
 };
 
-export default MainWrapper
+export default MainWrapper;

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2000 2000">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Puntos_syncrona);
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+
+      .cls-3 {
+        fill: #edaa45;
+      }
+
+      .cls-4 {
+        fill: #fbd59e;
+      }
+    </style>
+    <pattern id="Puntos_syncrona" x="0" y="0" width="508" height="508" patternUnits="userSpaceOnUse" viewBox="0 0 508 508">
+      <g>
+        <rect class="cls-2" width="508" height="508"/>
+        <circle class="cls-3" cx="507.45" cy="507.45" r="27.27"/>
+        <g>
+          <circle class="cls-3" cx="254" cy="507.45" r="27.27"/>
+          <circle class="cls-3" cx="508.55" cy="507.45" r="27.27"/>
+          <circle class="cls-3" cx="-.55" cy="507.45" r="27.27"/>
+        </g>
+        <circle class="cls-3" cx=".55" cy="507.45" r="27.27"/>
+        <g>
+          <g id="puntos">
+            <circle class="cls-3" cx="507.45" cy="254" r="27.27"/>
+          </g>
+          <g>
+            <circle class="cls-3" cx="507.45" cy="508.55" r="27.27"/>
+            <circle class="cls-3" cx="507.45" cy="254" r="27.27"/>
+            <circle class="cls-3" cx="507.45" cy="-.55" r="27.27"/>
+          </g>
+        </g>
+        <g>
+          <rect class="cls-4" x="0" y="0" width="508" height="508"/>
+          <g id="puntos-2" data-name="puntos">
+            <g>
+              <g>
+                <circle class="cls-3" cx="124.91" cy="126.41" r="27.27"/>
+                <circle class="cls-3" cx="379.45" cy="126.41" r="27.27"/>
+              </g>
+              <g>
+                <circle class="cls-3" cx="379.45" cy="380.95" r="27.27"/>
+                <circle class="cls-3" cx="124.91" cy="380.95" r="27.27"/>
+              </g>
+              <g>
+                <circle class="cls-3" cx="508.55" cy="254" r="27.27"/>
+                <circle class="cls-3" cx="254" cy="254" r="27.27"/>
+                <circle class="cls-3" cx="-.55" cy="254" r="27.27"/>
+              </g>
+            </g>
+          </g>
+          <g>
+            <circle class="cls-3" cx="254" cy="508.55" r="27.27"/>
+            <circle class="cls-3" cx="254" cy="254" r="27.27"/>
+            <circle class="cls-3" cx="254" cy="-.55" r="27.27"/>
+          </g>
+          <g>
+            <circle class="cls-3" cx="508.55" cy="508.55" r="27.27"/>
+            <circle class="cls-3" cx="508.55" cy="254" r="27.27"/>
+            <circle class="cls-3" cx="508.55" cy="-.55" r="27.27"/>
+          </g>
+          <g>
+            <circle class="cls-3" cx="-.55" cy="508.55" r="27.27"/>
+            <circle class="cls-3" cx="-.55" cy="254" r="27.27"/>
+            <circle class="cls-3" cx="-.55" cy="-.55" r="27.27"/>
+          </g>
+        </g>
+        <g>
+          <g id="puntos-3" data-name="puntos">
+            <circle class="cls-3" cx=".55" cy="254" r="27.27"/>
+          </g>
+          <g>
+            <circle class="cls-3" cx=".55" cy="508.55" r="27.27"/>
+            <circle class="cls-3" cx=".55" cy="254" r="27.27"/>
+            <circle class="cls-3" cx=".55" cy="-.55" r="27.27"/>
+          </g>
+        </g>
+        <circle class="cls-3" cx="507.45" cy=".55" r="27.27"/>
+        <g>
+          <circle class="cls-3" cx="254" cy=".55" r="27.27"/>
+          <circle class="cls-3" cx="508.55" cy=".55" r="27.27"/>
+          <circle class="cls-3" cx="-.55" cy=".55" r="27.27"/>
+        </g>
+        <circle class="cls-3" cx=".55" cy=".55" r="27.27"/>
+      </g>
+    </pattern>
+  </defs>
+  <rect class="cls-1" width="2000" height="2000"/>
+</svg>
