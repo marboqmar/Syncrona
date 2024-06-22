@@ -44,6 +44,15 @@ const getTaskBoard = (
       }
 
 const Boards = () => {
+  <DndProvider backend={HTML5Backend}>
+      <div>
+        <UserContextProvider>
+          <div>
+            <Topbar />
+          </div>
+        </UserContextProvider>
+      </div>
+    </DndProvider>
   const [theme, setTheme] = useState('syncrona-yellow');
   const [selectedTheme, setSelectedTheme] = useState(theme);
   const [previewTheme, setPreviewTheme] = useState(false);
@@ -53,6 +62,7 @@ const Boards = () => {
   const [taskBoards, setTasksBoards] = useState([] as TaskBoardProps[]);
   const [draggedTask, setDraggedTask] = useState(undefined as TaskData | undefined);
   const onSubmitAddTaskModal = async () => {
+     
       const setTasks = (tasks: TaskData[]) => {
           setTasksBoards([
               ...taskBoards.slice(0, taskBoards.length),
@@ -60,15 +70,7 @@ const Boards = () => {
               ...taskBoards.slice(taskBoards.length + 1)
           ])
       }
-      <DndProvider backend={HTML5Backend}>
-      <div className="html">
-        <UserContextProvider>
-          <div>
-            <Topbar />
-          </div>
-        </UserContextProvider>
-      </div>
-    </DndProvider>
+     
       setTasksBoards([
           ...taskBoards,
           {

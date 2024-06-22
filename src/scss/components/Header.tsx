@@ -1,4 +1,4 @@
-import {  Logo} from "../../../src/components/atoms";
+import {Logo} from "../../../src/components/atoms";
 
 
 const Header = () => {

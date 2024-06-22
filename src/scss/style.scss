@@ -1,14 +1,20 @@
 @import "./colors.scss";
 
 html {
-  background-image: url("./images/Frame\ 66.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
+  background-color: $Syncrona-white;
+  margin: 0px;
+}
+
+* {
+  user-select: none;
 }
 
 body {
+  margin: 0;
+  font-family: Livvic;
+}
+
+/*body {
   margin: 0px;
   padding: 0px;
 }
@@ -18,6 +24,7 @@ body {
   --yellow-theme-color: #f9c06c;
   background-color: var(--yellow-theme-color);
 }
+*/
 
 //Topbar//
 
@@ -217,13 +224,6 @@ input:checked + .slider:before {
   transform: translateY(8px);
 }
 
-.bg__image {
-  background-image: url("./images/Frame\ 66.jpg");
-}
-
-.bg__color__yellow {
-  background-color: var(--yellow-theme-color);
-}
 
 .margin__top--10px {
   margin-top: 10px;
@@ -238,14 +238,6 @@ input:checked + .slider:before {
   justify-content: center;
 }
 
-* {
-  user-select: none;
-}
-
-body {
-  margin: 0;
-  font-family: Livvic;
-}
 //this is for the board pages
 .background__boardlist {
   display: grid;

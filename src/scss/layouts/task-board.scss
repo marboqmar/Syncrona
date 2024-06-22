@@ -1,13 +1,14 @@
 .task-board-panel {
     background-color: rgba(255, 255, 255, 0.50);
     border-radius: 10px;
-    height: auto;
+    height: calc(100vh - 220px);
     margin: 66px 34px;
     padding: 24px 31px;
     padding-bottom: 136px;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    align-self: center;
     overflow: auto;
     gap: 28px;
 }

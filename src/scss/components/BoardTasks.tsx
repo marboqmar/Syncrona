@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { useContext } from "react";
-import { UserContext, TaskModel, TaskBoardModel} from "./UserContext/UserContext";
+import { UserContext, TaskModel} from "./UserContext/UserContext";
 import { ChangeEvent } from "react";
 
 interface BoardTasksProps {

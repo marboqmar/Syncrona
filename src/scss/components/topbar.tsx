@@ -27,8 +27,6 @@ const Topbar = () => {
         iconType="navigation"
         height="20px"
         fill="black"
-        stroke="2px"
-        strokeWidth="4px"
       />
 
       <input
