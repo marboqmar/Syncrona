@@ -1,4 +1,8 @@
 import { useState } from 'react';
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
+import Topbar from '../scss/components/topbar';
+import { UserContextProvider } from '../scss/components/UserContext/UserContext';
 import { TaskBoard } from '../components/organisms';
 import { TaskBoardProps, SetDraggedTask, SetTaskBoards } from '../components/organisms/interfaces/task-board.interface';
 import { TaskData } from '../components/molecules/interfaces/task.interface';
@@ -8,6 +12,9 @@ import { Button, Checkbox, Input } from '../components/atoms';
 import { getMeme } from '../services/imgflip';
 import '../scss/style.scss';
 import '../scss/layouts/task-board.scss';
+
+
+
 
 const getTaskBoard = (
   theme: string,
@@ -53,6 +60,15 @@ const Boards = () => {
               ...taskBoards.slice(taskBoards.length + 1)
           ])
       }
+      <DndProvider backend={HTML5Backend}>
+      <div className="html">
+        <UserContextProvider>
+          <div>
+            <Topbar />
+          </div>
+        </UserContextProvider>
+      </div>
+    </DndProvider>
       setTasksBoards([
           ...taskBoards,
           {
@@ -151,3 +167,5 @@ return <div className={`background theme-${theme}`}>
 }
 
 export default Boards;
+
+
