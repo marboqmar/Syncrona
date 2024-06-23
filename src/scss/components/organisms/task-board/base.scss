@@ -1,19 +1,20 @@
-@import './themes/syncrona-orange.scss';
-@import './themes/syncrona-yellow.scss';
-@import './themes/syncrona-pink.scss';
+@import "./themes/syncrona-orange.scss";
+@import "./themes/syncrona-yellow.scss";
+@import "./themes/syncrona-pink.scss";
+@import "../../../colors.scss";
 
 $taskBoardCardHorizontalPadding: 13px;
 
 .task-board {
   display: flex;
-  width: min(350px, 45vw );
+  width: min(350px, 45vw);
   height: fit-content;
   padding: 24px;
   flex-direction: column;
   // align-items: center;
   gap: 24px;
   border-radius: 24px;
-  background: #FEF5F9;
+  background: #fef5f9;
   box-shadow: 0px 4px 35px 0px rgba(249, 192, 108, 0.25);
 }
 
@@ -21,7 +22,7 @@ $taskBoardCardHorizontalPadding: 13px;
   margin: 0 auto;
 }
 .task-board-title {
-  color:#211C1E;
+  color: #211c1e;
   width: inherit;
   text-align: center;
   font-size: 20px;
@@ -32,7 +33,7 @@ $taskBoardCardHorizontalPadding: 13px;
 }
 
 .task-board-subtitle {
-  color: #211C1E;
+  color: #211c1e;
   text-align: center;
   font-size: 20px;
   font-style: normal;
@@ -52,7 +53,6 @@ $taskBoardCardHorizontalPadding: 13px;
   height: fit-content;
   padding-bottom: 12px;
 }
-
 
 .task-board-card img {
   width: calc(100% + 2 * $taskBoardCardHorizontalPadding);

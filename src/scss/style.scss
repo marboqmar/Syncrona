@@ -18,14 +18,22 @@ body {
   margin: 0px;
   padding: 0px;
 }
-/*
+
 :root {
   --color-text: #211c1e;
-  --main-color: #fef5f9;
-  --yellow-theme-color: #f9c06c;
-  background-color: var(--yellow-theme-color);
+  --main-color: #f9c06c;
 }
-*/
+
+.dark-theme {
+  --color-text: #fef5f9;
+  --main-color: #b5b0b2;
+  --syncrona-yellow: #b5b0b2;
+}
+
+.light-theme {
+  --color-text: #211c1e;
+  --main-color: #f9c06c;
+}
 
 //Topbar//
 
@@ -39,7 +47,6 @@ body {
   border-color: var(--color-text);
   padding: 10px;
 }
-
 
 .Board__Page__Tittle {
   background-color: transparent;
@@ -231,7 +238,6 @@ input:checked + .slider:before {
 .move__Y {
   transform: translateY(8px);
 }
-
 
 .margin__top--10px {
   margin-top: 10px;
