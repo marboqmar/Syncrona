@@ -1,5 +1,6 @@
 import React from 'react';
 import ButtonProps from './interfaces/button.interface';
+import '../../scss/components/atoms/buttons/base.scss';
 
 const Button = ({ text, type, disabled, onClick, width, height, theme }: ButtonProps) => {
   const styles = {
@@ -7,7 +8,11 @@ const Button = ({ text, type, disabled, onClick, width, height, theme }: ButtonP
     height,
   };
   return (
-    <button className={`${type} ${theme}`} disabled={disabled} onClick={onClick} style={styles}>
+    <button 
+    className={`${type} theme-${theme}`} 
+    disabled={disabled} 
+    onClick={onClick} 
+    style={styles}>
       {text}
     </button>
   );

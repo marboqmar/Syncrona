@@ -30,7 +30,10 @@ const getTaskBoard = (
                   ...taskBoards.slice(index + 1)
               ])
           }
-          return <TaskBoard
+          return <div>
+            
+            <div>
+            <TaskBoard
               key={index}
               title={taskboard.title}
               banner={taskboard.banner}
@@ -41,18 +44,13 @@ const getTaskBoard = (
               setDraggedTask={setDraggedTask}
               openSelectThemeModal={() => setIsOpenSelectThemeModal(true)}
           />
+          </div>
+          </div>
       }
 
 const Boards = () => {
-  <DndProvider backend={HTML5Backend}>
-      <div>
-        <UserContextProvider>
-          <div>
-            <Topbar />
-          </div>
-        </UserContextProvider>
-      </div>
-    </DndProvider>
+      
+  
   const [theme, setTheme] = useState('syncrona-yellow');
   const [selectedTheme, setSelectedTheme] = useState(theme);
   const [previewTheme, setPreviewTheme] = useState(false);
@@ -70,7 +68,7 @@ const Boards = () => {
               ...taskBoards.slice(taskBoards.length + 1)
           ])
       }
-     
+      
       setTasksBoards([
           ...taskBoards,
           {
@@ -98,7 +96,8 @@ if (previewTheme) {
 setSelectedTheme(newTheme);
 }
 return <div className={`background theme-${theme}`}>
-<Modal
+  
+  <Modal
   theme={theme}
   submitText="Let's go"
   onSubmit={onSubmitAddTaskModal}
@@ -146,6 +145,9 @@ return <div className={`background theme-${theme}`}>
       setChecked={setPreviewTheme}
     />
   </Modal>
+  <div>
+    <Topbar/>
+  </div>
   <div className='task-board-panel'>
     {
       taskBoards.map(getTaskBoard(

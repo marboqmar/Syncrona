@@ -9,7 +9,7 @@ import { Button } from '../../components';
 const BoardsMenu = () => {
   return (
     <div className="BoardsMenu__direction__column justify__center  ">
-      <div>
+      <div>                                                                 
         <p className="BoardsMenu__Title">Boards</p>
       </div>
       <div>

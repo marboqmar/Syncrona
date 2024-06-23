@@ -1,6 +1,7 @@
 import {Input,Checkbox,Icon} from '../atoms';
 import {TaskProps} from './interfaces/task.interface';
-//MIGHT HAVE TO ADD THEME LATER FOR STYLES
+import '../../scss/components/molecules/task/base.scss';
+
 const Task = ({name,data,setData,theme}:TaskProps) => {
     const setIsFinished = (isFinished: boolean) =>{setData({...data,isFinished})};
     const setTitle = (title: string) =>{setData({...data,title})};

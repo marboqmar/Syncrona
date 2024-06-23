@@ -146,7 +146,7 @@ const TaskBoard = ({
             >
                 <h1 className={`task-board-title theme-${theme}`}>{ title }</h1>
                 <Image src={ banner } alt={ title } width='100%' height='120px'/>
-                <h2 className={`task-board-subtitle theme-${theme}`}>Deberes</h2>
+                <h2 className={`task-board-subtitle theme-${theme}`}>To do</h2>
             </Droppable>
                 { tasks.map(taskBuilder(title, theme, setTasks, draggedTask, setDraggedTask)) }
         </div>

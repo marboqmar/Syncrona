@@ -14,10 +14,11 @@ body {
   font-family: Livvic;
 }
 
-/*body {
+*body {
   margin: 0px;
   padding: 0px;
 }
+/*
 :root {
   --color-text: #211c1e;
   --main-color: #fef5f9;
@@ -39,6 +40,7 @@ body {
   padding: 10px;
 }
 
+
 .Board__Page__Tittle {
   background-color: transparent;
   border: none;
@@ -48,6 +50,12 @@ body {
 //Topbar.Options//
 
 .Topbar__Options {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.Topbar__Icon {
+  margin-top: 10px;
   margin-left: 5px;
   margin-right: 5px;
 }
