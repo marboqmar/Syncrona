@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '../../components';
 
 const BoardsMenu = () => {
+  
   return (
     <div className="BoardsMenu__direction__column justify__center  ">
       <div>                                                                 
@@ -19,13 +20,14 @@ const BoardsMenu = () => {
           </div>
         </Link>
       </div>
-      <div>
+      <div className="BoardsMenu__button">
         <Link to="/Boards">
           <Button
             text="New Board"
             type="primary"
             width={'9.68rem'}
             height={'3.43rem'}
+            theme='syncrona-yellow'
             className="BoardsMenu__button  livvic-regular "
           />
         </Link>

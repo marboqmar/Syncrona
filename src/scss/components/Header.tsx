@@ -5,8 +5,8 @@ const Header = () => {
   return (
     <div className="align__center flex margin__center justify__center">
       <div className="marginRLogo">
-      <Logo logoTheme='OrangeTheme'
-            width='2rem'/>
+      <Logo logoTheme='MixedColors1'
+            width='3rem'/>
       </div>
        <div>
        <h1 className="login__tittle livvic-regular">Syncrona</h1>

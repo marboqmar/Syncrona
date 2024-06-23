@@ -17,7 +17,7 @@ const Login = () => {
             <p className="login__input__tittle  livvic-regular">Username</p>
 
             <Input
-              placeholder=""
+              placeholder="User name"
               width="80%"
               height="2rem"
               value={userName}
