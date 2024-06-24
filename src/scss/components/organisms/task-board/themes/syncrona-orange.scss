@@ -8,7 +8,8 @@ svg.theme-syncrona-orange path {
   fill: $Syncrona-Orange;
 }
 
-.droppable.task-draggable.theme-syncrona-orange:hover {
-  background-color: $Syncrona-Orange-Dark;
+.droppable.task-draggable.theme-syncrona-orange:hover{
+  background-color: $Syncrona-Orange-Light;
   border-radius: 15px;
 }
+

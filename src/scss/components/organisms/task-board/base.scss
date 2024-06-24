@@ -49,6 +49,9 @@ $taskBoardCardHorizontalPadding: 13px;
   border-radius: 12px;
 }
 
+.task-board-card:active{
+  background-color:$Syncrona-yellow-dark;
+}
 .droppable.task-draggable {
   height: fit-content;
   padding-bottom: 12px;
