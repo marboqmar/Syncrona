@@ -1,0 +1,68 @@
+@import "./themes/syncrona-orange.scss";
+@import "./themes/syncrona-yellow.scss";
+@import "./themes/syncrona-pink.scss";
+@import "../../../colors.scss";
+
+$taskBoardCardHorizontalPadding: 13px;
+
+.task-board {
+  display: flex;
+  width: min(350px, 45vw);
+  height: fit-content;
+  padding: 24px;
+  flex-direction: column;
+  // align-items: center;
+  gap: 24px;
+  border-radius: 24px;
+  background: #fef5f9;
+  box-shadow: 0px 4px 35px 0px rgba(249, 192, 108, 0.25);
+}
+
+.task-board button {
+  margin: 0 auto;
+}
+.task-board-title {
+  color: #211c1e;
+  width: inherit;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  word-wrap: break-word;
+}
+
+.task-board-subtitle {
+  color: #211c1e;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.task-board-card {
+  display: flex;
+  padding: 24px $taskBoardCardHorizontalPadding;
+  padding-bottom: 14px;
+  flex-direction: column;
+  border-radius: 12px;
+}
+
+.task-board-card:active{
+  background-color:$Syncrona-yellow-dark;
+}
+.droppable.task-draggable {
+  height: fit-content;
+  padding-bottom: 12px;
+  padding-top: 12px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+
+
+.task-board-card img {
+  width: calc(100% + 2 * $taskBoardCardHorizontalPadding);
+  margin-left: -$taskBoardCardHorizontalPadding;
+}

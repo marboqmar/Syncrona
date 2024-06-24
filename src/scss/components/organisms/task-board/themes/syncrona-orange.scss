@@ -1,0 +1,15 @@
+@import "../../../../colors.scss";
+
+.task.theme-syncrona-orange {
+  border-color: $Syncrona-Orange;
+}
+
+svg.theme-syncrona-orange path {
+  fill: $Syncrona-Orange;
+}
+
+.droppable.task-draggable.theme-syncrona-orange:hover{
+  background-color: $Syncrona-Orange-Light;
+  border-radius: 15px;
+}
+

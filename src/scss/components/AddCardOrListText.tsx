@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Cards } from "./models";
+import { Card } from "./models";
 import { useTranslation } from "react-i18next";
 import { useDrag } from "react-dnd";
 
 export interface AddCardOrListTextProp {
-  cardInfo: Cards;
+  cardInfo: Card;
 }
 
 const AddCardOrListText = (props: AddCardOrListTextProp) => {

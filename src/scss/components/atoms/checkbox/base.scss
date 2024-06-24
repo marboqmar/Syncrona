@@ -1,0 +1,29 @@
+@import './themes/syncrona-yellow.scss';
+@import './themes/syncrona-orange.scss';
+@import './themes/syncrona-pink.scss';
+
+input[type=checkbox] {
+  box-sizing: border-box;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #9C9699;
+  border-radius: 4px;
+  appearance: none;
+}
+
+input[type=checkbox]:disabled {
+  border-color: #CECACC !important;
+}
+
+input[type=checkbox]:hover:disabled{
+  background-image: url('data:image/svg+xml,<svg width="30.000000000000004" height="30.000000000000004" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"><g class="layer"><title>Layer 1</title><g id="Union"><path d="m26.01,11.87c1.21,-1.21 1.21,-3.16 0,-4.37c-1.2,-1.21 -3.16,-1.21 -4.37,0l-8.62,8.62l-3.99,-3.99c-1.21,-1.2 -3.17,-1.2 -4.37,0c-1.21,1.21 -1.21,3.17 0,4.37l6.17,6.19c1.21,1.21 3.17,1.21 4.37,0l10.81,-10.81z" fill="%23CECACC" id="svg_1"/></g></g></svg>') !important;
+  background-size: contain !important;
+  border-color: #CECACC !important;
+}
+
+.checkbox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}

@@ -40,7 +40,7 @@ const Login = () => {
             />
           </div>
           <div>
-            <p className="login__input__tittle">{t('common:Password')}</p>
+            <p className="login__input__tittle livvic-regulary">{t('common:Password')}</p>
             <Input
               placeholder={t('common:Password')}
               value={password}
@@ -50,35 +50,39 @@ const Login = () => {
               name="password"
               setValue={setPassword}
               type="password"
-              className="bg__input"
+              className="bg__input livvic-regular"
             />
           </div>
         </div>
         <div className="margin__center flex__column align__center ">
-          <Link to="/Boards">
+          <Link to="/BoardsMenu">
             <Button
               text={t('Log in')}
               type="primary"
+              theme='syncrona-pink'
               onClick={logIn}
               width={'9.68rem'}
               height={'3.43rem'}
-              className="login__button  livvic-regular "
             />
           </Link>
         </div>
       </div>
-      <div className="justify__center">
-        <div className="margin__center  TermsAndConditions flex__row ">
+      <div className=" margin__center">
+        <div className="margin__center margin__top--10px">
           <Checkbox
             setChecked={setChecked}
             text={t('Terms and conditions')}
             checked={checked}
             name="cualquier nombre"
           />
-          <Checkbox setChecked={setChecked} text={t('Privacy policy')} checked={checked} name="cualquier nombre" />
+          <Checkbox 
+          setChecked={setChecked} 
+          text={t('Privacy policy')} 
+          checked={checked} 
+          name="cualquier nombre" />
         </div>
         <div className="margin__center TermsAndConditions ">
-          <div>
+          <div className='flex__row'>
             <button onClick={() => i18n.changeLanguage('en')} className="login__button--translation  livvic-regular ">
               English
             </button>

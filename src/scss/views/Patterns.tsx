@@ -1,5 +1,5 @@
 import MainWrapper from "../wrappers/MainWrapper.tsx";
-import "../style.scss";
+import * as styles from "../style.scss";
 
 const Patterns = () => {
   return (

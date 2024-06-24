@@ -1,0 +1,13 @@
+@import "../.../../../../../colors.scss";
+
+button.primary.theme-syncrona-yellow {
+  border-color: #d89027;
+  background-color: $Syncrona-yellow;
+  color: #211c1e;
+}
+
+button.secondary.theme-syncrona-yellow {
+  border-color: #f9c06c;
+  background-color: $Syncrona-yellow-lighter;
+  color: #756169;
+}

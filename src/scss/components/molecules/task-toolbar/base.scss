@@ -1,0 +1,17 @@
+.task-board-toolbar {
+    display: flex;
+    width: 100%;
+    padding: 24px;
+    margin: 0 -24px;
+    margin-bottom: -24px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    border-bottom-right-radius: 24px;
+    border-bottom-left-radius: 24px;
+  }
+
+  
+  .task-board-toolbar div:last-child{
+    margin-left: auto;
+  }

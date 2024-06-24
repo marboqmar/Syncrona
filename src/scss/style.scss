@@ -1,22 +1,37 @@
 @import "./colors.scss";
 
 html {
-  background-image: url("./images/Frame\ 66.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
+  background-color: $Syncrona-white;
+  margin: 0px;
+}
+
+* {
+  user-select: none;
 }
 
 body {
+  margin: 0;
+  font-family: Livvic;
+}
+
+*body {
   margin: 0px;
   padding: 0px;
 }
+
 :root {
   --color-text: #211c1e;
-  --main-color: #fef5f9;
-  --yellow-theme-color: #f9c06c;
-  background-color: var(--yellow-theme-color);
+  --main-color: #f9c06c;
+}
+
+.dark-mode {
+  --color-text: #fef5f9;
+  --main-color: #b5b0b2;
+}
+
+.light-theme {
+  --color-text: #211c1e;
+  --main-color: #f9c06c;
 }
 
 //Topbar//
@@ -41,6 +56,12 @@ body {
 //Topbar.Options//
 
 .Topbar__Options {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.Topbar__Icon {
+  margin-top: 10px;
   margin-left: 5px;
   margin-right: 5px;
 }
@@ -217,14 +238,6 @@ input:checked + .slider:before {
   transform: translateY(8px);
 }
 
-.bg__image {
-  background-image: url("./images/Frame\ 66.jpg");
-}
-
-.bg__color__yellow {
-  background-color: var(--yellow-theme-color);
-}
-
 .margin__top--10px {
   margin-top: 10px;
 }
@@ -236,4 +249,26 @@ input:checked + .slider:before {
 
 .justify__center {
   justify-content: center;
+}
+
+//this is for the board pages
+.background__boardlist {
+  display: grid;
+  height: 100vh;
+  overflow-y: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+}
+
+.background.theme-syncrona-orange {
+  background-image: url(../assets/background/syncrona-orange.svg);
+}
+
+.background.theme-syncrona-yellow {
+  background-image: url(../assets/background/syncrona-yellow.svg);
+}
+
+.background.theme-syncrona-pink {
+  background-image: url(../assets/background/syncrona-pink.svg);
 }

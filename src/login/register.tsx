@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Button, Input } from '../components/atoms';
 import '../scss/style.scss';
-import '../scss/register.scss';
+
+//import './register/register.scss';
 import '../scss/login.scss';
 
 interface RegisterFormData {
