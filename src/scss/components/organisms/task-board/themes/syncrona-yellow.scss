@@ -1,7 +1,14 @@
+@import "../../../../colors.scss";
+
 .task.theme-syncrona-yellow {
-  border-color: #EDAA45;
+  border-color: $Syncrona-yellow;
 }
 
 svg.theme-syncrona-yellow path{
-  fill: #EDAA45;
+  fill: $Syncrona-yellow;
+}
+
+.droppable.task-draggable.theme-syncrona-yellow:hover {
+  background-color: $Syncrona-yellow-dark;
+  border-radius: 15px;
 }

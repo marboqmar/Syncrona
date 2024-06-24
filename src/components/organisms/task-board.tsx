@@ -92,7 +92,7 @@ const taskBuilder = (
     return <Droppable
         key={`${title}-task-${index}`}
         name={`${title}-task-${index}-droppable`}
-        type='task-draggable'
+        type={`task-draggable theme-${theme}`}
         onDrop={taskDropper(
             taskAdder(tasks, setTasks, index + 1, draggedTask),
             draggedTask,

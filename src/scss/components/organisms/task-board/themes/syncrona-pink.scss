@@ -1,7 +1,14 @@
+@import "../../../../colors.scss";
+
 .task.theme-syncrona-pink {
-  border-color: #CF3076;
+  border-color: $Syncrona-pink;
 }
 
 svg.theme-syncrona-pink path{
-  fill: #CF3076;
+  fill: $Syncrona-pink;
+}
+
+.droppable.task-draggable.theme-syncrona-pink:hover {
+  background-color: $Syncrona-pink-dark;
+  border-radius: 15px;
 }
