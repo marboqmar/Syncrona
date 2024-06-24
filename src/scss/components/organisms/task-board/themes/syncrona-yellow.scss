@@ -1,7 +1,9 @@
+@import "../../../../colors.scss";
+
 .task.theme-syncrona-yellow {
-  border-color: #EDAA45;
+  border-color: $Syncrona-yellow;
 }
 
-svg.theme-syncrona-yellow path{
-  fill: #EDAA45;
+svg.theme-syncrona-yellow path {
+  fill: $Syncrona-yellow;
 }

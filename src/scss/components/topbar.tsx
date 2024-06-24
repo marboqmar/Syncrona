@@ -6,17 +6,11 @@ import '../style.scss';
 
 const Topbar = () => {
   const [dark, setDark] = useState(true);
-  const darkmode = () => {
-    if (dark) {
-      document.documentElement.style.setProperty('--color-text', '#fef5f9');
-      document.documentElement.style.setProperty('--main-color', '#b5b0b2');
-      document.documentElement.style.setProperty('Syncrona-yellow', '#b5b0b2');
-    } else {
-      document.documentElement.style.setProperty('--color-text', '#211C1E');
-      document.documentElement.style.setProperty('--main-color', '#f9c06c');
-    }
-    setDark(!dark);
-  };
+
+  function DarkMode() {
+    const rootElement = document.documentElement; // Selecciona el elemento raíz
+    rootElement.classList.toggle('dark-mode'); // Alterna la clase 'dark-mode'
+  }
 
   const { t, i18n } = useTranslation(['common', 'list']);
 
@@ -38,7 +32,7 @@ const Topbar = () => {
             Spanish
           </button>
           <label className="switch">
-            <input type="checkbox" onClick={darkmode} />
+            <input type="checkbox" onClick={DarkMode} />
             <span className="slider round Topbar__Options"></span>
           </label>
         </div>
