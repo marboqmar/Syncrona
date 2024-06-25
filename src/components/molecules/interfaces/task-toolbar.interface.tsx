@@ -7,6 +7,7 @@ export interface TaskTool {
     type: string;
     isDraggable: boolean;
     onClick?: OnClick
+    theme?:string;
 }
 
 export interface TaskToolBarProps {

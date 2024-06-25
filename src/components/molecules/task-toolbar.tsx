@@ -7,7 +7,7 @@ const renderTool = (selectedTool: string, setSelectedTool: SetSelectedTool) => (
     name,
     type,
     isDraggable,
-    onClick
+    onClick,
 }: TaskTool) => {
     const isDragging = name === selectedTool;
     const setIsDragging = () => setSelectedTool(name);
@@ -19,15 +19,17 @@ const renderTool = (selectedTool: string, setSelectedTool: SetSelectedTool) => (
         isDragging={isDragging}
         setIsDragging={setIsDragging}
     >
-        <Icon iconName={name as IconNames} iconType={type as IconTypes}/>
+        <div className={`task-board-icon`}>
+          <Icon iconName={name as IconNames} iconType={type as IconTypes}/>
+        </div>
     </Draggable>
     :
-    <Icon
+    <div className={`task-board-icon`}><Icon
       key={name.toLowerCase()}
       iconName={name as IconNames}
       iconType={type as IconTypes}
       onClick={onClick}
-    />
+    /></div>
 }
 
 const TaskToolBar = ({

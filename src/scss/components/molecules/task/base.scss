@@ -55,3 +55,8 @@
   width: 15px;
   height: 15px;
 }
+
+.task-board-icon:hover {
+  background-color: var(--accent-color);
+  border-radius: 15px;
+}
