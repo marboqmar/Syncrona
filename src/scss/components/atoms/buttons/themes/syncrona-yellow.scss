@@ -11,3 +11,10 @@ button.secondary.theme-syncrona-yellow {
   background-color: $Syncrona-yellow-lighter;
   color: #756169;
 }
+button.primary.theme-syncrona-yellow:active {
+  border-color: $Syncrona-yellow-darker;
+  border-width: thin;
+}
+button.primary.theme-syncrona-yellow:hover {
+  box-shadow: 0px 4px 10px 0px rgba(165, 106, 39, 0.206);
+}

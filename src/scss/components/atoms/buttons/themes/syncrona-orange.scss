@@ -9,3 +9,11 @@ button.primary.theme-syncrona-orange {
     background-color: #DA5933;
     color: #FEF5F9;
   }
+
+  button.primary.theme-syncrona-orange:active {
+    border-color: $Syncrona-Orange-Darker;
+    border-width: thin;
+  }
+  button.primary.theme-syncrona-orange:hover {
+    box-shadow: 0px 4px 10px 0px rgba(175, 74, 44, 0.206);
+  }

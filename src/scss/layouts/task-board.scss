@@ -1,4 +1,4 @@
-$taskBoardPanelVerticalPadding: 100px;
+$taskBoardPanelVerticalPadding: 140px;
 
 .task-board-panel {
     background-color: rgba(255, 255, 255, 0.50);
@@ -33,12 +33,39 @@ $taskBoardPanelVerticalPadding: 100px;
   background-color: #CF3076;
 }
 
+.theme-selector.theme-syncrona-pink:hover {
+  box-shadow: 0px 4px 10px 0px rgba(115, 88, 72, 0.206);
+}
+
+.theme-selector.theme-syncrona-pink:active {
+  border-color:  #732648;
+  border-width: 0.18rem;
+}
+
+
 .theme-selector.theme-syncrona-orange {
   border-color: #AF4A2C;
   background-color: #DA5933;
+}
+.theme-selector.theme-syncrona-orange:hover {
+  box-shadow: 0px 4px 10px 0px rgba(175, 74, 44, 0.206);
+}
+
+.theme-selector.theme-syncrona-orange:active {
+  border-color: #853523;
+  border-width: 0.18rem;
 }
 
 .theme-selector.theme-syncrona-yellow {
   border-color: #D89027;
   background-color: #EDAA45;
+}
+
+.theme-selector.theme-syncrona-yellow:hover {
+  box-shadow: 0px 4px 10px 0px rgba(165, 106, 39, 0.206);
+}
+
+.theme-selector.theme-syncrona-yellow:active {
+  border-color:  #A56B27;
+  border-width: 0.18rem;
 }

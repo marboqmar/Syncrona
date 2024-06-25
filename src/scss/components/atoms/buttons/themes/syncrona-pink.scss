@@ -9,3 +9,11 @@ button.secondary.theme-syncrona-pink {
     background-color: #EA7BAC;
     color: #FEF5F9;
   }
+
+  button.primary.theme-syncrona-pink:active {
+    border-color: $Syncrona-pink-darker;
+    border-width: thin;
+  }
+  button.primary.theme-syncrona-pink:hover {
+    box-shadow: 0px 4px 10px 0px rgba(115, 88, 72, 0.206);
+  }
